@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="25" fill="#0B1E36"/>
+  
+  <!-- Outer Gold Glow/Border -->
+  <rect x="4" y="4" width="92" height="92" rx="21" fill="none" stroke="#C8A96A" stroke-width="2" opacity="0.3"/>
+  <rect x="8" y="8" width="84" height="84" rx="17" fill="none" stroke="#C8A96A" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Top Valance / Rod -->
+  <path d="M 20 25 Q 50 15 80 25 Q 80 35 50 28 Q 20 35 20 25 Z" fill="#B8955A"/>
+  <rect x="15" y="20" width="70" height="4" rx="2" fill="#C8A96A"/>
+  <circle cx="15" cy="22" r="4" fill="#C8A96A"/>
+  <circle cx="85" cy="22" r="4" fill="#C8A96A"/>
+
+  <!-- Left Elegant Curtain -->
+  <path d="M 22 28 C 35 50, 30 75, 20 82 C 30 85, 45 75, 45 28 Z" fill="#C8A96A"/>
+  <path d="M 25 28 C 36 50, 32 75, 23 80 C 31 82, 42 75, 42 28 Z" fill="#B8955A" opacity="0.4"/>
+  
+  <!-- Right Elegant Curtain -->
+  <path d="M 78 28 C 65 50, 70 75, 80 82 C 70 85, 55 75, 55 28 Z" fill="#C8A96A"/>
+  <path d="M 75 28 C 64 50, 68 75, 77 80 C 69 82, 58 75, 58 28 Z" fill="#B8955A" opacity="0.4"/>
+
+  <!-- Elegant Tiebacks -->
+  <path d="M 21 55 Q 32 62 41 52" stroke="#0B1E36" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M 79 55 Q 68 62 59 52" stroke="#0B1E36" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Star/Sparkle Accent -->
+  <path d="M 50 12 L 51 16 L 55 17 L 51 18 L 50 22 L 49 18 L 45 17 L 49 16 Z" fill="#F5F1EA"/>
+</svg>
