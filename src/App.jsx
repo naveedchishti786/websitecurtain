@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Common Components
-import Header from './components/common/Header';
-import Navbar from './components/common/Navbar';
-import Footer from './components/common/Footer';
-import AIChatbot from './components/chat/AIChatbot';
+import Header from './Components/common/Header';
+import Navbar from './Components/common/Navbar';
+import Footer from './Components/common/Footer';
+import AIChatbot from './Components/chat/AIChatbot';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
