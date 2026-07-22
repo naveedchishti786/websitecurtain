@@ -687,12 +687,12 @@ const Gallery = () => {
               <span className="text-sm font-bold text-[#C8A96A] uppercase tracking-widest">Filter by Category</span>
             </div>
             
-            <div className="flex flex-wrap gap-3 mt-4 md:mt-0">
+            <div className="flex overflow-x-auto pb-4 gap-3 mt-4 md:mt-0 scrollbar-hide snap-x">
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
+                  className={`flex-shrink-0 flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 snap-start ${
                     selectedCategory === category.id
                       ? 'bg-[#0B1E36] text-white shadow-lg'
                       : 'bg-[#F5F1EA] text-[#222222] border-2 border-[#E8E2D8] hover:border-[#C8A96A]'
@@ -715,20 +715,20 @@ const Gallery = () => {
         <section className="py-16 relative z-10">
           <div className="max-w-7xl mx-auto px-4">
             {filteredItems.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                 {filteredItems.map((item, idx) => (
                   <div
                     key={item.id}
-                    className="group cursor-pointer h-full"
+                    className="group cursor-pointer break-inside-avoid"
                     onClick={() => setSelectedImage(item)}
                     style={{
                       animationDelay: `${idx * 100}ms`
                     }}
                   >
                     {/* Card Container */}
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col transform group-hover:-translate-y-3 border-2 border-[#FFFFFF] hover:border-[#E8E2D8]">
+                    <div className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 flex flex-col transform group-hover:-translate-y-2 border border-[#E8E2D8] hover:border-[#C8A96A] relative">
                       {/* Image Container */}
-                      <div className="relative overflow-hidden h-64 bg-[#F5F1EA]">
+                      <div className="relative overflow-hidden bg-[#F5F1EA]">
                         <img
                           src={item.image}
                           alt={item.title}
@@ -744,7 +744,7 @@ const Gallery = () => {
 
                         {/* Category Badge */}
                         <div className="absolute top-4 right-4">
-                          <span className="bg-[#C8A96A] text-white px-4 py-2 rounded-full text-xs font-black uppercase tracking-wider shadow-lg group-hover:bg-[#B8955A] transition-colors">
+                          <span className="bg-[#C8A96A]/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-black uppercase tracking-wider shadow-lg group-hover:bg-[#0B1E36] transition-colors">
                             {categories.find(c => c.id === item.category)?.name}
                           </span>
                         </div>

@@ -15,14 +15,14 @@ const Collections = () => {
       description: 'Premium curtains for every room and style',
       image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&auto=format&fit=crop&q=60',
       items: 42,
-      featured: 'Blackout • Velvet • Silk • Custom',
+      featured: 'Blackout • Velvet & blackout • Silk & blackout • Custom',
       path: '/curtains',
       products: [
         { name: 'Blackout Curtains', count: '7 types' },
         { name: 'Sheer Curtains', count: '6 types' },
-        { name: 'Velvet Curtains', count: '6 types' },
-        { name: 'Silk Curtains', count: '6 types' },
-        { name: 'Linen Curtains', count: '6 types' },
+        { name: 'Velvet & blackout', count: '6 types' },
+        { name: 'Silk & blackout', count: '6 types' },
+        { name: 'Linen & blackout', count: '6 types' },
         { name: 'Motorized Curtains', count: '6 types' },
       ]
     },
@@ -174,12 +174,12 @@ const Collections = () => {
         <section className="py-8 bg-white border-b-2 border-[#E8E2D8]">
           <div className="max-w-7xl mx-auto px-4">
             <p className="text-sm font-bold text-[#C8A96A] uppercase tracking-widest mb-4">Filter Collections</p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex overflow-x-auto pb-4 gap-3 scrollbar-hide snap-x">
               {filterCategories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setActiveFilter(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
+                  className={`flex-shrink-0 flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 snap-start ${
                     activeFilter === category.id
                       ? 'bg-[#0B1E36] text-white shadow-lg'
                       : 'bg-[#F5F1EA] text-[#222222] border-2 border-[#E8E2D8] hover:border-[#C8A96A] hover:bg-white'
@@ -200,112 +200,72 @@ const Collections = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
-              {filteredCollections.map((collection) => (
-                <Link key={collection.id} to={collection.path} className="group h-full">
-                  <div className={`bg-gradient-to-br ${collection.bgGradient} rounded-2xl p-8 h-full text-white transform group-hover:scale-105 transition-all duration-300 cursor-pointer shadow-lg hover:shadow-2xl hover:-translate-y-3 border-2 border-transparent group-hover:border-[#C8A96A]`}>
-                    <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {collection.icon}
-                    </div>
-                    
-                    <h2 className="text-2xl font-black mb-2 group-hover:text-[#F5F1EA] transition-colors">
-                      {collection.name}
-                    </h2>
-
-                    <p className="text-sm text-white/90 mb-4 font-medium">
-                      {collection.description}
-                    </p>
-                    
-                    <div className="flex items-center justify-between pt-4 border-t-2 border-white/20">
-                      <span className="text-xs font-black bg-white/20 px-3 py-1 rounded-full">
-                        {collection.items} Products
-                      </span>
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-
-            {/* ===== DETAILED COLLECTIONS ===== */}
-            <div className="space-y-16">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
               {filteredCollections.map((collection, idx) => (
                 <div 
                   key={collection.id} 
-                  className="bg-white rounded-3xl shadow-xl overflow-hidden border-2 border-[#E8E2D8] hover:border-[#C8A96A] transition-all duration-300"
+                  className="group break-inside-avoid relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#E8E2D8] hover:border-[#C8A96A] transition-all duration-500 transform hover:-translate-y-2 flex flex-col"
                   style={{ animation: `fadeIn 0.5s ease-in-out ${idx * 100}ms both` }}
                 >
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
-                    {/* Left - Image & Info */}
-                    <div className={`relative p-12 text-white flex flex-col justify-center items-center overflow-hidden min-h-[400px] bg-gradient-to-br ${collection.bgGradient}`}>
-                      <div className="absolute inset-0">
-                        <img 
-                          src={collection.image} 
-                          alt={collection.name} 
-                          className="w-full h-full object-contain object-center group-hover:scale-110 transition-transform duration-500" 
-                        />
-                        <div className={`absolute inset-0 bg-gradient-to-br ${collection.bgGradient} opacity-60 mix-blend-multiply`}></div>
-                      </div>
-
-                      <div className="relative z-10 flex flex-col items-center text-center space-y-4">
-                        <div className="text-7xl filter drop-shadow-lg">
-                          {collection.icon}
-                        </div>
-
-                        <div>
-                          <h2 className="text-4xl font-black mb-3 drop-shadow-lg">
-                            {collection.name}
-                          </h2>
-                          <p className="text-lg text-white/95 mb-6 drop-shadow-md font-medium leading-relaxed">
-                            {collection.description}
-                          </p>
-                        </div>
-
-                        <Link 
-                          to={collection.path} 
-                          className="bg-white text-[#0B1E36] px-8 py-4 rounded-xl font-black hover:bg-[#F5F1EA] hover:text-[#C8A96A] transition-all duration-300 flex items-center space-x-2 shadow-xl hover:shadow-2xl transform hover:scale-105 uppercase tracking-wider"
-                        >
-                          <span>Browse All</span>
-                          <ArrowRight className="w-5 h-5" />
-                        </Link>
-                      </div>
+                  {/* Card Header & Background */}
+                  <div className={`relative h-[300px] flex flex-col justify-end p-8 text-white overflow-hidden bg-gradient-to-br ${collection.bgGradient}`}>
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0">
+                      <img 
+                        src={collection.image} 
+                        alt={collection.name} 
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 mix-blend-overlay"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t from-[#0B1E36] to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300`}></div>
                     </div>
 
-                    {/* Right - Products List */}
-                    <div className="col-span-2 p-10 bg-white">
-                      <h3 className="text-2xl font-black text-[#222222] mb-8 flex items-center space-x-2">
-                        <span className="w-1 h-8 bg-[#C8A96A] rounded-full"></span>
-                        <span>Available Categories</span>
-                      </h3>
+                    {/* Header Content */}
+                    <div className="relative z-10 flex flex-col items-start transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className="text-4xl mb-3 p-3 bg-white/20 backdrop-blur-md rounded-2xl border border-white/30 text-white">
+                        {collection.icon}
+                      </div>
+                      <h2 className="text-3xl font-black mb-2 drop-shadow-md tracking-tight">
+                        {collection.name}
+                      </h2>
+                      <p className="text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 drop-shadow-md">
+                        {collection.description}
+                      </p>
+                    </div>
+                  </div>
 
-                      <div className="grid grid-cols-2 gap-4">
-                        {collection.products.map((product, productIdx) => (
-                          <div 
-                            key={productIdx} 
-                            className="flex items-center space-x-3 p-4 bg-[#F5F1EA] rounded-xl hover:bg-[#C8A96A]/10 hover:border-[#C8A96A] border-2 border-[#E8E2D8] transition-all duration-300 group cursor-pointer"
-                          >
-                            <div className="w-2.5 h-2.5 bg-[#C8A96A] rounded-full group-hover:scale-150 transition-transform"></div>
-                            <div>
-                              <p className="font-black text-[#222222] text-sm group-hover:text-[#0B1E36] transition-colors">
-                                {product.name}
-                              </p>
-                              <p className="text-xs text-[#666666] font-semibold">
-                                {product.count}
-                              </p>
-                            </div>
+                  {/* Body Content */}
+                  <div className="p-8 flex-1 bg-white">
+                    <div className="flex items-center justify-between mb-6">
+                      <span className="text-xs font-black text-[#C8A96A] bg-[#C8A96A]/10 px-4 py-1.5 rounded-full uppercase tracking-wider">
+                        {collection.items} Products
+                      </span>
+                    </div>
+
+                    <div className="space-y-3 mb-8">
+                      {collection.products.slice(0, 4).map((product, pIdx) => (
+                        <div key={pIdx} className="flex items-center justify-between group/item">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-1.5 h-1.5 rounded-full bg-[#C8A96A]/50 group-hover/item:bg-[#C8A96A] group-hover/item:scale-150 transition-all"></div>
+                            <span className="font-bold text-[#444444] group-hover/item:text-[#0B1E36] transition-colors">{product.name}</span>
                           </div>
-                        ))}
-                      </div>
-
-                      {/* Browse Button */}
-                      <Link
-                        to={collection.path}
-                        className="mt-8 inline-flex items-center space-x-2 text-[#0B1E36] hover:text-[#C8A96A] font-black text-sm uppercase tracking-wider group transition-colors"
-                      >
-                        <span>View All {collection.name}</span>
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Link>
+                          <span className="text-xs font-bold text-[#999999] bg-gray-100 px-2 py-1 rounded-md">{product.count}</span>
+                        </div>
+                      ))}
+                      {collection.products.length > 4 && (
+                        <div className="text-sm font-bold text-[#C8A96A] pl-4 italic">
+                          + {collection.products.length - 4} more categories
+                        </div>
+                      )}
                     </div>
+
+                    {/* Action Button */}
+                    <Link 
+                      to={collection.path} 
+                      className="w-full flex items-center justify-center space-x-2 py-4 bg-[#F5F1EA] group-hover:bg-[#0B1E36] text-[#0B1E36] group-hover:text-white font-black rounded-xl transition-all duration-300"
+                    >
+                      <span className="uppercase tracking-wider text-sm">Explore Collection</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-2 transition-transform" />
+                    </Link>
                   </div>
                 </div>
               ))}

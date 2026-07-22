@@ -182,8 +182,8 @@ const ProductDetail = () => {
     ],
     curtains: [
       { id: 101, name: 'Premium Blackout Curtain', price: 'AED 250', image: '/images/blackout-curtains/blackout-1.jpg', type: 'blackout', sizePrices: { '100cm': 250, '150cm': 350, '200cm': 450, '250cm': 550, '300cm': 650 } },
-      { id: 301, name: 'Classic White Sheer Curtain', price: 'AED 150', image: '/images/sheer-curtains/sheer-1.jpg', type: 'sheer', sizePrices: { '100cm': 150, '150cm': 200, '200cm': 250, '250cm': 300, '300cm': 350 } },
-      { id: 5, name: 'Luxurious Velvet Curtains', price: 'AED 400', image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60', type: 'velvet', sizePrices: { '100cm': 400, '150cm': 500, '200cm': 600, '250cm': 700, '300cm': 800 } },
+      { id: 301, name: 'American Style Sheer Curtain', price: 'AED 550', image: '/images/sheer-curtains/sheer-1.jpg', type: 'sheer', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 } },
+      { id: 5, name: 'Luxurious Velvet & blackout', price: 'AED 400', image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60', type: 'velvet', sizePrices: { '100cm': 400, '150cm': 500, '200cm': 600, '250cm': 700, '300cm': 800 } },
       { id: 1101, name: 'Blackout & Sheer Combination', price: 'AED 350', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', type: 'blackout-sheer', sizePrices: { '100cm': 350, '150cm': 450, '200cm': 550, '250cm': 650, '300cm': 750 } }
     ],
     mattresses: [
@@ -211,9 +211,22 @@ const ProductDetail = () => {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Product Image */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <div className="bg-gradient-to-br from-amber-100 to-amber-50 h-96 rounded-lg flex items-center justify-center mb-6 overflow-hidden">
-              <img src={mainImage} alt={product.name} className="w-full h-full object-contain" />
+          <div className="bg-white rounded-xl p-8 shadow-2xl relative overflow-hidden group border border-gray-100">
+            <div className="bg-gradient-to-br from-[#F5F1EA] to-white h-[400px] md:h-[500px] rounded-2xl flex items-center justify-center mb-6 overflow-hidden relative">
+              <img src={mainImage} alt={product.name} className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700" />
+              
+              {/* Professional Text Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E36]/80 via-transparent to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                <div className="transform translate-y-4 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-500">
+                  <span className="bg-[#C8A96A] text-white px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest shadow-lg mb-3 inline-block">
+                    Premium Collection
+                  </span>
+                  <h2 className="text-white text-3xl md:text-4xl font-black drop-shadow-md mb-2">{product.name}</h2>
+                  <p className="text-[#F5F1EA] font-medium text-lg drop-shadow-sm flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-[#C8A96A]"></span> Size Customizable
+                  </p>
+                </div>
+              </div>
             </div>
             {productImages.length > 1 && (
               <div className="grid grid-cols-4 gap-3">

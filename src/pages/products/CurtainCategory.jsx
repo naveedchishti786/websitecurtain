@@ -31,149 +31,119 @@ const CurtainCategory = () => {
     sheer: [
       {
         id: 301,
-        name: 'Classic White Sheer Curtain',
+        name: 'American Style Sheer curtain',
         type: 'sheer',
-        price: 'AED 150',
+        price: 'AED 550',
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 },
         image: '/images/sheer-curtains/sheer-1.jpg',
         rating: 4.8,
-        description: 'Elegant, Soft Light Filtering',
-        colors: ['White', 'Cream']
-      },
-      {
-        id: 302,
-        name: 'Flowing White Sheer',
-        type: 'sheer',
-        price: 'AED 160',
-        image: '/images/sheer-curtains/sheer-2.jpg',
-        rating: 4.7,
-        description: 'Smooth Flowing Fabric, Soft Touch',
-        colors: ['White']
-      },
-      {
-        id: 303,
-        name: 'Pleated White Sheer',
-        type: 'sheer',
-        price: 'AED 175',
-        image: '/images/sheer-curtains/sheer-3.jpg',
-        rating: 4.9,
-        description: 'Perfect Pleats for a Modern Look',
+        description: 'Classic American style sheer curtain for elegant living spaces.',
         colors: ['White', 'Off-White']
       },
       {
-        id: 304,
-        name: 'Luxury Track Sheer',
+        id: 302,
+        name: 'American Style Sheer curtain',
         type: 'sheer',
-        price: 'AED 180',
+        price: 'AED 550',
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 },
+        image: '/images/sheer-curtains/sheer-2.jpg',
+        rating: 4.9,
+        description: 'Premium light filtering sheer with American aesthetic.',
+        colors: ['White', 'Off-White']
+      },
+      {
+        id: 303,
+        name: 'Wavy Style Sheer curtain',
+        type: 'sheer',
+        price: 'AED 650',
+        sizePrices: { '100cm': 217, '150cm': 325, '200cm': 433, '250cm': 542, '300cm': 650 },
+        image: '/images/sheer-curtains/sheer-3.jpg',
+        rating: 4.7,
+        description: 'Modern wavy folds that add texture and volume to your room.',
+        colors: ['White', 'Cream']
+      },
+      {
+        id: 304,
+        name: 'Wavy Style Sheer curtain',
+        type: 'sheer',
+        price: 'AED 650',
+        sizePrices: { '100cm': 217, '150cm': 325, '200cm': 433, '250cm': 542, '300cm': 650 },
         image: '/images/sheer-curtains/sheer-4.jpg',
-        rating: 4.6,
-        description: 'Smooth Track System Integration',
-        colors: ['White']
+        rating: 4.8,
+        description: 'Beautiful flowing wavy sheer fabric for a contemporary look.',
+        colors: ['White', 'Cream']
       },
       {
         id: 305,
-        name: 'Grommet Style Sheer',
+        name: 'American Style Sable Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 150',
-        image: '/images/sheer-curtains/sheer-5.jpg',
-        rating: 4.5,
-        description: 'Easy to Hang, Classic Grommets',
-        colors: ['Cream', 'White']
+        price: 'AED 580',
+        sizePrices: { '100cm': 193, '150cm': 290, '200cm': 387, '250cm': 483, '300cm': 580 },
+        image: '/images/sheer-curtains/sheer-7.jpg',
+        rating: 4.9,
+        description: 'Luxurious Sable fabric sheer with classic American design.',
+        colors: ['Natural', 'Beige']
       },
       {
         id: 306,
-        name: 'Modern Eyelet Sheer',
+        name: 'American Style Sable Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 155',
-        image: '/images/sheer-curtains/sheer-6.jpg',
+        price: 'AED 580',
+        sizePrices: { '100cm': 193, '150cm': 290, '200cm': 387, '250cm': 483, '300cm': 580 },
+        image: '/images/sheer-curtains/sheer-8.jpg',
         rating: 4.8,
-        description: 'Sleek Eyelet Rings, Minimalist',
-        colors: ['White', 'Silver']
+        description: 'High-quality Sable fabric providing a warm glow to your interior.',
+        colors: ['Natural', 'Beige']
       },
       {
         id: 307,
-        name: 'Beige Textured Sheer',
+        name: 'Wavy Style Sable Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 190',
-        image: '/images/sheer-curtains/sheer-7.jpg',
-        rating: 4.9,
-        description: 'Warm Beige Tones with Texture',
-        colors: ['Beige', 'Sand']
+        price: 'AED 680',
+        sizePrices: { '100cm': 227, '150cm': 340, '200cm': 453, '250cm': 567, '300cm': 680 },
+        image: '/images/sheer-curtains/sheer-9.jpg',
+        rating: 5.0,
+        description: 'Wavy folds combined with premium Sable fabric for ultimate elegance.',
+        colors: ['Natural', 'Beige']
       },
       {
         id: 308,
-        name: 'Warm Glow Sheer',
+        name: 'American Style Linen Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 185',
-        image: '/images/sheer-curtains/sheer-8.jpg',
-        rating: 4.7,
-        description: 'Filters Sunlight Beautifully',
-        colors: ['Cream', 'Beige']
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/sheer-curtains/sheer-11.jpg',
+        rating: 4.9,
+        description: 'Organic linen fabric sheer with a structured American style.',
+        colors: ['Linen White', 'Natural']
       },
       {
         id: 309,
-        name: 'Contemporary Ripple Fold Sheer',
+        name: 'American Style Linen Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 210',
-        image: '/images/sheer-curtains/sheer-9.jpg',
-        rating: 5.0,
-        description: 'Consistent S-Curve Ripple Fold',
-        colors: ['Off-White']
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/sheer-curtains/sheer-12.jpg',
+        rating: 4.8,
+        description: 'Textured linen sheer that filters light beautifully.',
+        colors: ['Linen White', 'Natural']
       },
       {
         id: 310,
-        name: 'Classic Beige Grommet',
+        name: 'Wavy Style Linen Fabric Sheer curtain',
         type: 'sheer',
-        price: 'AED 160',
-        image: '/images/sheer-curtains/sheer-10.jpg',
-        rating: 4.6,
-        description: 'Warm, Inviting Sheer Fabric',
-        colors: ['Beige']
-      },
-      {
-        id: 311,
-        name: 'Textured Stripe Sheer',
-        type: 'sheer',
-        price: 'AED 200',
-        image: '/images/sheer-curtains/sheer-11.jpg',
-        rating: 4.8,
-        description: 'Subtle Vertical Texture Lines',
-        colors: ['Cream', 'White']
-      },
-      {
-        id: 312,
-        name: 'Linen Blend Sheer',
-        type: 'sheer',
-        price: 'AED 220',
-        image: '/images/sheer-curtains/sheer-12.jpg',
-        rating: 4.9,
-        description: 'Natural Linen Feel and Look',
-        colors: ['Natural', 'Off-White']
-      },
-      {
-        id: 313,
-        name: 'Linen Grommet Sheer',
-        type: 'sheer',
-        price: 'AED 175',
-        image: '/images/sheer-curtains/sheer-13.jpg',
-        rating: 4.7,
-        description: 'Rustic Charm with Grommet Top',
-        colors: ['Natural']
-      },
-      {
-        id: 314,
-        name: 'Grand Wide Sheer',
-        type: 'sheer',
-        price: 'AED 250',
+        price: 'AED 749',
+        sizePrices: { '100cm': 250, '150cm': 375, '200cm': 499, '250cm': 624, '300cm': 749 },
         image: '/images/sheer-curtains/sheer-14.jpg',
         rating: 5.0,
-        description: 'Perfect for Large Windows & Sliding Doors',
-        colors: ['White', 'Cream']
+        description: 'The pinnacle of luxury: wavy folds in pure linen fabric.',
+        colors: ['Linen White', 'Natural']
       }
     ],
     velvet: [
       {
         id: 5,
-        name: 'Luxurious Velvet Curtains',
+        name: 'Luxurious Velvet & blackout',
         type: 'velvet',
         price: 'AED 400',
         image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60',
@@ -183,7 +153,7 @@ const CurtainCategory = () => {
       },
       {
         id: 6,
-        name: 'Royal Velvet Collection',
+        name: 'Royal Velvet & blackout',
         type: 'velvet',
         price: 'AED 450',
         image: 'https://images.unsplash.com/photo-1600607688969-a5bfcd64bd28?w=800&auto=format&fit=crop&q=60',
@@ -195,7 +165,7 @@ const CurtainCategory = () => {
     silk: [
       {
         id: 7,
-        name: 'Pure Silk Curtains',
+        name: 'Pure Silk & blackout',
         type: 'silk',
         price: 'AED 500',
         image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=60',
@@ -205,7 +175,7 @@ const CurtainCategory = () => {
       },
       {
         id: 8,
-        name: 'Silk Blend Premium',
+        name: 'Silk Blend & blackout',
         type: 'silk',
         price: 'AED 550',
         image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60',
@@ -216,15 +186,82 @@ const CurtainCategory = () => {
     ],
     linen: [
       {
-        id: 9,
-        name: 'Natural Linen Curtains',
+        id: 901,
+        name: 'Linen Only Blackout Curtain',
         type: 'linen',
-        price: 'AED 220',
-        image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop&q=60',
-        rating: 4.7,
-        description: 'Eco-Friendly, Natural Texture',
-        colors: ['Natural', 'Light Brown', 'Taupe']
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+        image: '/images/linen-blackout-curtains/linen-1.jpg',
+        rating: 4.8,
+        description: 'Premium linen blackout curtain for complete privacy.',
+        colors: ['Linen', 'Taupe']
       },
+      {
+        id: 902,
+        name: 'Linen Only Blackout Curtain',
+        type: 'linen',
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+        image: '/images/linen-blackout-curtains/linen-2.jpg',
+        rating: 4.9,
+        description: 'Natural texture linen with 100% light blocking.',
+        colors: ['Linen', 'Taupe']
+      },
+      {
+        id: 903,
+        name: 'Linen Only Blackout Curtain',
+        type: 'linen',
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+        image: '/images/linen-blackout-curtains/linen-3.jpg',
+        rating: 4.8,
+        description: 'Eco-friendly linen fabric combined with blackout lining.',
+        colors: ['Linen', 'Taupe']
+      },
+      {
+        id: 904,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/linen-blackout-curtains/linen-4.jpg',
+        rating: 5.0,
+        description: 'Elegant wavy folds with premium linen blackout fabric.',
+        colors: ['Natural', 'Beige']
+      },
+      {
+        id: 905,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/linen-blackout-curtains/linen-5.jpg',
+        rating: 4.9,
+        description: 'Contemporary wavy design providing maximum light control.',
+        colors: ['Natural', 'Beige']
+      },
+      {
+        id: 906,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/linen-blackout-curtains/linen-6.jpg',
+        rating: 4.8,
+        description: 'Beautiful texture and flawless drape in natural linen.',
+        colors: ['Natural', 'Beige']
+      },
+      {
+        id: 907,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+        image: '/images/linen-blackout-curtains/linen-7.jpg',
+        rating: 5.0,
+        description: 'The pinnacle of luxury: wavy linen blackout curtains.',
+        colors: ['Natural', 'Beige']
+      }
     ],
     motorized: [
       {
@@ -381,7 +418,11 @@ const CurtainCategory = () => {
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              {filter === 'blackout-sheer' ? 'Blackout & Sheer' : filter.charAt(0).toUpperCase() + filter.slice(1)}
+              {filter === 'blackout-sheer' ? 'Blackout & Sheer' : 
+               filter === 'velvet' ? 'Velvet & blackout' :
+               filter === 'silk' ? 'Silk & blackout' :
+               filter === 'linen' ? 'Linen & blackout' :
+               filter.charAt(0).toUpperCase() + filter.slice(1)}
             </button>
           ))}
         </div>
@@ -390,9 +431,22 @@ const CurtainCategory = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((product) => (
             <div key={product.id} className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
-              {/* Image */}
-              <div className="relative h-56 bg-gray-100 overflow-hidden">
-                <img src={product.image} alt={product.name} className="w-full h-full object-contain object-center group-hover:scale-110 transition-transform duration-500" />
+              {/* Image Container */}
+              <div className="relative overflow-hidden h-72 bg-[#F5F1EA] group-hover:shadow-inner">
+                <img src={product.image} alt={product.name} className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" />
+                
+                {/* Overlay Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E36]/90 via-[#0B1E36]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                
+                {/* Overlay Text Content */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end">
+                  <span className="text-[#C8A96A] text-xs font-black uppercase tracking-widest mb-1 shadow-sm">
+                    Customizable
+                  </span>
+                  <h4 className="text-white font-bold text-lg leading-tight shadow-sm drop-shadow-md">
+                    {product.name}
+                  </h4>
+                </div>
               </div>
 
               {/* Content */}
