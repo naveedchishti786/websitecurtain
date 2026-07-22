@@ -386,94 +386,139 @@ const FurnitureCategory = () => {
     'tv-units': [
       {
         id: 25,
-        name: 'Modern TV Unit - Wall Mounted',
+        name: 'Modern TV Unit 1',
         type: 'tv-units',
-        price: 'AED 1,499',
-        priceNum: 1499,
-        image: '📺',
+        price: 'AED 1,150',
+        priceNum: 1150,
+        image: '/images/tv-units/tv-unit-1.jpg',
         rating: 4.8,
-        reviews: 234,
-        description: 'Sleek wall-mounted TV unit',
-        colors: ['Black', 'White', 'Grey', 'Walnut'],
-        material: 'MDF + Metal',
-        dimensions: '180cm x 40cm x 15cm',
-        features: ['Wall Mounted', 'Space Saving', 'Cable Management', 'Modern Design']
+        reviews: 205,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
       },
       {
         id: 26,
-        name: 'TV Stand with Storage',
+        name: 'Modern TV Unit 2',
         type: 'tv-units',
-        price: 'AED 1,199',
-        priceNum: 1199,
-        image: '📺',
-        rating: 4.7,
-        reviews: 201,
-        description: 'TV stand with shelves and storage',
-        colors: ['Natural', 'White', 'Black', 'Brown'],
-        material: 'Wood',
-        dimensions: '160cm x 45cm x 60cm',
-        features: ['Storage Shelves', 'Open Design', 'Easy Assembly', 'Versatile']
+        price: 'AED 1,300',
+        priceNum: 1300,
+        image: '/images/tv-units/tv-unit-2.jpg',
+        rating: 4.8,
+        reviews: 210,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
       },
       {
         id: 27,
-        name: 'Luxury TV Unit - High Gloss',
+        name: 'Modern TV Unit 3',
         type: 'tv-units',
-        price: 'AED 2,299',
-        priceNum: 2299,
-        image: '📺',
-        rating: 4.9,
-        reviews: 289,
-        description: 'Premium high gloss TV unit',
-        colors: ['Black', 'White', 'Walnut'],
-        material: 'MDF + High Gloss Finish',
-        dimensions: '220cm x 50cm x 70cm',
-        features: ['High Gloss Finish', 'LED Lighting', 'Multiple Storage', 'Premium Look']
+        price: 'AED 1,450',
+        priceNum: 1450,
+        image: '/images/tv-units/tv-unit-3.jpg',
+        rating: 4.8,
+        reviews: 215,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
       },
       {
         id: 28,
-        name: 'Corner TV Unit',
+        name: 'Modern TV Unit 4',
         type: 'tv-units',
-        price: 'AED 1,399',
-        priceNum: 1399,
-        image: '📺',
-        rating: 4.7,
-        reviews: 167,
-        description: 'Corner mounted TV unit',
-        colors: ['Natural', 'White', 'Dark Brown'],
-        material: 'Solid Wood',
-        dimensions: '120cm x 120cm x 65cm',
-        features: ['Corner Design', 'Space Efficient', 'Sturdy', 'Modern Style']
+        price: 'AED 1,600',
+        priceNum: 1600,
+        image: '/images/tv-units/tv-unit-4.jpg',
+        rating: 4.8,
+        reviews: 220,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
       },
       {
         id: 29,
-        name: 'Floating TV Unit',
+        name: 'Modern TV Unit 5',
         type: 'tv-units',
-        price: 'AED 1,699',
-        priceNum: 1699,
-        image: '📺',
+        price: 'AED 1,750',
+        priceNum: 1750,
+        image: '/images/tv-units/tv-unit-5.jpg',
         rating: 4.8,
-        reviews: 223,
-        description: 'Floating design TV unit',
-        colors: ['White', 'Black', 'Grey'],
-        material: 'MDF + Metal Brackets',
-        dimensions: '150cm x 40cm x 15cm',
-        features: ['Floating Design', 'Minimalist', 'Easy Installation', 'Modern']
+        reviews: 225,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
       },
       {
         id: 30,
-        name: 'TV Unit with Glass Doors',
+        name: 'Modern TV Unit 6',
         type: 'tv-units',
-        price: 'AED 1,899',
-        priceNum: 1899,
-        image: '📺',
-        rating: 4.9,
-        reviews: 267,
-        description: 'TV unit with glass door storage',
-        colors: ['Walnut', 'Oak', 'White'],
-        material: 'Wood + Glass',
-        dimensions: '180cm x 50cm x 70cm',
-        features: ['Glass Doors', 'Elegant Design', 'Display Space', 'Protective']
-      }
+        price: 'AED 1,900',
+        priceNum: 1900,
+        image: '/images/tv-units/tv-unit-6.jpg',
+        rating: 4.8,
+        reviews: 230,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
+      },
+      {
+        id: 31,
+        name: 'Modern TV Unit 7',
+        type: 'tv-units',
+        price: 'AED 2,050',
+        priceNum: 2050,
+        image: '/images/tv-units/tv-unit-7.jpg',
+        rating: 4.8,
+        reviews: 235,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
+      },
+      {
+        id: 32,
+        name: 'Modern TV Unit 8',
+        type: 'tv-units',
+        price: 'AED 2,200',
+        priceNum: 2200,
+        image: '/images/tv-units/tv-unit-8.jpg',
+        rating: 4.8,
+        reviews: 240,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
+      },
+      {
+        id: 33,
+        name: 'Modern TV Unit 9',
+        type: 'tv-units',
+        price: 'AED 2,350',
+        priceNum: 2350,
+        image: '/images/tv-units/tv-unit-9.jpg',
+        rating: 4.8,
+        reviews: 245,
+        description: 'Sleek and modern TV unit with storage.',
+        colors: ['Walnut', 'White', 'Black'],
+        material: 'MDF + Wood',
+        dimensions: 'Custom',
+        features: ['Modern Design', 'Storage Shelves', 'Cable Management', 'Durable']
+      },
     ],
     'office': [
       {
@@ -781,8 +826,12 @@ const FurnitureCategory = () => {
                         className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group"
                       >
                         {/* Image */}
-                        <div className="relative h-48 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center text-6xl overflow-hidden group-hover:scale-110 transition-transform">
-                          {product.image}
+                        <div className="relative h-48 bg-gradient-to-br from-amber-100 to-amber-50 flex items-center justify-center overflow-hidden group-hover:scale-110 transition-transform">
+                          {product.image.startsWith('/') ? (
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <span className="text-6xl">{product.image}</span>
+                          )}
                           <button
                             onClick={() => handleAddToWishlist(product)}
                             className={`absolute top-3 right-3 p-2 rounded-full transition-all ${
@@ -884,8 +933,12 @@ const FurnitureCategory = () => {
                   {filteredProducts.length > 0 ? (
                     filteredProducts.map((product) => (
                       <div key={product.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all flex gap-6">
-                        <div className="w-40 h-40 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg flex items-center justify-center text-5xl flex-shrink-0">
-                          {product.image}
+                        <div className="w-40 h-40 bg-gradient-to-br from-amber-100 to-amber-50 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          {product.image.startsWith('/') ? (
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <span className="text-5xl">{product.image}</span>
+                          )}
                         </div>
 
                         <div className="flex-grow">

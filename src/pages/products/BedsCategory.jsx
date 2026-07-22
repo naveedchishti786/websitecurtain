@@ -13,8 +13,108 @@ const BedsCategory = () => {
   const [sortBy, setSortBy] = useState('popular');
   const [firmness, setFirmness] = useState('all');
 
+  const newBedsData = {
+    single: Array.from({ length: 5 }, (_, i) => ({
+      id: 3001 + i,
+      name: `Premium Single Bed ${i + 1}`,
+      type: 'single',
+      price: `AED ${899 + i * 50}`,
+      priceNum: 899 + i * 50,
+      image: `/images/beds-collection/bed-${i + 1}.jpg`,
+      rating: 4.8,
+      reviews: 120,
+      description: 'Luxurious single bed design',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: '90cm x 200cm',
+      features: ['Premium Finish', 'Comfortable', 'Durable'],
+      warranty: '5 Years'
+    })),
+    double: Array.from({ length: 5 }, (_, i) => ({
+      id: 3101 + i,
+      name: `Premium Double Bed ${i + 1}`,
+      type: 'double',
+      price: `AED ${1299 + i * 50}`,
+      priceNum: 1299 + i * 50,
+      image: `/images/beds-collection/bed-${i + 6}.jpg`,
+      rating: 4.8,
+      reviews: 120,
+      description: 'Luxurious double bed design',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: '140cm x 200cm',
+      features: ['Premium Finish', 'Comfortable', 'Durable'],
+      warranty: '5 Years'
+    })),
+    queen: Array.from({ length: 5 }, (_, i) => ({
+      id: 3201 + i,
+      name: `Premium Queen Bed ${i + 1}`,
+      type: 'queen',
+      price: `AED ${1699 + i * 50}`,
+      priceNum: 1699 + i * 50,
+      image: `/images/beds-collection/bed-${i + 11}.jpg`,
+      rating: 4.8,
+      reviews: 120,
+      description: 'Luxurious queen bed design',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: '160cm x 200cm',
+      features: ['Premium Finish', 'Comfortable', 'Durable'],
+      warranty: '5 Years'
+    })),
+    king: Array.from({ length: 6 }, (_, i) => ({
+      id: 3301 + i,
+      name: `Premium King Bed ${i + 1}`,
+      type: 'king',
+      price: `AED ${2099 + i * 50}`,
+      priceNum: 2099 + i * 50,
+      image: `/images/beds-collection/bed-${i + 16}.jpg`,
+      rating: 4.8,
+      reviews: 120,
+      description: 'Luxurious king bed design',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: '180cm x 200cm',
+      features: ['Premium Finish', 'Comfortable', 'Durable'],
+      warranty: '5 Years'
+    })),
+    'super-king': Array.from({ length: 6 }, (_, i) => ({
+      id: 3401 + i,
+      name: `Premium Super King Bed ${i + 1}`,
+      type: 'super-king',
+      price: `AED ${2599 + i * 50}`,
+      priceNum: 2599 + i * 50,
+      image: `/images/beds-collection/bed-${i + 22}.jpg`,
+      rating: 4.8,
+      reviews: 120,
+      description: 'Luxurious super king bed design',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: '200cm x 200cm',
+      features: ['Premium Finish', 'Comfortable', 'Durable'],
+      warranty: '5 Years'
+    })),
+    hydraulic: Array.from({ length: 5 }, (_, i) => ({
+      id: 3501 + i,
+      name: `Premium Hydraulic Storage Bed ${i + 1}`,
+      type: 'hydraulic',
+      price: `AED ${1899 + i * 50}`,
+      priceNum: 1899 + i * 50,
+      image: `/images/beds-collection/bed-${i + 28}.jpg`,
+      rating: 4.9,
+      reviews: 150,
+      description: 'Luxurious bed with smart hydraulic storage lift mechanism.',
+      colors: ['Customizable'],
+      material: 'Premium Materials',
+      dimensions: 'Multiple Sizes Available',
+      features: ['Hydraulic Lift', 'Smart Storage', 'Premium Finish', 'Durable'],
+      warranty: '5 Years'
+    }))
+  };
+
   // Comprehensive Beds Data - FIXED
   const bedsData = {
+    ...newBedsData,
     'king-size': [
       {
         id: 1,
@@ -22,7 +122,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 2,499',
         priceNum: 2499,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-1.jpg',
         rating: 4.9,
         reviews: 234,
         description: 'Premium upholstered king size bed with storage',
@@ -38,7 +138,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 2,799',
         priceNum: 2799,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-2.jpg',
         rating: 4.8,
         reviews: 189,
         description: 'Contemporary design with low platform style',
@@ -54,7 +154,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 3,299',
         priceNum: 3299,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-3.jpg',
         rating: 5.0,
         reviews: 312,
         description: 'Premium bed with integrated LED lighting',
@@ -70,7 +170,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 1,999',
         priceNum: 1999,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-4.jpg',
         rating: 4.7,
         reviews: 156,
         description: 'Traditional wooden king size bed',
@@ -86,7 +186,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 2,999',
         priceNum: 2999,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-5.jpg',
         rating: 4.9,
         reviews: 267,
         description: 'King bed with mirror design headboard',
@@ -102,7 +202,7 @@ const BedsCategory = () => {
         type: 'king-size',
         price: 'AED 1,599',
         priceNum: 1599,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-6.jpg',
         rating: 4.6,
         reviews: 134,
         description: 'Affordable king bed without compromise',
@@ -120,7 +220,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 1,899',
         priceNum: 1899,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-7.jpg',
         rating: 4.8,
         reviews: 267,
         description: 'Elegant queen size bed with fabric upholstery',
@@ -136,7 +236,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 1,599',
         priceNum: 1599,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-8.jpg',
         rating: 4.7,
         reviews: 198,
         description: 'Sleek modern platform bed in queen size',
@@ -152,7 +252,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 1,699',
         priceNum: 1699,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-9.jpg',
         rating: 4.9,
         reviews: 245,
         description: 'Queen bed with integrated storage drawers',
@@ -168,7 +268,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 2,299',
         priceNum: 2299,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-10.jpg',
         rating: 4.9,
         reviews: 289,
         description: 'Premium leather queen size bed',
@@ -184,7 +284,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 1,999',
         priceNum: 1999,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-11.jpg',
         rating: 4.8,
         reviews: 223,
         description: 'Queen bed with LED lighting system',
@@ -200,7 +300,7 @@ const BedsCategory = () => {
         type: 'queen-size',
         price: 'AED 1,299',
         priceNum: 1299,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-12.jpg',
         rating: 4.6,
         reviews: 156,
         description: 'Affordable queen bed with good quality',
@@ -218,7 +318,7 @@ const BedsCategory = () => {
         type: 'single',
         price: 'AED 699',
         priceNum: 699,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-13.jpg',
         rating: 4.6,
         reviews: 134,
         description: 'Traditional single bed in solid wood',
@@ -234,7 +334,7 @@ const BedsCategory = () => {
         type: 'single',
         price: 'AED 599',
         priceNum: 599,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-14.jpg',
         rating: 4.7,
         reviews: 167,
         description: 'Contemporary single platform bed',
@@ -250,7 +350,7 @@ const BedsCategory = () => {
         type: 'single',
         price: 'AED 799',
         priceNum: 799,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-15.jpg',
         rating: 4.8,
         reviews: 201,
         description: 'Single bed with storage drawers underneath',
@@ -266,7 +366,7 @@ const BedsCategory = () => {
         type: 'single',
         price: 'AED 899',
         priceNum: 899,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-16.jpg',
         rating: 4.9,
         reviews: 223,
         description: 'Luxury single bed with fabric upholstery',
@@ -284,7 +384,7 @@ const BedsCategory = () => {
         type: 'bunk',
         price: 'AED 1,299',
         priceNum: 1299,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-17.jpg',
         rating: 4.8,
         reviews: 289,
         description: 'Sturdy wooden bunk bed for two',
@@ -300,7 +400,7 @@ const BedsCategory = () => {
         type: 'bunk',
         price: 'AED 1,099',
         priceNum: 1099,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-18.jpg',
         rating: 4.7,
         reviews: 178,
         description: 'Sleek metal bunk bed design',
@@ -316,7 +416,7 @@ const BedsCategory = () => {
         type: 'bunk',
         price: 'AED 1,699',
         priceNum: 1699,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-19.jpg',
         rating: 4.9,
         reviews: 312,
         description: 'Bunk bed with integrated study desk',
@@ -332,7 +432,7 @@ const BedsCategory = () => {
         type: 'bunk',
         price: 'AED 1,999',
         priceNum: 1999,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-20.jpg',
         rating: 5.0,
         reviews: 267,
         description: 'Luxury bunk bed with premium materials',
@@ -350,7 +450,7 @@ const BedsCategory = () => {
         type: 'storage',
         price: 'AED 2,199',
         priceNum: 2199,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-21.jpg',
         rating: 4.9,
         reviews: 245,
         description: 'Large queen bed with extensive storage',
@@ -366,7 +466,7 @@ const BedsCategory = () => {
         type: 'storage',
         price: 'AED 2,699',
         priceNum: 2699,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-22.jpg',
         rating: 4.8,
         reviews: 201,
         description: 'King size bed with maximum storage capacity',
@@ -384,7 +484,7 @@ const BedsCategory = () => {
         type: 'kids',
         price: 'AED 599',
         priceNum: 599,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-23.jpg',
         rating: 4.8,
         reviews: 234,
         description: 'Fun and colorful bed for children',
@@ -400,7 +500,7 @@ const BedsCategory = () => {
         type: 'kids',
         price: 'AED 799',
         priceNum: 799,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-24.jpg',
         rating: 4.9,
         reviews: 312,
         description: 'Themed character bed for kids',
@@ -418,7 +518,7 @@ const BedsCategory = () => {
         type: 'frames',
         price: 'AED 1,999',
         priceNum: 1999,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-25.jpg',
         rating: 4.8,
         reviews: 201,
         description: 'Electric adjustable bed frame',
@@ -434,7 +534,7 @@ const BedsCategory = () => {
         type: 'frames',
         price: 'AED 499',
         priceNum: 499,
-        image: '🛏️',
+        image: '/images/beds-collection/bed-26.jpg',
         rating: 4.6,
         reviews: 167,
         description: 'Simple and sturdy bed frame',
@@ -512,7 +612,7 @@ const BedsCategory = () => {
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-900 mb-3">Bed Type</h4>
                   <div className="space-y-2">
-                    {['all', 'king-size', 'queen-size', 'single', 'bunk', 'storage', 'kids', 'frames'].map((filter) => (
+                    {['all', 'single', 'double', 'queen', 'king', 'super-king', 'hydraulic', 'bunk', 'storage', 'kids', 'frames'].map((filter) => (
                       <button
                         key={filter}
                         onClick={() => setSelectedFilter(filter)}
@@ -597,8 +697,12 @@ const BedsCategory = () => {
                       key={product.id}
                       className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all overflow-hidden"
                     >
-                      <div className="bg-gradient-to-br from-blue-100 to-blue-50 h-48 flex items-center justify-center text-6xl">
-                        {product.image}
+                      <div className="h-48 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center text-6xl relative group">
+                        {product.image.startsWith('/') || product.image.startsWith('http') ? (
+                          <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                        ) : (
+                          <span className="group-hover:scale-110 transition-transform duration-500">{product.image}</span>
+                        )}
                       </div>
                       <div className="p-6">
                         <h3 className="text-lg font-bold text-gray-800 mb-2">{product.name}</h3>

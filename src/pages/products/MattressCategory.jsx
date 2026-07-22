@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { Star, Heart, ShoppingCart, Filter, Grid, List, Truck, Shield, RotateCcw, Zap } from 'lucide-react';
+import { Star, Heart, ShoppingCart, Filter, Grid, List, Truck, Shield, RotateCcw, Zap, Activity } from 'lucide-react';
 
 const MattressCategory = () => {
   const { type } = useParams();
@@ -15,664 +15,183 @@ const MattressCategory = () => {
 
   // Comprehensive Mattress Data
   const mattressData = {
-    'memory-foam': [
+    medical: [
       {
-        id: 1,
-        name: 'Premium Memory Foam Mattress - Queen',
-        type: 'memory-foam',
-        price: 'AED 1,899',
-        priceNum: 1899,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 456,
-        description: 'Gel-infused memory foam with orthopedic support',
-        colors: ['White', 'Grey', 'Cream'],
-        material: 'Memory Foam + Gel',
-        dimensions: '160cm x 200cm x 30cm',
-        firmness: 'Medium',
-        features: ['Gel-Infused', 'Pressure Relief', 'Temperature Control', 'Hypoallergenic'],
-        benefits: ['Reduces Body Pressure', 'Perfect Spinal Alignment', 'Motion Isolation', 'Durability 10+ Years'],
-        warranty: '10 Years'
-      },
-      {
-        id: 2,
-        name: 'Luxury Memory Foam - King Size',
-        type: 'memory-foam',
-        price: 'AED 2,499',
-        priceNum: 2499,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 523,
-        description: 'Premium gel memory foam with luxury quilting',
-        colors: ['White', 'Grey', 'Beige'],
-        material: 'Premium Memory Foam + Gel',
-        dimensions: '200cm x 180cm x 32cm',
-        firmness: 'Medium-Firm',
-        features: ['Premium Gel', 'Luxury Quilting', 'CoolGel Technology', 'Anti-Microbial'],
-        benefits: ['Superior Comfort', 'Enhanced Cooling', 'Allergy Protection', 'Extended Lifespan'],
-        warranty: '10 Years'
-      },
-      {
-        id: 3,
-        name: 'Memory Foam Topper - Thin',
-        type: 'memory-foam',
-        price: 'AED 599',
-        priceNum: 599,
-        image: '🛌',
-        rating: 4.7,
-        reviews: 234,
-        description: 'Memory foam mattress topper for existing beds',
-        colors: ['White', 'Grey'],
-        material: 'Memory Foam',
-        dimensions: '160cm x 200cm x 5cm',
-        firmness: 'Medium',
-        features: ['Easy to Use', 'Removable Cover', 'Breathable', 'Budget Friendly'],
-        benefits: ['Instant Comfort', 'Better Sleep', 'Affordable Upgrade', 'Easy Maintenance'],
-        warranty: '3 Years'
-      },
-      {
-        id: 4,
-        name: 'Ultra-Thick Memory Foam - Single',
-        type: 'memory-foam',
-        price: 'AED 999',
-        priceNum: 999,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 312,
-        description: 'Extra thick memory foam for maximum comfort',
-        colors: ['White', 'Grey', 'Cream'],
-        material: 'Ultra-Thick Memory Foam',
-        dimensions: '90cm x 190cm x 35cm',
-        firmness: 'Medium-Soft',
-        features: ['Ultra-Thick', 'Extra Comfort', 'Pressure Relieving', 'Durable'],
-        benefits: ['Luxurious Feel', 'Pain Relief', 'Long Lifespan', 'Value for Money'],
-        warranty: '5 Years'
-      },
-      {
-        id: 5,
-        name: 'Cool Gel Memory Foam - Twin',
-        type: 'memory-foam',
-        price: 'AED 1,299',
-        priceNum: 1299,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 289,
-        description: 'Cooling gel memory foam perfect for hot sleepers',
-        colors: ['White', 'Light Blue'],
-        material: 'Cooling Gel Memory Foam',
-        dimensions: '120cm x 190cm x 28cm',
-        firmness: 'Medium',
-        features: ['Advanced Cooling', 'Gel Technology', 'Breathable', 'Temperature Regulating'],
-        benefits: ['Stay Cool Night', 'Sweat Reduction', 'Better Sleep Quality', 'Comfortable'],
-        warranty: '7 Years'
-      },
-      {
-        id: 6,
-        name: 'Budget Memory Foam - Double',
-        type: 'memory-foam',
-        price: 'AED 1,399',
-        priceNum: 1399,
-        image: '🛌',
+        id: 'med-10',
+        name: 'Medical Mattress (10-12cm)',
+        type: 'medical',
+        image: '/images/mattress-collection/mattress-1.jpg',
         rating: 4.6,
-        reviews: 178,
-        description: 'Affordable memory foam without compromising quality',
-        colors: ['White', 'Grey'],
-        material: 'Memory Foam',
-        dimensions: '140cm x 190cm x 25cm',
+        reviews: 85,
+        description: 'Basic medical mattress for firm orthopedic support.',
+        colors: ['White'],
+        material: 'High Density Medical Foam',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Firm',
+        features: ['Orthopedic Support', 'Breathable Cover', 'Firm Base'],
+        benefits: ['Reduces Back Pain', 'Better Posture', 'Durability'],
+        prices: {
+          '90*200cm': 325, '100*200cm': 365, '120*200cm': 395, '150*200cm': 425, '160*200cm': 455, '180*200cm': 485, '200*200cm': 515
+        },
+        priceNum: 325
+      },
+      {
+        id: 'med-15',
+        name: 'Medical Mattress (15cm)',
+        type: 'medical',
+        image: '/images/mattress-collection/mattress-1.jpg',
+        rating: 4.7,
+        reviews: 110,
+        description: 'Standard medical mattress providing excellent spinal alignment.',
+        colors: ['White'],
+        material: 'High Density Medical Foam',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Firm',
+        features: ['Orthopedic Support', 'Breathable Cover', 'Firm Base'],
+        benefits: ['Reduces Back Pain', 'Better Posture', 'Durability'],
+        prices: {
+          '90*200cm': 365, '100*200cm': 395, '120*200cm': 425, '150*200cm': 455, '160*200cm': 485, '180*200cm': 509, '200*200cm': 545
+        },
+        priceNum: 365
+      },
+      {
+        id: 'med-20',
+        name: 'Medical Mattress (20cm)',
+        type: 'medical',
+        image: '/images/mattress-collection/mattress-1.jpg',
+        rating: 4.8,
+        reviews: 145,
+        description: 'Advanced thick medical mattress for optimal support and comfort.',
+        colors: ['White'],
+        material: 'High Density Medical Foam',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Firm',
+        features: ['Orthopedic Support', 'Breathable Cover', 'Firm Base'],
+        benefits: ['Reduces Back Pain', 'Better Posture', 'Durability'],
+        prices: {
+          '90*200cm': 455, '100*200cm': 470, '120*200cm': 499, '150*200cm': 525, '160*200cm': 540, '180*200cm': 585, '200*200cm': 615
+        },
+        priceNum: 455
+      },
+      {
+        id: 'super-med-pillow',
+        name: 'Super Medical Mattress Pillow Top (20cm)',
+        type: 'medical',
+        image: '/images/mattress-collection/mattress-3.jpg',
+        rating: 4.9,
+        reviews: 210,
+        description: 'Premium medical mattress with an integrated pillow top for extra comfort.',
+        colors: ['White', 'Navy Border'],
+        material: 'Premium Medical Foam',
+        dimensions: 'Multiple Sizes Available',
         firmness: 'Medium-Firm',
-        features: ['Affordable', 'Good Support', 'Durable', 'Easy Care'],
-        benefits: ['Great Value', 'Comfortable Sleep', 'Long Lasting', 'Eco-Friendly'],
-        warranty: '5 Years'
+        features: ['Pillow Top', 'Orthopedic Grade', 'Premium Fabric'],
+        benefits: ['Zero Back Pain', 'Maximum Support', 'Long Lasting'],
+        prices: {
+          '90*200cm': 609, '100*200cm': 669, '120*200cm': 769, '150*200cm': 799, '160*200cm': 849, '180*200cm': 899, '200*200cm': 999
+        },
+        priceNum: 609
+      },
+      {
+        id: 'super-med-box',
+        name: 'Super Medical Mattress Box Top (20cm)',
+        type: 'medical',
+        image: '/images/mattress-collection/mattress-2.jpg',
+        rating: 4.9,
+        reviews: 185,
+        description: 'Luxury orthopedic super medical mattress with a structured box top.',
+        colors: ['White', 'Grey Border'],
+        material: 'Ultra Medical Foam',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Medium-Firm',
+        features: ['Box Top', 'Orthopedic Grade', 'Comfort Layer'],
+        benefits: ['Therapeutic Sleep', 'Optimal Posture', 'Premium Comfort'],
+        prices: {
+          '90*200cm': 609, '100*200cm': 669, '120*200cm': 769, '150*200cm': 799, '160*200cm': 849, '180*200cm': 899, '200*200cm': 999
+        },
+        priceNum: 609
       }
     ],
-    'orthopedic': [
+    prime: [
       {
-        id: 7,
-        name: 'Orthopedic Medical Mattress - King',
-        type: 'orthopedic',
-        price: 'AED 2,799',
-        priceNum: 2799,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 478,
-        description: 'Medically approved orthopedic support mattress',
-        colors: ['White', 'Beige', 'Light Grey'],
-        material: 'Orthopedic Foam + Medical Grade Spring',
-        dimensions: '200cm x 180cm x 32cm',
-        firmness: 'Firm',
-        features: ['Medical Grade', 'Spinal Support', 'Pressure Point Relief', 'Certified'],
-        benefits: ['Back Pain Relief', 'Proper Alignment', 'Medical Support', 'Professional Recommended'],
-        warranty: '10 Years'
-      },
-      {
-        id: 8,
-        name: 'Orthopedic Back Support - Queen',
-        type: 'orthopedic',
-        price: 'AED 1,999',
-        priceNum: 1999,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 345,
-        description: 'Advanced orthopedic design for back pain relief',
-        colors: ['White', 'Cream'],
-        material: 'Orthopedic Foam + Coil Spring',
-        dimensions: '160cm x 200cm x 30cm',
-        firmness: 'Firm',
-        features: ['Back Support', 'Pain Relief', 'Spinal Alignment', 'Hypoallergenic'],
-        benefits: ['Reduced Back Pain', 'Better Posture', 'Comfortable', 'Doctor Recommended'],
-        warranty: '8 Years'
-      },
-      {
-        id: 9,
-        name: 'Orthopedic Cervical Support Mattress',
-        type: 'orthopedic',
-        price: 'AED 2,299',
-        priceNum: 2299,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 412,
-        description: 'Cervical spine support for neck pain relief',
-        colors: ['White', 'Grey'],
-        material: 'Medical Foam + Support Springs',
-        dimensions: '160cm x 200cm x 31cm',
-        firmness: 'Medium-Firm',
-        features: ['Cervical Support', 'Neck Relief', 'Spinal Alignment', 'Medical Grade'],
-        benefits: ['Neck Pain Relief', 'Better Sleep', 'Proper Support', 'Long Lasting'],
-        warranty: '10 Years'
-      },
-      {
-        id: 10,
-        name: 'Orthopedic Firm Mattress - Single',
-        type: 'orthopedic',
-        price: 'AED 1,199',
-        priceNum: 1199,
-        image: '🛌',
+        id: 'prime-bonnell',
+        name: 'Prime Mattress Bonnell Spring (23cm)',
+        type: 'prime',
+        image: '/images/mattress-collection/mattress-4.jpg',
         rating: 4.7,
-        reviews: 267,
-        description: 'Firm orthopedic support for proper alignment',
-        colors: ['White', 'Beige'],
-        material: 'Firm Orthopedic Foam',
-        dimensions: '90cm x 190cm x 28cm',
-        firmness: 'Firm',
-        features: ['Firm Support', 'Proper Alignment', 'Durable', 'Breathable'],
-        benefits: ['Back Support', 'Pain Relief', 'Good Value', 'Comfortable'],
-        warranty: '5 Years'
-      },
+        reviews: 95,
+        description: 'Prime everyday mattress featuring durable bonnell springs.',
+        colors: ['White'],
+        material: 'Comfort Foam + Spring',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Medium',
+        features: ['Breathable', 'Ultra Soft', 'Skin-friendly'],
+        benefits: ['Deep Sleep', 'All-night Comfort', 'Value for Money'],
+        prices: {
+          '90*200cm': 589, '100*200cm': 639, '120*200cm': 659, '150*200cm': 709, '160*200cm': 729, '180*200cm': 769, '200*200cm': 819
+        },
+        priceNum: 589
+      }
+    ],
+    'pocket-spring': [
       {
-        id: 11,
-        name: 'Premium Orthopedic Medical Grade',
-        type: 'orthopedic',
-        price: 'AED 3,299',
-        priceNum: 3299,
-        image: '🛌',
+        id: 'supreme-silk',
+        name: 'Supreme Silk Mattress Pocket Spring (30cm)',
+        type: 'pocket-spring',
+        image: '/images/mattress-collection/mattress-5.jpg',
         rating: 5.0,
-        reviews: 534,
-        description: 'Top-of-the-line medical grade orthopedic mattress',
-        colors: ['White', 'Light Blue'],
-        material: 'Premium Medical Grade Foam + Spring',
-        dimensions: '200cm x 180cm x 35cm',
-        firmness: 'Firm',
-        features: ['Medical Grade', 'Advanced Support', 'Certified', 'Premium Materials'],
-        benefits: ['Maximum Support', 'Pain Relief', 'Professional Recommended', 'Best Quality'],
-        warranty: '10 Years'
+        reviews: 320,
+        description: 'Supreme silk fabric with premium pocket springs for ultimate luxury.',
+        colors: ['White', 'Navy Border'],
+        material: 'Pocket Spring + Silk Fabric',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Medium',
+        features: ['Pocket Springs', 'Silk Cover', 'Motion Isolation'],
+        benefits: ['Zero Partner Disturbance', 'Luxury Feel', 'Cooling Silk'],
+        prices: {
+          '90*200cm': 799, '100*200cm': 839, '120*200cm': 959, '150*200cm': 1089, '160*200cm': 1129, '180*200cm': 1219, '200*200cm': 1319
+        },
+        priceNum: 799
       },
       {
-        id: 12,
-        name: 'Orthopedic Plus Support Mattress',
-        type: 'orthopedic',
-        price: 'AED 2,199',
-        priceNum: 2199,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 323,
-        description: 'Enhanced orthopedic support with comfort layers',
-        colors: ['Beige', 'White', 'Grey'],
-        material: 'Orthopedic Foam + Comfort Layers',
-        dimensions: '160cm x 200cm x 30cm',
-        firmness: 'Medium-Firm',
-        features: ['Enhanced Support', 'Comfort Layers', 'Breathable', 'Certified'],
-        benefits: ['Good Support', 'Comfortable Sleep', 'Long Lasting', 'Value for Money'],
-        warranty: '8 Years'
+        id: 'euro-heaven',
+        name: 'Euro Heaven Mattress Pocket Spring (30cm)',
+        type: 'pocket-spring',
+        image: '/images/mattress-collection/mattress-6.jpg',
+        rating: 4.9,
+        reviews: 280,
+        description: 'Euro-top heaven pocket spring for a luxurious, cloud-like sleep.',
+        colors: ['White', 'Grey Cover'],
+        material: 'Pocket Spring + Memory Foam',
+        dimensions: 'Multiple Sizes Available',
+        firmness: 'Medium-Soft',
+        features: ['Euro Top', 'Pocket Spring', 'Premium Foam Layer'],
+        benefits: ['Cloud-like Comfort', 'Body Contouring', 'Durability'],
+        prices: {
+          '90*200cm': 799, '100*200cm': 919, '120*200cm': 949, '150*200cm': 1079, '160*200cm': 1119, '180*200cm': 1219, '200*200cm': 1299
+        },
+        priceNum: 799
       }
     ],
-    'spring': [
+    'bonnel-spring': [
       {
-        id: 13,
-        name: 'Pocket Spring Mattress - Queen',
-        type: 'spring',
-        price: 'AED 1,699',
-        priceNum: 1699,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 389,
-        description: 'Advanced pocket spring technology for support',
-        colors: ['White', 'Cream', 'Beige'],
-        material: 'Pocket Springs + Memory Foam',
-        dimensions: '160cm x 200cm x 29cm',
-        firmness: 'Medium',
-        features: ['Pocket Springs', 'Motion Isolation', 'Pressure Relief', 'Breathable'],
-        benefits: ['Individual Support', 'No Partner Disturbance', 'Comfortable', 'Durable'],
-        warranty: '7 Years'
-      },
-      {
-        id: 14,
-        name: 'Bonnell Spring Mattress - King',
-        type: 'spring',
-        price: 'AED 1,399',
-        priceNum: 1399,
-        image: '🛌',
-        rating: 4.6,
-        reviews: 234,
-        description: 'Traditional bonnell spring mattress',
-        colors: ['White', 'Grey'],
-        material: 'Bonnell Springs + Foam',
-        dimensions: '200cm x 180cm x 25cm',
-        firmness: 'Medium',
-        features: ['Spring Support', 'Affordable', 'Good Support', 'Durable'],
-        benefits: ['Budget Friendly', 'Reliable Support', 'Long Lasting', 'Value'],
-        warranty: '5 Years'
-      },
-      {
-        id: 15,
-        name: 'Luxury Pocket Spring - King',
-        type: 'spring',
-        price: 'AED 3,199',
-        priceNum: 3199,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 456,
-        description: 'Premium pocket spring with luxury comfort layers',
-        colors: ['White', 'Beige', 'Champagne'],
-        material: 'Premium Pocket Springs + Luxury Layers',
-        dimensions: '200cm x 180cm x 32cm',
-        firmness: 'Medium-Soft',
-        features: ['Premium Springs', 'Luxury Padding', 'Motion Isolation', 'Premium Feel'],
-        benefits: ['Luxurious Sleep', 'Maximum Comfort', 'Long Lasting', 'Premium Quality'],
-        warranty: '10 Years'
-      },
-      {
-        id: 16,
-        name: 'Hybrid Spring Mattress',
-        type: 'spring',
-        price: 'AED 2,199',
-        priceNum: 2199,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 367,
-        description: 'Hybrid design combining springs and memory foam',
-        colors: ['White', 'Grey', 'Cream'],
-        material: 'Pocket Springs + Memory Foam + Latex',
-        dimensions: '160cm x 200cm x 30cm',
-        firmness: 'Medium',
-        features: ['Hybrid Design', 'Best of Both', 'Balanced Support', 'Comfortable'],
-        benefits: ['Perfect Balance', 'Great Support', 'Comfortable', 'Long Lasting'],
-        warranty: '8 Years'
-      },
-      {
-        id: 17,
-        name: 'Spring Topper Mattress',
-        type: 'spring',
-        price: 'AED 699',
-        priceNum: 699,
-        image: '🛌',
-        rating: 4.6,
-        reviews: 189,
-        description: 'Spring topper for improving existing mattress',
-        colors: ['White', 'Cream'],
-        material: 'Mini Springs + Padding',
-        dimensions: '160cm x 200cm x 8cm',
-        firmness: 'Medium',
-        features: ['Spring Support', 'Easy to Use', 'Removable Cover', 'Affordable'],
-        benefits: ['Instant Upgrade', 'Added Support', 'Affordable', 'Easy Care'],
-        warranty: '3 Years'
-      },
-      {
-        id: 18,
-        name: 'Professional Spring Mattress',
-        type: 'spring',
-        price: 'AED 1,799',
-        priceNum: 1799,
-        image: '🛌',
+        id: 'velvet-vista',
+        name: 'Velvet Vista Mattress Pillow Top Bonnell Spring (30cm)',
+        type: 'bonnel-spring',
+        image: '/images/mattress-collection/mattress-7.jpg',
         rating: 4.7,
-        reviews: 278,
-        description: 'Professional grade spring mattress',
-        colors: ['White', 'Beige'],
-        material: 'Professional Springs + Support Foam',
-        dimensions: '160cm x 200cm x 28cm',
-        firmness: 'Firm',
-        features: ['Professional Grade', 'Strong Support', 'Durable', 'Reliable'],
-        benefits: ['Strong Support', 'Long Lasting', 'Professional Quality', 'Value'],
-        warranty: '7 Years'
-      }
-    ],
-    'latex': [
-      {
-        id: 19,
-        name: 'Natural Latex Mattress - Queen',
-        type: 'latex',
-        price: 'AED 2,599',
-        priceNum: 2599,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 412,
-        description: '100% natural latex for eco-conscious sleepers',
-        colors: ['Cream', 'White', 'Natural'],
-        material: '100% Natural Latex',
-        dimensions: '160cm x 200cm x 25cm',
+        reviews: 150,
+        description: 'Velvet vista bonnell spring mattress with a plush pillow top.',
+        colors: ['White', 'Black Border'],
+        material: 'Bonnell Spring + Foam Layer',
+        dimensions: 'Multiple Sizes Available',
         firmness: 'Medium',
-        features: ['100% Natural Latex', 'Eco-Friendly', 'Hypoallergenic', 'Sustainable'],
-        benefits: ['Eco-Friendly', 'Natural Sleep', 'Hypoallergenic', 'Comfortable'],
-        warranty: '15 Years'
-      },
-      {
-        id: 20,
-        name: 'Blended Latex Mattress - King',
-        type: 'latex',
-        price: 'AED 2,399',
-        priceNum: 2399,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 345,
-        description: 'High-quality blended latex mattress',
-        colors: ['Cream', 'Beige'],
-        material: 'Natural & Synthetic Latex Blend',
-        dimensions: '200cm x 180cm x 26cm',
-        firmness: 'Medium-Firm',
-        features: ['Latex Blend', 'Good Support', 'Hypoallergenic', 'Breathable'],
-        benefits: ['Good Support', 'Hypoallergenic', 'Durable', 'Affordable'],
-        warranty: '12 Years'
-      },
-      {
-        id: 21,
-        name: 'Premium Latex with Memory Foam',
-        type: 'latex',
-        price: 'AED 3,099',
-        priceNum: 3099,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 478,
-        description: 'Luxury latex combined with memory foam',
-        colors: ['White', 'Cream', 'Natural'],
-        material: 'Premium Latex + Memory Foam',
-        dimensions: '160cm x 200cm x 28cm',
-        firmness: 'Medium',
-        features: ['Premium Latex', 'Memory Foam Layer', 'Hybrid Comfort', 'Premium Quality'],
-        benefits: ['Best of Both', 'Premium Comfort', 'Hypoallergenic', 'Long Lasting'],
-        warranty: '15 Years'
-      },
-      {
-        id: 22,
-        name: 'Latex Topper - Thin',
-        type: 'latex',
-        price: 'AED 799',
-        priceNum: 799,
-        image: '🛌',
-        rating: 4.7,
-        reviews: 234,
-        description: 'Natural latex topper for existing mattress',
-        colors: ['Cream', 'Natural'],
-        material: 'Natural Latex',
-        dimensions: '160cm x 200cm x 5cm',
-        firmness: 'Medium',
-        features: ['Natural Latex', 'Eco-Friendly', 'Removable Cover', 'Hypoallergenic'],
-        benefits: ['Instant Comfort', 'Eco-Friendly', 'Hypoallergenic', 'Removable'],
-        warranty: '5 Years'
-      },
-      {
-        id: 23,
-        name: 'Luxury Latex Mattress - Single',
-        type: 'latex',
-        price: 'AED 1,899',
-        priceNum: 1899,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 312,
-        description: 'Luxury single size latex mattress',
-        colors: ['Cream', 'White'],
-        material: 'Premium Natural Latex',
-        dimensions: '90cm x 190cm x 25cm',
-        firmness: 'Medium',
-        features: ['Premium Latex', 'Eco-Friendly', 'Comfortable', 'Hypoallergenic'],
-        benefits: ['Premium Feel', 'Eco-Conscious', 'Healthy Sleep', 'Durable'],
-        warranty: '12 Years'
-      },
-      {
-        id: 24,
-        name: 'Eco-Friendly Latex Blend',
-        type: 'latex',
-        price: 'AED 2,199',
-        priceNum: 2199,
-        image: '🛌',
-        rating: 4.7,
-        reviews: 289,
-        description: 'Sustainable eco-friendly latex blend',
-        colors: ['Natural', 'Cream'],
-        material: 'Eco-Friendly Latex Blend',
-        dimensions: '160cm x 200cm x 24cm',
-        firmness: 'Medium-Soft',
-        features: ['Eco-Friendly', 'Sustainable', 'Hypoallergenic', 'Breathable'],
-        benefits: ['Sustainable', 'Eco-Conscious', 'Healthy', 'Comfortable'],
-        warranty: '10 Years'
-      }
-    ],
-    'medical': [
-      {
-        id: 25,
-        name: 'Hospital Medical Mattress',
-        type: 'medical',
-        price: 'AED 3,499',
-        priceNum: 3499,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 389,
-        description: 'Professional hospital grade medical mattress',
-        colors: ['White', 'Medical Blue'],
-        material: 'Medical Grade Foam + Spring',
-        dimensions: '90cm x 190cm x 30cm',
-        firmness: 'Firm',
-        features: ['Hospital Grade', 'Medical Certified', 'Infection Resistant', 'Easy Clean'],
-        benefits: ['Medical Quality', 'Hygienic', 'Professional Care', 'Durable'],
-        warranty: '10 Years'
-      },
-      {
-        id: 26,
-        name: 'Pressure Relief Medical Mattress',
-        type: 'medical',
-        price: 'AED 4,199',
-        priceNum: 4199,
-        image: '🛌',
-        rating: 5.0,
-        reviews: 456,
-        description: 'Advanced pressure relief for medical use',
-        colors: ['White', 'Light Blue'],
-        material: 'Pressure Relieving Medical Foam',
-        dimensions: '90cm x 190cm x 32cm',
-        firmness: 'Medium-Firm',
-        features: ['Pressure Relief', 'Medical Grade', 'Anti-Decubitus', 'Certified'],
-        benefits: ['Pressure Relief', 'Medical Support', 'Healing', 'Professional Quality'],
-        warranty: '10 Years'
-      },
-      {
-        id: 27,
-        name: 'Anti-Decubitus Medical Mattress',
-        type: 'medical',
-        price: 'AED 3,899',
-        priceNum: 3899,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 423,
-        description: 'Specialized anti-decubitus medical mattress',
-        colors: ['White', 'Medical Grey'],
-        material: 'Anti-Decubitus Medical Foam',
-        dimensions: '90cm x 190cm x 30cm',
-        firmness: 'Medium',
-        features: ['Anti-Decubitus', 'Medical Grade', 'Certified', 'Therapeutic'],
-        benefits: ['Medical Support', 'Therapeutic', 'Healing Focused', 'Professional'],
-        warranty: '10 Years'
-      },
-      {
-        id: 28,
-        name: 'Waterproof Medical Mattress',
-        type: 'medical',
-        price: 'AED 2,799',
-        priceNum: 2799,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 334,
-        description: 'Waterproof medical grade mattress',
-        colors: ['White', 'Blue'],
-        material: 'Waterproof Medical Material',
-        dimensions: '90cm x 190cm x 25cm',
-        firmness: 'Firm',
-        features: ['Waterproof', 'Medical Grade', 'Easy Clean', 'Infection Control'],
-        benefits: ['Hygienic', 'Medical Grade', 'Easy Maintenance', 'Professional'],
-        warranty: '8 Years'
-      },
-      {
-        id: 29,
-        name: 'Post-Surgery Medical Mattress',
-        type: 'medical',
-        price: 'AED 3,599',
-        priceNum: 3599,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 401,
-        description: 'Specialized mattress for post-surgery recovery',
-        colors: ['White', 'Light Grey'],
-        material: 'Medical Recovery Foam',
-        dimensions: '90cm x 190cm x 31cm',
-        firmness: 'Medium-Soft',
-        features: ['Recovery Focused', 'Medical Grade', 'Supportive', 'Therapeutic'],
-        benefits: ['Faster Recovery', 'Pain Relief', 'Medical Support', 'Comfortable'],
-        warranty: '10 Years'
-      },
-      {
-        id: 30,
-        name: 'Intensive Care Medical Mattress',
-        type: 'medical',
-        price: 'AED 4,499',
-        priceNum: 4499,
-        image: '🛌',
-        rating: 5.0,
-        reviews: 478,
-        description: 'Premium intensive care medical mattress',
-        colors: ['White', 'Medical Blue'],
-        material: 'Premium Medical Care Foam',
-        dimensions: '90cm x 190cm x 33cm',
-        firmness: 'Firm',
-        features: ['Intensive Care', 'Premium Medical', 'Advanced Technology', 'Certified'],
-        benefits: ['Maximum Support', 'Medical Excellence', 'Professional Care', 'Best Quality'],
-        warranty: '10 Years'
-      }
-    ],
-    'toppers': [
-      {
-        id: 31,
-        name: 'Premium Memory Foam Topper - 7cm',
-        type: 'toppers',
-        price: 'AED 899',
-        priceNum: 899,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 367,
-        description: 'Thick memory foam topper for maximum comfort',
-        colors: ['White', 'Grey', 'Cream'],
-        material: 'Premium Memory Foam',
-        dimensions: '160cm x 200cm x 7cm',
-        firmness: 'Medium',
-        features: ['Thick Topper', 'Memory Foam', 'Removable Cover', 'Easy Assembly'],
-        benefits: ['Instant Comfort', 'Better Sleep', 'Easy Upgrade', 'Affordable'],
-        warranty: '5 Years'
-      },
-      {
-        id: 32,
-        name: 'Gel Cooling Topper',
-        type: 'toppers',
-        price: 'AED 799',
-        priceNum: 799,
-        image: '🛌',
-        rating: 4.7,
-        reviews: 289,
-        description: 'Cooling gel topper for hot sleepers',
-        colors: ['White', 'Light Blue'],
-        material: 'Gel Memory Foam',
-        dimensions: '160cm x 200cm x 6cm',
-        firmness: 'Medium',
-        features: ['Cooling Gel', 'Temperature Control', 'Removable', 'Breathable'],
-        benefits: ['Stay Cool', 'Better Sleep', 'Comfortable', 'Easy Clean'],
-        warranty: '3 Years'
-      },
-      {
-        id: 33,
-        name: 'Latex Topper - Premium',
-        type: 'toppers',
-        price: 'AED 1,299',
-        priceNum: 1299,
-        image: '🛌',
-        rating: 4.9,
-        reviews: 412,
-        description: 'Premium natural latex topper',
-        colors: ['Cream', 'White', 'Natural'],
-        material: 'Natural Latex',
-        dimensions: '160cm x 200cm x 7cm',
-        firmness: 'Medium',
-        features: ['Natural Latex', 'Eco-Friendly', 'Hypoallergenic', 'Durable'],
-        benefits: ['Eco-Friendly', 'Hypoallergenic', 'Comfortable', 'Long Lasting'],
-        warranty: '10 Years'
-      },
-      {
-        id: 34,
-        name: 'Down Feather Topper',
-        type: 'toppers',
-        price: 'AED 699',
-        priceNum: 699,
-        image: '🛌',
-        rating: 4.6,
-        reviews: 234,
-        description: 'Soft down feather mattress topper',
-        colors: ['White', 'Cream'],
-        material: 'Down Feather + Cotton',
-        dimensions: '160cm x 200cm x 5cm',
-        firmness: 'Soft',
-        features: ['Down Feather', 'Soft & Plush', 'Removable', 'Easy Care'],
-        benefits: ['Luxurious Feel', 'Extra Soft', 'Comfortable', 'Affordable'],
-        warranty: '2 Years'
-      },
-      {
-        id: 35,
-        name: 'Hybrid Topper - Foam & Springs',
-        type: 'toppers',
-        price: 'AED 999',
-        priceNum: 999,
-        image: '🛌',
-        rating: 4.8,
-        reviews: 345,
-        description: 'Hybrid topper combining foam and springs',
-        colors: ['White', 'Grey'],
-        material: 'Memory Foam + Mini Springs',
-        dimensions: '160cm x 200cm x 8cm',
-        firmness: 'Medium',
-        features: ['Hybrid Design', 'Best of Both', 'Balanced Support', 'Comfortable'],
-        benefits: ['Perfect Balance', 'Good Support', 'Comfortable', 'Value'],
-        warranty: '5 Years'
-      },
-      {
-        id: 36,
-        name: 'Thin Comfort Topper - 5cm',
-        type: 'toppers',
-        price: 'AED 599',
-        priceNum: 599,
-        image: '🛌',
-        rating: 4.6,
-        reviews: 201,
-        description: 'Thin comfort topper for slight upgrade',
-        colors: ['White', 'Cream', 'Grey'],
-        material: 'Comfort Foam',
-        dimensions: '160cm x 200cm x 5cm',
-        firmness: 'Medium-Soft',
-        features: ['Thin Profile', 'Easy to Use', 'Affordable', 'Removable'],
-        benefits: ['Budget Friendly', 'Easy Setup', 'Improved Comfort', 'Value'],
-        warranty: '2 Years'
+        features: ['Pillow Top', 'Natural Latex Feel', 'Traditional Bounciness'],
+        benefits: ['Balanced Support', 'Temperature Control', 'Premium Feel'],
+        prices: {
+          '90*200cm': 699, '100*200cm': 749, '120*200cm': 769, '150*200cm': 849, '160*200cm': 879, '180*200cm': 939, '200*200cm': 999
+        },
+        priceNum: 699
       }
     ]
   };
@@ -735,7 +254,15 @@ const MattressCategory = () => {
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-2">🛌 Premium Mattress Collection</h1>
             <p className="text-lg text-gray-300">Discover the perfect mattress for a better sleep</p>
-            <p className="text-amber-300 font-semibold mt-2">✓ Free Delivery | ✓ 10-Year Warranty | ✓ Easy Returns | ✓ Medical Grade Options</p>
+            <div className="flex flex-wrap items-center gap-4 text-amber-300 font-semibold mt-2">
+              <span className="flex items-center gap-1"><Truck className="w-4 h-4" /> Free Delivery</span>
+              <span className="hidden md:inline">|</span>
+              <span className="flex items-center gap-1"><Shield className="w-4 h-4" /> 10-Year Warranty</span>
+              <span className="hidden md:inline">|</span>
+              <span className="flex items-center gap-1"><RotateCcw className="w-4 h-4" /> Easy Returns</span>
+              <span className="hidden md:inline">|</span>
+              <span className="flex items-center gap-1"><Activity className="w-4 h-4" /> Medical Grade Options</span>
+            </div>
           </div>
         </div>
 
@@ -754,7 +281,7 @@ const MattressCategory = () => {
                 <div className="mb-6">
                   <h4 className="font-bold text-gray-900 mb-3">Mattress Type</h4>
                   <div className="space-y-2 max-h-64 overflow-y-auto">
-                    {['all', 'memory-foam', 'orthopedic', 'spring', 'latex', 'medical', 'toppers'].map((filter) => (
+                    {['all', 'medical', 'prime', 'pocket-spring', 'bonnel-spring'].map((filter) => (
                       <button
                         key={filter}
                         onClick={() => setSelectedFilter(filter)}
@@ -922,7 +449,11 @@ const MattressCategory = () => {
                       >
                         {/* Image */}
                         <div className="relative h-48 bg-gradient-to-br from-blue-100 to-blue-50 flex items-center justify-center text-6xl overflow-hidden group-hover:scale-110 transition-transform">
-                          {product.image}
+                          {product.image.startsWith('/') || product.image.startsWith('http') ? (
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <span>{product.image}</span>
+                          )}
                           <button
                             onClick={() => handleAddToWishlist(product)}
                             className={`absolute top-3 right-3 p-2 rounded-full transition-all ${
@@ -982,7 +513,9 @@ const MattressCategory = () => {
 
                           {/* Price & Button */}
                           <div className="flex justify-between items-center">
-                            <span className="text-2xl font-bold text-amber-600">{product.price}</span>
+                            <span className="text-2xl font-bold text-amber-600">
+                              {product.prices ? `AED ${Object.values(product.prices)[0]}` : product.price}
+                            </span>
                             <div className="flex gap-2">
                               <button
                                 onClick={() => handleAddToCart(product)}
@@ -993,6 +526,7 @@ const MattressCategory = () => {
                               </button>
                               <Link
                                 to={`/mattress/${product.type}/${product.id}`}
+                                state={{ product }}
                                 className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2.5 rounded-lg font-semibold transition-all text-sm"
                               >
                                 View
@@ -1014,8 +548,12 @@ const MattressCategory = () => {
                   {filteredProducts.length > 0 ? (
                     filteredProducts.map((product) => (
                       <div key={product.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all flex gap-6">
-                        <div className="w-40 h-40 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center text-5xl flex-shrink-0">
-                          {product.image}
+                        <div className="w-40 h-40 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg flex items-center justify-center text-5xl flex-shrink-0 overflow-hidden">
+                          {product.image.startsWith('/') || product.image.startsWith('http') ? (
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <span>{product.image}</span>
+                          )}
                         </div>
 
                         <div className="flex-grow">
@@ -1060,7 +598,9 @@ const MattressCategory = () => {
                           </div>
 
                           <div className="flex justify-between items-center">
-                            <span className="text-3xl font-bold text-amber-600">{product.price}</span>
+                            <span className="text-3xl font-bold text-amber-600">
+                              {product.prices ? `AED ${Object.values(product.prices)[0]}` : product.price}
+                            </span>
                             <div className="flex gap-3">
                               <button
                                 onClick={() => handleAddToCart(product)}
@@ -1071,6 +611,7 @@ const MattressCategory = () => {
                               </button>
                               <Link
                                 to={`/mattress/${product.type}/${product.id}`}
+                                state={{ product }}
                                 className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-bold transition-all"
                               >
                                 View Details

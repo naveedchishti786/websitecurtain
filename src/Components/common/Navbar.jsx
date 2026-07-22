@@ -20,6 +20,7 @@ const Navbar = () => {
         { name: 'Motorized Curtains', path: '/curtains/motorized', icon: <Blinds className="w-5 h-5" />, description: 'Smart Control' },
         { name: 'Velvet Curtains', path: '/curtains/velvet', icon: <Blinds className="w-5 h-5" />, description: 'Luxury Texture' },
         { name: 'Blinds', path: '/curtains/blinds', icon: <Blinds className="w-5 h-5" />, description: 'Roller & Venetian' },
+        { name: 'Blackout & Sheer', path: '/curtains/blackout-sheer', icon: <Blinds className="w-5 h-5" />, description: 'Perfect Combo' },
       ]
     },
     { 

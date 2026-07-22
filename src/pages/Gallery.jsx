@@ -292,6 +292,17 @@ const Gallery = () => {
       year: 2023
     },
 
+        // FURNITURE - TV Units
+    ...Array.from({ length: 9 }, (_, i) => ({
+      id: 4001 + i,
+      category: 'furniture',
+      title: `Modern TV Unit ${i + 1}`,
+      description: 'Sleek and modern TV unit with storage.',
+      image: `/images/tv-units/tv-unit-${i + 1}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+
     // BEDS - Only bed furniture
     {
       id: 17,
@@ -365,80 +376,89 @@ const Gallery = () => {
       location: 'Dubai Marina',
       year: 2024
     },
+    // SINGLE BEDS
+    ...Array.from({ length: 5 }, (_, i) => ({
+      id: 2001 + i,
+      category: 'beds',
+      title: `Single Bed Collection ${i + 1}`,
+      description: 'Premium single bed designed for space saving and comfort.',
+      image: `/images/beds-collection/bed-${i + 1}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // DOUBLE BEDS
+    ...Array.from({ length: 5 }, (_, i) => ({
+      id: 2101 + i,
+      category: 'beds',
+      title: `Double Bed Collection ${i + 1}`,
+      description: 'Luxurious double bed design for ultimate relaxation.',
+      image: `/images/beds-collection/bed-${i + 6}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // QUEEN BEDS
+    ...Array.from({ length: 5 }, (_, i) => ({
+      id: 2201 + i,
+      category: 'beds',
+      title: `Queen Bed Collection ${i + 1}`,
+      description: 'Elegant queen size bed with sophisticated style.',
+      image: `/images/beds-collection/bed-${i + 11}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // KING BEDS
+    ...Array.from({ length: 6 }, (_, i) => ({
+      id: 2301 + i,
+      category: 'beds',
+      title: `King Bed Collection ${i + 1}`,
+      description: 'Spacious and comfortable king size bed.',
+      image: `/images/beds-collection/bed-${i + 16}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // SUPER KING BEDS
+    ...Array.from({ length: 6 }, (_, i) => ({
+      id: 2401 + i,
+      category: 'beds',
+      title: `Super King Bed Collection ${i + 1}`,
+      description: 'Massive super king bed for royal comfort.',
+      image: `/images/beds-collection/bed-${i + 22}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // HYDRAULIC BEDS
+    ...Array.from({ length: 5 }, (_, i) => ({
+      id: 2501 + i,
+      category: 'beds',
+      title: `Hydraulic Storage Bed ${i + 1}`,
+      description: 'Smart hydraulic lift storage bed for maximum space efficiency.',
+      image: `/images/beds-collection/bed-${i + 28}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
 
-    // STORAGE - Only almari/wardrobes
-    {
-      id: 25,
+        // STORAGE - Cabinets
+    ...Array.from({ length: 15 }, (_, i) => ({
+      id: 3001 + i,
       category: 'storage',
-      title: 'Built-in Wardrobe - Walk-in Closet',
-      description: 'Custom-designed walk-in closet with premium finishes and organization',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      location: 'Dubai Marina',
+      title: `Premium Storage Cabinet ${i + 1}`,
+      description: 'Elegant storage cabinet designed for optimal organization and aesthetics.',
+      image: `/images/cabinets/cabinet-${i + 1}.jpg`,
+      location: 'Dubai',
       year: 2024
-    },
-    {
-      id: 26,
+    })),
+
+    
+    // STORAGE - Dressing with Mirror
+    ...Array.from({ length: 15 }, (_, i) => ({
+      id: 3101 + i,
       category: 'storage',
-      title: 'Modern Sliding Door Wardrobe',
-      description: 'Contemporary wardrobe with sleek sliding doors',
-      image: 'https://images.unsplash.com/photo-1565183938294-7563f3ff68bb?w=800&h=600&fit=crop',
-      location: 'Downtown Dubai',
+      title: `Dressing with Mirror ${i + 1}`,
+      description: 'Elegant dressing table with mirror and storage.',
+      image: `/images/dressing-mirror/dressing-${i + 1}.jpg`,
+      location: 'Dubai',
       year: 2024
-    },
-    {
-      id: 27,
-      category: 'storage',
-      title: 'Bedroom Almari - Glass Panels',
-      description: 'Elegant bedroom wardrobe with glass panel doors',
-      image: 'https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=800&h=600&fit=crop',
-      location: 'Business Bay',
-      year: 2024
-    },
-    {
-      id: 28,
-      category: 'storage',
-      title: 'Corner Wardrobe Cabinet',
-      description: 'Space-saving corner almari with smart storage',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      location: 'JBR Dubai',
-      year: 2023
-    },
-    {
-      id: 29,
-      category: 'storage',
-      title: 'Wooden Wardrobe - Traditional Design',
-      description: 'Classic wooden almari with traditional carving details',
-      image: 'https://images.unsplash.com/photo-1566281797870-131b6e24d04f?w=800&h=600&fit=crop',
-      location: 'Palm Jumeirah',
-      year: 2023
-    },
-    {
-      id: 30,
-      category: 'storage',
-      title: 'Multi-Door Wardrobe System',
-      description: 'Large modular wardrobe with multiple compartments',
-      image: 'https://images.unsplash.com/photo-1532372320572-cda402087165?w=800&h=600&fit=crop',
-      location: 'Arabian Ranches',
-      year: 2023
-    },
-    {
-      id: 31,
-      category: 'storage',
-      title: 'Mirror Wardrobe - Space Enhancer',
-      description: 'Wardrobe with mirror panels for modern aesthetic',
-      image: 'https://images.unsplash.com/photo-1595521624a3d1a55c2b96a35b2ccc20cb387b3c?w=800&h=600&fit=crop',
-      location: 'Emirates Hills',
-      year: 2024
-    },
-    {
-      id: 32,
-      category: 'storage',
-      title: 'Luxury Built-in Almari',
-      description: 'Premium built-in wardrobe with custom organization',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
-      location: 'DIFC',
-      year: 2024
-    },
+    })),
 
     // COMPLETE ROOMS - Full room interiors
     {
@@ -530,6 +550,16 @@ const Gallery = () => {
       title: `Premium Blackout Design ${i + 1}`,
       description: '100% Light Blocking blackout curtain for complete privacy.',
       image: `/images/blackout-curtains/blackout-${i + 1}.jpg`,
+      location: 'Dubai',
+      year: 2024
+    })),
+    // BLACKOUT & SHEER CURTAINS
+    ...Array.from({ length: 18 }, (_, i) => ({
+      id: 1601 + i,
+      category: 'curtains',
+      title: `Blackout & Sheer Combination ${i + 1}`,
+      description: 'Perfect combination of light control and elegance.',
+      image: `/images/blackout-sheer-curtains/blackout-sheer-${i + 1}.jpg`,
       location: 'Dubai',
       year: 2024
     }))
