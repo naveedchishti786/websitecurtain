@@ -288,7 +288,7 @@ const Home = () => {
               { type: 'Blackout Curtains', image: '/images/blackout-curtains/blackout-1.jpg', path: '/curtains/blackout' },
               { type: 'Sheer Curtains', image: '/images/sheer-curtains/sheer-1.jpg', path: '/curtains/sheer' },
               { type: 'Blinds', image: '/images/blind-curtains/blind-1.jpg', path: '/curtains/blinds' },
-              { type: 'Motorized Curtains', image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=60', path: '/curtains/motorized' }
+              { type: 'Velvet & blackout', image: '/images/velvet-curtains/velvet-1.jpg', path: '/curtains/velvet' }
             ].map((curtain, idx) => (
               <Link key={idx} to={curtain.path} className="group block h-full">
                 <div className="relative rounded-2xl overflow-hidden h-80 shadow-lg group-hover:shadow-2xl transition-all duration-300 bg-[#F5F1EA]">

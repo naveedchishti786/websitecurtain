@@ -68,7 +68,7 @@ const TermsConditions = () => {
                 We stand behind the quality of our products with a comprehensive 5-Year Warranty:
               </p>
               <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                <li>The warranty covers manufacturing defects in materials and mechanisms (such as curtain tracks, motorized systems, and furniture frames).</li>
+                <li>The warranty covers manufacturing defects in materials and mechanisms (such as curtain tracks and furniture frames).</li>
                 <li>It does not cover normal wear and tear, fading due to direct sunlight exposure, or damage caused by improper cleaning, accidents, or misuse.</li>
                 <li>Any third-party modifications to the installed products will void the warranty.</li>
               </ul>

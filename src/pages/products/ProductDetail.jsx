@@ -186,6 +186,15 @@ const ProductDetail = () => {
       { id: 5, name: 'Luxurious Velvet & blackout', price: 'AED 400', image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60', type: 'velvet', sizePrices: { '100cm': 400, '150cm': 500, '200cm': 600, '250cm': 700, '300cm': 800 } },
       { id: 1101, name: 'Blackout & Sheer Combination', price: 'AED 350', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', type: 'blackout-sheer', sizePrices: { '100cm': 350, '150cm': 450, '200cm': 550, '250cm': 650, '300cm': 750 } }
     ],
+    
+    tvUnits: [
+      { id: 25, name: 'Modern TV Unit 1', price: 'AED 2,000', image: '/images/tv-units/tv-unit-1.jpg', type: 'tv-units' },
+      { id: 26, name: 'Modern TV Unit 2', price: 'AED 2,000', image: '/images/tv-units/tv-unit-2.jpg', type: 'tv-units' },
+      { id: 27, name: 'Modern TV Unit 3', price: 'AED 2,000', image: '/images/tv-units/tv-unit-3.jpg', type: 'tv-units' },
+      { id: 28, name: 'Modern TV Unit 4', price: 'AED 2,000', image: '/images/tv-units/tv-unit-4.jpg', type: 'tv-units' },
+      { id: 29, name: 'Modern TV Unit 5', price: 'AED 2,000', image: '/images/tv-units/tv-unit-5.jpg', type: 'tv-units' },
+      { id: 30, name: 'Modern TV Unit 6', price: 'AED 2,000', image: '/images/tv-units/tv-unit-6.jpg', type: 'tv-units' }
+    ],
     mattresses: [
       { id: 'med-20', name: 'Medical Mattress (20cm)', price: 'AED 455', image: '/images/mattress-collection/mattress-1.jpg', type: 'medical', prices: { '90*200cm': 455, '100*200cm': 470, '120*200cm': 499, '150*200cm': 525, '160*200cm': 540, '180*200cm': 585, '200*200cm': 615 }, productType: 'mattress' },
       { id: 'super-med-pillow', name: 'Super Medical Pillow Top', price: 'AED 609', image: '/images/mattress-collection/mattress-3.jpg', type: 'medical', prices: { '90*200cm': 609, '100*200cm': 669, '120*200cm': 769, '150*200cm': 799, '160*200cm': 849, '180*200cm': 899, '200*200cm': 999 }, productType: 'mattress' },
@@ -197,8 +206,10 @@ const ProductDetail = () => {
   const getRelated = () => {
     const isBlind = product.type === 'blinds' || product.name?.toLowerCase().includes('blind');
     const isMattress = location.pathname.includes('mattress') || product.name?.toLowerCase().includes('mattress');
+    const isTvUnit = product.type === 'tv-units' || product.name?.toLowerCase().includes('tv unit');
     let items;
     if (isMattress) items = relatedProducts.mattresses;
+    else if (isTvUnit) items = relatedProducts.tvUnits;
     else if (isBlind) items = relatedProducts.blinds;
     else items = relatedProducts.curtains;
     

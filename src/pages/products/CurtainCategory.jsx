@@ -17,7 +17,7 @@ const CurtainCategory = () => {
       rating: Number((4.5 + (i % 6) * 0.1).toFixed(1)),
       description: '100% Light Blocking, Thermal Insulated',
       colors: ['Customizable']
-    })),
+    })).filter(item => item.name !== 'Premium Blackout Curtain 4' && item.name !== 'Premium Blackout Curtain 5' && item.name !== 'Premium Blackout Curtain 6'),
     'blackout-sheer': Array.from({ length: 18 }, (_, i) => ({
       id: 1101 + i,
       name: `Blackout & Sheer Combination ${i + 1}`,
@@ -35,7 +35,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 550',
         sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 },
-        image: '/images/sheer-curtains/sheer-1.jpg',
+        image: '/images/sheer-curtains/1.jpeg',
         rating: 4.8,
         description: 'Classic American style sheer curtain for elegant living spaces.',
         colors: ['White', 'Off-White']
@@ -46,7 +46,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 550',
         sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 },
-        image: '/images/sheer-curtains/sheer-2.jpg',
+        image: '/images/sheer-curtains/2.jpeg',
         rating: 4.9,
         description: 'Premium light filtering sheer with American aesthetic.',
         colors: ['White', 'Off-White']
@@ -57,7 +57,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 650',
         sizePrices: { '100cm': 217, '150cm': 325, '200cm': 433, '250cm': 542, '300cm': 650 },
-        image: '/images/sheer-curtains/sheer-3.jpg',
+        image: '/images/sheer-curtains/3.jpeg',
         rating: 4.7,
         description: 'Modern wavy folds that add texture and volume to your room.',
         colors: ['White', 'Cream']
@@ -68,7 +68,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 650',
         sizePrices: { '100cm': 217, '150cm': 325, '200cm': 433, '250cm': 542, '300cm': 650 },
-        image: '/images/sheer-curtains/sheer-4.jpg',
+        image: '/images/sheer-curtains/4.jpeg',
         rating: 4.8,
         description: 'Beautiful flowing wavy sheer fabric for a contemporary look.',
         colors: ['White', 'Cream']
@@ -79,7 +79,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 580',
         sizePrices: { '100cm': 193, '150cm': 290, '200cm': 387, '250cm': 483, '300cm': 580 },
-        image: '/images/sheer-curtains/sheer-7.jpg',
+        image: '/images/sheer-curtains/5.jpeg',
         rating: 4.9,
         description: 'Luxurious Sable fabric sheer with classic American design.',
         colors: ['Natural', 'Beige']
@@ -90,7 +90,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 580',
         sizePrices: { '100cm': 193, '150cm': 290, '200cm': 387, '250cm': 483, '300cm': 580 },
-        image: '/images/sheer-curtains/sheer-8.jpg',
+        image: '/images/sheer-curtains/6.jpeg',
         rating: 4.8,
         description: 'High-quality Sable fabric providing a warm glow to your interior.',
         colors: ['Natural', 'Beige']
@@ -101,7 +101,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 680',
         sizePrices: { '100cm': 227, '150cm': 340, '200cm': 453, '250cm': 567, '300cm': 680 },
-        image: '/images/sheer-curtains/sheer-9.jpg',
+        image: '/images/sheer-curtains/7.jpeg',
         rating: 5.0,
         description: 'Wavy folds combined with premium Sable fabric for ultimate elegance.',
         colors: ['Natural', 'Beige']
@@ -112,7 +112,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 699',
         sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/sheer-curtains/sheer-11.jpg',
+        image: '/images/sheer-curtains/8.jpeg',
         rating: 4.9,
         description: 'Organic linen fabric sheer with a structured American style.',
         colors: ['Linen White', 'Natural']
@@ -123,7 +123,7 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 699',
         sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/sheer-curtains/sheer-12.jpg',
+        image: '/images/sheer-curtains/9.jpeg',
         rating: 4.8,
         description: 'Textured linen sheer that filters light beautifully.',
         colors: ['Linen White', 'Natural']
@@ -134,146 +134,245 @@ const CurtainCategory = () => {
         type: 'sheer',
         price: 'AED 749',
         sizePrices: { '100cm': 250, '150cm': 375, '200cm': 499, '250cm': 624, '300cm': 749 },
-        image: '/images/sheer-curtains/sheer-14.jpg',
+        image: '/images/sheer-curtains/10.jpeg',
         rating: 5.0,
         description: 'The pinnacle of luxury: wavy folds in pure linen fabric.',
         colors: ['Linen White', 'Natural']
       }
     ],
-    velvet: [
+        velvet: [
+        {
+          id: 51,
+          name: 'Premium Velvet pleated curtain',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-1.jpg',
+          rating: 4.9,
+          reviews: 120,
+          description: 'Premium Velvet Pleated Curtain for ultimate luxury and darkness.',
+          colors: ['Pink', 'Customizable'],
+          sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+          price: 'AED 549',
+          priceNum: 549
+        },
+        {
+          id: 52,
+          name: 'Premium Velvet Fabric',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-2.jpg',
+          rating: 4.8,
+          reviews: 105,
+          description: 'Premium Velvet Pleated Curtain for ultimate luxury and darkness.',
+          colors: ['Multiple Colors', 'Customizable'],
+          sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+          price: 'AED 549',
+          priceNum: 549
+        },
+        {
+          id: 53,
+          name: 'Premium Velvet pleated curtain',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-3.jpg',
+          rating: 4.9,
+          reviews: 130,
+          description: 'Premium Velvet Pleated Curtain for ultimate luxury and darkness.',
+          colors: ['Brown', 'Customizable'],
+          sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+          price: 'AED 549',
+          priceNum: 549
+        },
+        {
+          id: 54,
+          name: 'Velvet Wavy Non-Blackout Curtain',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-4-cropped.jpg',
+          rating: 4.7,
+          reviews: 90,
+          description: 'Elegant Velvet Wavy Non-Blackout Curtain.',
+          colors: ['Orange', 'Customizable'],
+          sizePrices: { '100cm': 216, '150cm': 325, '200cm': 433, '250cm': 541, '300cm': 649 },
+          price: 'AED 649',
+          priceNum: 649
+        },
+        {
+          id: 55,
+          name: 'Velvet Wavy + Blackout Curtain',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-5-cropped.jpg',
+          rating: 4.9,
+          reviews: 150,
+          description: 'Premium Velvet Wavy + Blackout Curtain.',
+          colors: ['Dark Red', 'Customizable'],
+          sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+          price: 'AED 699',
+          priceNum: 699
+        },
+        {
+          id: 56,
+          name: 'Velvet Wavy + Blackout Curtain',
+          type: 'velvet',
+          image: '/images/velvet-curtains/velvet-6-cropped.jpg',
+          rating: 4.8,
+          reviews: 110,
+          description: 'Premium Velvet Wavy + Blackout Curtain with beautiful drape.',
+          colors: ['Rose', 'Customizable'],
+          sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
+          price: 'AED 699',
+          priceNum: 699
+        }
+    ],
+
+    linen: [
       {
-        id: 5,
-        name: 'Luxurious Velvet & blackout',
-        type: 'velvet',
-        price: 'AED 400',
-        image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60',
+        id: 601,
+        name: 'Linen Only Blackout Curtain',
+        type: 'linen',
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 274, '200cm': 366, '250cm': 457, '300cm': 549 },
+        image: '/images/linen-curtains/1.jpeg',
+        rating: 4.8,
+        description: 'Premium linen blackout curtain.',
+        colors: ['Linen White', 'Natural']
+      },
+      {
+        id: 602,
+        name: 'Linen Only Blackout Curtain',
+        type: 'linen',
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 274, '200cm': 366, '250cm': 457, '300cm': 549 },
+        image: '/images/linen-curtains/2.jpeg',
         rating: 4.9,
-        description: 'Rich Texture, Premium Feel',
-        colors: ['Burgundy', 'Navy', 'Emerald']
+        description: 'Premium linen blackout curtain.',
+        colors: ['Linen White', 'Natural']
       },
       {
-        id: 6,
-        name: 'Royal Velvet & blackout',
-        type: 'velvet',
-        price: 'AED 450',
-        image: 'https://images.unsplash.com/photo-1600607688969-a5bfcd64bd28?w=800&auto=format&fit=crop&q=60',
-        rating: 5.0,
-        description: 'Elegant Design, Durable Material',
-        colors: ['Deep Red', 'Royal Blue', 'Forest Green']
+        id: 603,
+        name: 'Linen Only Blackout Curtain',
+        type: 'linen',
+        price: 'AED 549',
+        sizePrices: { '100cm': 183, '150cm': 274, '200cm': 366, '250cm': 457, '300cm': 549 },
+        image: '/images/linen-curtains/3.jpeg',
+        rating: 4.8,
+        description: 'Premium linen blackout curtain.',
+        colors: ['Linen White', 'Natural']
       },
+      {
+        id: 604,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 349, '200cm': 466, '250cm': 582, '300cm': 699 },
+        image: '/images/linen-curtains/4.jpeg',
+        rating: 4.9,
+        description: 'Elegant linen wavy and blackout curtain.',
+        colors: ['Linen White', 'Natural']
+      },
+      {
+        id: 605,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 349, '200cm': 466, '250cm': 582, '300cm': 699 },
+        image: '/images/linen-curtains/5.jpeg',
+        rating: 4.8,
+        description: 'Elegant linen wavy and blackout curtain.',
+        colors: ['Linen White', 'Natural']
+      },
+      {
+        id: 606,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 349, '200cm': 466, '250cm': 582, '300cm': 699 },
+        image: '/images/linen-curtains/6.jpeg',
+        rating: 4.9,
+        description: 'Elegant linen wavy and blackout curtain.',
+        colors: ['Linen White', 'Natural']
+      },
+      {
+        id: 607,
+        name: 'Linen Wavy + Blackout Curtain',
+        type: 'linen',
+        price: 'AED 699',
+        sizePrices: { '100cm': 233, '150cm': 349, '200cm': 466, '250cm': 582, '300cm': 699 },
+        image: '/images/linen-curtains/7.jpeg',
+        rating: 5.0,
+        description: 'Elegant linen wavy and blackout curtain.',
+        colors: ['Linen White', 'Natural']
+      }
     ],
     silk: [
       {
-        id: 7,
-        name: 'Pure Silk & blackout',
+        id: 401,
+        name: 'Silk + blackout curtain',
         type: 'silk',
-        price: 'AED 500',
-        image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=60',
-        rating: 5.0,
-        description: 'Premium Silk, Lustrous Finish',
-        colors: ['Gold', 'Silver', 'Champagne']
+        price: 'AED 549',
+        priceNum: 549,
+        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
+        image: '/images/silk-blackout-curtains/silk-1.jpg',
+        rating: 4.8,
+        description: 'Premium Silk and Blackout Curtain',
+        colors: ['Customizable']
       },
       {
-        id: 8,
-        name: 'Silk Blend & blackout',
+        id: 402,
+        name: 'Silk + blackout curtain',
         type: 'silk',
-        price: 'AED 550',
-        image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60',
-        rating: 4.9,
-        description: 'Soft & Elegant, Light Control',
-        colors: ['Rose Gold', 'Blush', 'Pearl']
-      },
-    ],
-    linen: [
-      {
-        id: 901,
-        name: 'Linen Only Blackout Curtain',
-        type: 'linen',
-        price: 'AED 549',
-        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
-        image: '/images/linen-blackout-curtains/linen-1.jpg',
+        price: 'AED 599',
+        priceNum: 599,
+        sizePrices: { '100cm': 200, '150cm': 300, '200cm': 400, '250cm': 500, '300cm': 599 },
+        image: '/images/silk-blackout-curtains/silk-2.jpg',
         rating: 4.8,
-        description: 'Premium linen blackout curtain for complete privacy.',
-        colors: ['Linen', 'Taupe']
+        description: 'Premium Silk and Blackout Curtain',
+        colors: ['Customizable']
       },
       {
-        id: 902,
-        name: 'Linen Only Blackout Curtain',
-        type: 'linen',
+        id: 403,
+        name: 'Silk + blackout curtain',
+        type: 'silk',
         price: 'AED 549',
+        priceNum: 549,
         sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
-        image: '/images/linen-blackout-curtains/linen-2.jpg',
-        rating: 4.9,
-        description: 'Natural texture linen with 100% light blocking.',
-        colors: ['Linen', 'Taupe']
-      },
-      {
-        id: 903,
-        name: 'Linen Only Blackout Curtain',
-        type: 'linen',
-        price: 'AED 549',
-        sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 },
-        image: '/images/linen-blackout-curtains/linen-3.jpg',
+        image: '/images/silk-blackout-curtains/silk-3.jpg',
         rating: 4.8,
-        description: 'Eco-friendly linen fabric combined with blackout lining.',
-        colors: ['Linen', 'Taupe']
+        description: 'Premium Silk and Blackout Curtain',
+        colors: ['Customizable']
       },
       {
-        id: 904,
-        name: 'Linen Wavy + Blackout Curtain',
-        type: 'linen',
+        id: 404,
+        name: 'Silk wavy + blackout curtain',
+        type: 'silk',
         price: 'AED 699',
+        priceNum: 699,
         sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/linen-blackout-curtains/linen-4.jpg',
-        rating: 5.0,
-        description: 'Elegant wavy folds with premium linen blackout fabric.',
-        colors: ['Natural', 'Beige']
-      },
-      {
-        id: 905,
-        name: 'Linen Wavy + Blackout Curtain',
-        type: 'linen',
-        price: 'AED 699',
-        sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/linen-blackout-curtains/linen-5.jpg',
+        image: '/images/silk-blackout-curtains/silk-4.jpg',
         rating: 4.9,
-        description: 'Contemporary wavy design providing maximum light control.',
-        colors: ['Natural', 'Beige']
+        description: 'Elegant Silk Wavy and Blackout Curtain',
+        colors: ['Customizable']
       },
       {
-        id: 906,
-        name: 'Linen Wavy + Blackout Curtain',
-        type: 'linen',
+        id: 405,
+        name: 'Silk wavy + blackout curtain',
+        type: 'silk',
         price: 'AED 699',
+        priceNum: 699,
         sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/linen-blackout-curtains/linen-6.jpg',
-        rating: 4.8,
-        description: 'Beautiful texture and flawless drape in natural linen.',
-        colors: ['Natural', 'Beige']
+        image: '/images/silk-blackout-curtains/silk-5.jpg',
+        rating: 4.9,
+        description: 'Elegant Silk Wavy and Blackout Curtain',
+        colors: ['Customizable']
       },
       {
-        id: 907,
-        name: 'Linen Wavy + Blackout Curtain',
-        type: 'linen',
+        id: 406,
+        name: 'Silk wavy + blackout curtain',
+        type: 'silk',
         price: 'AED 699',
+        priceNum: 699,
         sizePrices: { '100cm': 233, '150cm': 350, '200cm': 466, '250cm': 583, '300cm': 699 },
-        image: '/images/linen-blackout-curtains/linen-7.jpg',
-        rating: 5.0,
-        description: 'The pinnacle of luxury: wavy linen blackout curtains.',
-        colors: ['Natural', 'Beige']
+        image: '/images/silk-blackout-curtains/silk-6.jpg',
+        rating: 4.9,
+        description: 'Elegant Silk Wavy and Blackout Curtain',
+        colors: ['Customizable']
       }
-    ],
-    motorized: [
-      {
-        id: 10,
-        name: 'Smart Motorized Curtains',
-        type: 'motorized',
-        price: 'AED 800',
-        image: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=800&auto=format&fit=crop&q=60',
-        rating: 4.9,
-        description: 'App Control, Remote Operation',
-        colors: ['Black', 'White', 'Gray']
-      },
     ],
     custom: [
       {
@@ -408,7 +507,7 @@ const CurtainCategory = () => {
       {/* Filter Section */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-wrap gap-3 mb-8">
-          {['all', 'blackout', 'blackout-sheer', 'sheer', 'velvet', 'silk', 'linen', 'motorized', 'blinds', 'custom'].map((filter) => (
+          {['all', 'blackout', 'blackout-sheer', 'sheer', 'velvet', 'silk', 'linen', 'blinds', 'custom'].map((filter) => (
             <button
               key={filter}
               onClick={() => setSelectedFilter(filter)}

@@ -47,7 +47,7 @@ const AIChatbot = () => {
       return "We are based in Dubai, UAE. However, we come to YOU! We offer free home measurements, consultations, and installations across all UAE Emirates. Would you like to book a visit?";
     }
     if (text.includes('curtain') || text.includes('blind')) {
-      return "We offer a wide range of premium curtains including Blackout Curtains (for total darkness), Sheer Curtains, Motorized/Smart Curtains, and luxury Velvet Curtains. Would you like to book a free home measurement to see our fabric samples?";
+      return "We offer a wide range of premium curtains including Blackout Curtains (for total darkness), Sheer Curtains, and luxury Velvet Curtains. Would you like to book a free home measurement to see our fabric samples?";
     }
     if (text.includes('furniture') || text.includes('sofa') || text.includes('bed') || text.includes('mattress') || text.includes('table')) {
       return "Beyond curtains, we craft luxury custom furniture including L-shape and U-shape Sofas, Modern Dining Sets, Upholstered Beds, Premium Mattresses, and Smart Storage solutions. Everything is custom-built to your needs!";

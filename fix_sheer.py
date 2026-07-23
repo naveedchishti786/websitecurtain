@@ -1,37 +1,28 @@
 import fitz
-import os
 from PIL import Image
 import io
+import os
 
-pdf_path = r"C:\Users\DELL\.gemini\antigravity\brain\5b8ac2b5-7855-4d49-866a-da0113a2533f\.user_uploaded\media__1784760336906.pdf"
-output_dir = r"public\images\sheer-curtains"
+pdf_path = r'C:\Users\DELL\.gemini\antigravity\brain\beecddc3-6466-4455-a90a-98edbfce69be\.user_uploaded\media__1784791138945.pdf'
+out_dir = r'public\images\sheer-curtains'
 
 doc = fitz.open(pdf_path)
-all_images = []
-
-for page_index in range(len(doc)):
-    page = doc[page_index]
-    for img in page.get_images(full=True):
-        xref = img[0]
-        base_image = doc.extract_image(xref)
-        image_bytes = base_image["image"]
-        try:
-            pil_img = Image.open(io.BytesIO(image_bytes))
-            area = pil_img.size[0] * pil_img.size[1]
-            all_images.append({
-                "bytes": image_bytes,
-                "area": area
-            })
-        except:
-            pass
-
-# Sort by area descending and take top 14
-all_images.sort(key=lambda x: x["area"], reverse=True)
-top_14 = all_images[:14]
-
 count = 1
-for img_data in top_14:
-    with open(os.path.join(output_dir, f"sheer-{count}.jpg"), "wb") as f:
-        f.write(img_data["bytes"])
-    print(f"Saved sheer-{count}.jpg with area {img_data['area']}")
-    count += 1
+
+for p in range(len(doc)):
+    page = doc[p]
+    for img_info in page.get_images(full=True):
+        xref = img_info[0]
+        img_dict = doc.extract_image(xref)
+        img = Image.open(io.BytesIO(img_dict['image']))
+        w, h = img.size
+        # The curtain is on the right. We want a square crop of the right side.
+        if w > h:
+            cropped = img.crop((w - h, 0, w, h))
+        else:
+            cropped = img
+            
+        out_path = os.path.join(out_dir, f'sheer-{count}.jpg')
+        cropped.convert('RGB').save(out_path)
+        print(f"Saved {out_path} ({w}x{h} -> {cropped.size})")
+        count += 1

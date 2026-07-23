@@ -39,6 +39,17 @@ export const products = {
       features: ["Light Filtering", "Easy Care", "Multiple Colors"],
       category: "curtains"
     },
+    {
+      id: 3,
+      name: "American Style Sable Fabric Sheer curtain",
+      description: "Luxurious Sable fabric sheer with classic American design.",
+      price: 580,
+      image: "/images/sheer-curtains/sheer-.jpg?v=2",
+      features: ["Sable Fabric", "Classic American Design", "Available in Natural & Beige", "Rating: 4.9"],
+      colors: ["Natural", "Beige"],
+      rating: 4.9,
+      category: "curtains"
+    },
     // Add more curtain products
   ],
   furniture: [

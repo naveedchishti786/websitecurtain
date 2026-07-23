@@ -13,7 +13,7 @@ const Collections = () => {
       icon: <Blinds size="1em" />,
       bgGradient: 'from-[#0B1E36] to-[#173054]',
       description: 'Premium curtains for every room and style',
-      image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&auto=format&fit=crop&q=60',
+      image: '/images/blackout-curtains/blackout-1.jpg',
       items: 42,
       featured: 'Blackout • Velvet & blackout • Silk & blackout • Custom',
       path: '/curtains',
@@ -23,7 +23,6 @@ const Collections = () => {
         { name: 'Velvet & blackout', count: '6 types' },
         { name: 'Silk & blackout', count: '6 types' },
         { name: 'Linen & blackout', count: '6 types' },
-        { name: 'Motorized Curtains', count: '6 types' },
       ]
     },
     {
@@ -32,7 +31,7 @@ const Collections = () => {
       icon: <Sofa size="1em" />,
       bgGradient: 'from-[#C8A96A] to-[#B8955A]',
       description: 'Luxury sofas and comfortable seating',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=60',
+      image: '/images/furniture.jpg',
       items: 24,
       featured: 'Sectional • Recliner • Loveseat',
       path: '/sofas',
@@ -51,7 +50,7 @@ const Collections = () => {
       icon: <Armchair size="1em" />,
       bgGradient: 'from-[#173054] to-[#0B1E36]',
       description: 'Quality furniture for your living space',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60',
+      image: '/images/furniture.jpg',
       items: 36,
       featured: 'Living Room • Dining • Sofa • Office',
       path: '/furniture',
@@ -70,7 +69,7 @@ const Collections = () => {
       icon: <BedDouble size="1em" />,
       bgGradient: 'from-[#0B1E36] to-[#C8A96A]',
       description: 'Comfortable beds for better sleep',
-      image: 'https://images.unsplash.com/photo-1540932239986-310128078e6f?w=800&auto=format&fit=crop&q=60',
+      image: '/images/beds-collection/bed-1.jpg',
       items: 42,
       featured: 'King • Queen • Single • Storage',
       path: '/beds',
@@ -89,7 +88,7 @@ const Collections = () => {
       icon: <BedSingle size="1em" />,
       bgGradient: 'from-[#C8A96A] to-[#173054]',
       description: 'Premium mattress for ultimate comfort',
-      image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&auto=format&fit=crop&q=60',
+      image: '/images/mattress-collection/mattress-1.jpg',
       items: 36,
       featured: 'Memory Foam • Orthopedic • Spring',
       path: '/mattress',
@@ -108,7 +107,7 @@ const Collections = () => {
       icon: <Archive size="1em" />,
       bgGradient: 'from-[#173054] to-[#C8A96A]',
       description: 'Smart storage solutions for your home',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=60',
+      image: '/images/cabinets/cabinet-1.jpg',
       items: 36,
       featured: 'Wardrobes • Cupboards • Cabinets',
       path: '/storage',
@@ -128,6 +127,9 @@ const Collections = () => {
     { id: 'curtains', name: 'Curtains', icon: <Blinds size="1em" /> },
     { id: 'furniture', name: 'Furniture', icon: <Armchair size="1em" /> },
     { id: 'beds', name: 'Beds', icon: <BedDouble size="1em" /> },
+    { id: 'sofas', name: 'Sofas', icon: <Sofa size="1em" /> },
+    { id: 'storage', name: 'Storage', icon: <Archive size="1em" /> },
+    { id: 'mattress', name: 'Mattress', icon: <BedSingle size="1em" /> },
   ];
 
   const filteredCollections = activeFilter === 'all' 
@@ -200,11 +202,11 @@ const Collections = () => {
           </div>
 
           <div className="max-w-7xl mx-auto px-4 relative z-10">
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredCollections.map((collection, idx) => (
                 <div 
                   key={collection.id} 
-                  className="group break-inside-avoid relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#E8E2D8] hover:border-[#C8A96A] transition-all duration-500 transform hover:-translate-y-2 flex flex-col"
+                  className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl border-2 border-[#E8E2D8] hover:border-[#C8A96A] transition-all duration-500 transform hover:-translate-y-2 flex flex-col"
                   style={{ animation: `fadeIn 0.5s ease-in-out ${idx * 100}ms both` }}
                 >
                   {/* Card Header & Background */}
