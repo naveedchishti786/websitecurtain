@@ -332,51 +332,135 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ===== TESTIMONIALS SECTION ===== */}
+      {/* ===== MEASUREMENT / ORDERING GUIDE ===== */}
       <section className="py-20 md:py-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-[#C8A96A] font-bold text-sm tracking-widest uppercase mb-4 inline-block bg-[#C8A96A]/15 px-4 py-2 rounded-full border border-[#C8A96A]/30">
-              😊 Happy Customers
+              📏 Easy Process
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-[#0B1E36] mt-4">
-              What Our Customers Say
+            <h2 className="text-4xl md:text-5xl font-black text-[#0B1E36] mt-4 mb-6">
+              How to Measure & Order
             </h2>
-            <p className="text-lg text-[#173054] font-semibold mt-4 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who have transformed their homes
+            <p className="text-lg text-[#173054] font-semibold max-w-2xl mx-auto">
+              Getting the perfect curtains for your home is simple. Follow our 4-step guide or book a free measurement with our experts.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, idx) => (
-              <div 
-                key={idx}
-                className="bg-gradient-to-br from-[#F5F1EA] to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 group hover:-translate-y-3 border-2 border-[#C8A96A]/30 hover:border-[#C8A96A]/60"
-              >
-                {/* Stars */}
-                <div className="flex items-center mb-4 gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-[#C8A96A] text-[#C8A96A]" />
-                  ))}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {[
+              { step: '1', title: 'Measure Width', desc: 'Measure your window width or the curtain track/pole length. We recommend adding 15cm on each side for better coverage.' },
+              { step: '2', title: 'Measure Drop', desc: 'Measure from the top of the track or pole to where you want the curtains to end (sill, below sill, or floor length).' },
+              { step: '3', title: 'Choose Fabric', desc: 'Select from our wide range of premium blackout, sheer, or velvet fabrics. Request fabric samples if needed.' },
+              { step: '4', title: 'Place Order', desc: 'Submit your measurements online or contact us via WhatsApp for a quick quote and professional installation.' },
+            ].map((item, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-[#F5F1EA] to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#C8A96A]/20 hover:border-[#C8A96A] relative group hover:-translate-y-2">
+                <div className="absolute -top-6 -left-6 w-12 h-12 bg-[#0B1E36] group-hover:bg-[#C8A96A] transition-colors text-white font-black text-xl rounded-full flex items-center justify-center border-4 border-white shadow-md">
+                  {item.step}
                 </div>
-
-                {/* Review Text */}
-                <p className="text-[#0B1E36] mb-6 leading-relaxed font-semibold relative">
-                  <span className="text-5xl text-[#C8A96A]/30 absolute -top-6 -left-2">"</span>
-                  {testimonial.text}
-                  <span className="text-5xl text-[#C8A96A]/30 absolute -bottom-6 -right-2">"</span>
-                </p>
-
-                {/* Customer Info */}
-                <div className="pt-6 border-t-2 border-[#C8A96A]/30 flex items-center space-x-4">
-                  <div className="text-4xl">{testimonial.avatar}</div>
-                  <div className="text-left">
-                    <p className="font-black text-[#0B1E36]">{testimonial.name}</p>
-                    <p className="text-sm text-[#C8A96A] font-bold tracking-wide">{testimonial.location}</p>
-                  </div>
-                </div>
+                <h3 className="text-xl font-black text-[#0B1E36] mb-3 mt-2 group-hover:text-[#C8A96A] transition-colors">{item.title}</h3>
+                <p className="text-[#173054] font-medium leading-relaxed">{item.desc}</p>
               </div>
             ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+             <a href="https://wa.me/971555124614" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center space-x-3 px-8 py-4 bg-gradient-to-r from-[#0B1E36] to-[#173054] text-white font-black text-base rounded-xl hover:from-[#173054] hover:to-[#0B1E36] transition-all duration-300 shadow-lg transform hover:scale-105 group uppercase tracking-wide">
+               <span>Prefer professional help? Book Free Measurement</span>
+               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== TESTIMONIALS SECTION ===== */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-white to-[#F5F1EA] relative">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <span className="text-[#C8A96A] font-bold text-sm tracking-widest uppercase mb-4 inline-block bg-[#C8A96A]/15 px-4 py-2 rounded-full border border-[#C8A96A]/30">
+              ⭐ Social Proof
+            </span>
+            <h2 className="text-4xl md:text-5xl font-black text-[#0B1E36] mt-4">
+              Trusted by Hundreds of Homes
+            </h2>
+            <p className="text-lg text-[#173054] font-semibold mt-4 max-w-2xl mx-auto">
+              See what our customers say and view our recent transformations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Recent Project Showcase */}
+            <div className="relative h-[600px] w-full hidden lg:block group">
+               {/* Decorative background elements */}
+               <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-gradient-to-br from-[#C8A96A]/20 to-transparent rounded-[40px] -z-10 transition-transform duration-700 group-hover:rotate-3"></div>
+               <div className="absolute bottom-10 left-10 w-24 h-24 bg-[#0B1E36]/5 rounded-full blur-xl -z-10"></div>
+               
+               {/* Main tall image */}
+               <img 
+                 src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&h=1200&fit=crop" 
+                 alt="Recent Installation 1" 
+                 className="absolute top-4 right-4 w-[75%] h-[500px] rounded-[32px] shadow-2xl object-cover z-10 transition-all duration-700 group-hover:scale-[1.02] border-4 border-white/50" 
+               />
+               
+               {/* Floating Badge */}
+               <div className="absolute top-20 -left-6 bg-white/95 backdrop-blur-md px-6 py-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.1)] z-30 flex items-center gap-4 transition-transform duration-700 group-hover:-translate-y-2 group-hover:shadow-2xl">
+                  <div className="w-12 h-12 bg-[#F5F1EA] rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-[#C8A96A] fill-[#C8A96A]" />
+                  </div>
+                  <div>
+                    <p className="text-2xl font-black text-[#0B1E36]">4.9/5</p>
+                    <p className="text-xs font-bold text-[#173054] uppercase tracking-wider">Customer Rating</p>
+                  </div>
+               </div>
+               
+               {/* Smaller overlapping landscape image */}
+               <img 
+                 src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop" 
+                 alt="Recent Installation 2" 
+                 className="absolute bottom-0 left-4 w-[65%] h-[320px] rounded-[32px] shadow-[0_30px_60px_rgba(11,30,54,0.15)] object-cover z-20 border-[12px] border-white transition-all duration-700 group-hover:-translate-y-4 group-hover:translate-x-2 group-hover:scale-105" 
+               />
+            </div>
+            
+            {/* Mobile Showcase */}
+            <div className="grid grid-cols-2 gap-4 lg:hidden mb-12">
+               <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&h=800&fit=crop" alt="Recent Installation 1" className="rounded-2xl shadow-lg w-full h-56 object-cover hover:scale-105 transition-transform duration-500" />
+               <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=800&fit=crop" alt="Recent Installation 2" className="rounded-2xl shadow-lg w-full h-56 object-cover translate-y-6 hover:scale-105 transition-transform duration-500" />
+            </div>
+            
+            {/* Reviews */}
+            <div className="space-y-6">
+              {testimonials.map((testimonial, idx) => (
+                <div 
+                  key={idx}
+                  className="bg-white p-8 rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 group border-l-4 border-[#C8A96A] hover:border-[#0B1E36] relative"
+                >
+                  <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.017 21L16.41 14.59C16.634 13.916 16.746 13.208 16.746 12.5C16.746 11.233 16.242 10.018 15.346 9.122C14.45 8.226 13.235 7.722 11.968 7.722V4.5C14.09 4.5 16.125 5.343 17.625 6.843C19.125 8.343 19.968 10.378 19.968 12.5C19.968 13.626 19.789 14.743 19.439 15.8L16.638 21H14.017ZM7.049 21L9.442 14.59C9.666 13.916 9.778 13.208 9.778 12.5C9.778 11.233 9.274 10.018 8.378 9.122C7.482 8.226 6.267 7.722 5 7.722V4.5C7.122 4.5 9.157 5.343 10.657 6.843C12.157 8.343 13 10.378 13 12.5C13 13.626 12.821 14.743 12.471 15.8L9.67 21H7.049Z" />
+                    </svg>
+                  </div>
+                  <div className="flex items-center justify-between mb-6 relative z-10">
+                    <div className="flex items-center space-x-4">
+                      <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#0B1E36] to-[#173054] flex items-center justify-center text-white font-black text-xl shadow-lg">
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div>
+                        <p className="font-black text-[#0B1E36] text-lg">{testimonial.name}</p>
+                        <p className="text-xs text-[#C8A96A] font-bold tracking-widest uppercase mt-0.5">{testimonial.location}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p className="text-[#173054] leading-relaxed font-semibold relative z-10">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="mt-6 flex items-center gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-[#C8A96A] text-[#C8A96A]" />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -459,19 +543,26 @@ const Home = () => {
             Contact our experts for personalized consultation and discover how we can elevate your living space with premium solutions.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a 
+              href="https://wa.me/971555124614"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center space-x-3 px-8 py-4 md:px-8 md:py-5 bg-[#25D366] text-white font-black text-lg rounded-xl hover:bg-[#128C7E] transition-all duration-300 shadow-2xl transform hover:scale-105 uppercase tracking-wide w-full md:w-auto"
+            >
+              <span>💬 WhatsApp Us</span>
+            </a>
             <a 
               href="tel:+971555124614"
-              className="flex items-center justify-center space-x-3 px-8 py-4 md:px-10 md:py-5 bg-gradient-to-r from-[#C8A96A] via-[#D4AF37] to-[#B8955A] text-white font-black text-lg rounded-xl hover:from-[#B8955A] hover:via-[#C8A96A] hover:to-[#A8854A] transition-all duration-300 shadow-2xl hover:shadow-[#C8A96A]/80 transform hover:scale-105 group uppercase tracking-wide"
+              className="flex items-center justify-center space-x-3 px-8 py-4 md:px-8 md:py-5 bg-gradient-to-r from-[#C8A96A] via-[#D4AF37] to-[#B8955A] text-white font-black text-lg rounded-xl hover:from-[#B8955A] hover:via-[#C8A96A] hover:to-[#A8854A] transition-all duration-300 shadow-2xl hover:shadow-[#C8A96A]/80 transform hover:scale-105 uppercase tracking-wide w-full md:w-auto"
             >
-              <span>📞 Call Now</span>
-              <span>+971 55 512 4614</span>
+              <span>📞 Get a Quote</span>
             </a>
             <Link 
               to="/contact"
-              className="px-8 py-4 md:px-10 md:py-5 border-3 border-[#F5F1EA] text-[#F5F1EA] font-black text-lg rounded-xl hover:bg-[#0B1E36]/70 hover:text-[#C8A96A] hover:border-[#C8A96A] transition-all duration-300 backdrop-blur-sm uppercase tracking-wide"
+              className="px-8 py-4 md:px-8 md:py-5 border-3 border-[#F5F1EA] text-[#F5F1EA] font-black text-lg rounded-xl hover:bg-[#0B1E36]/70 hover:text-[#C8A96A] hover:border-[#C8A96A] transition-all duration-300 backdrop-blur-sm uppercase tracking-wide w-full md:w-auto text-center"
             >
-              ✉️ Get Free Consultation
+              Book Free Measurement
             </Link>
           </div>
 
