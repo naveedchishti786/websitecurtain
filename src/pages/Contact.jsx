@@ -60,14 +60,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@zoyacurtains.ae',
-      link: 'mailto:info@zoyacurtains.ae'
+      content: 'info@zoyapremiumcurtains.com',
+      link: 'mailto:info@zoyapremiumcurtains.com'
     },
     {
       icon: MapPin,
       title: 'Location',
-      content: 'Dubai, UAE',
-      link: '#'
+      content: 'Sharjah, UAE',
+      link: 'https://maps.app.goo.gl/mGEVYobnAumZiaa79'
     },
     {
       icon: Clock,
@@ -342,7 +342,7 @@ const Contact = () => {
               style={{ border: 0 }}
               loading="lazy"
               allowFullScreen=""
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.5893370944557!2d55.27082!3d25.19594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6e1a0000001%3A0x1234567890!2sDubai%2C%20UAE!5e0!3m2!1sen!2sae!4v1234567890"
+              src="https://maps.google.com/maps?q=25.310688,55.442813&t=&z=15&ie=UTF8&iwloc=&output=embed"
             ></iframe>
           </div>
         </div>

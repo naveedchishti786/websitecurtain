@@ -183,7 +183,7 @@ const ProductDetail = () => {
     curtains: [
       { id: 101, name: 'Premium Blackout Curtain', price: 'AED 250', image: '/images/blackout-curtains/blackout-1.jpg', type: 'blackout', sizePrices: { '100cm': 250, '150cm': 350, '200cm': 450, '250cm': 550, '300cm': 650 } },
       { id: 301, name: 'American Style Sheer Curtain', price: 'AED 550', image: '/images/sheer-curtains/sheer-1.jpg', type: 'sheer', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 } },
-      { id: 5, name: 'Luxurious Velvet & blackout', price: 'AED 400', image: 'https://images.unsplash.com/photo-1580228771349-4708709ec543?w=800&auto=format&fit=crop&q=60', type: 'velvet', sizePrices: { '100cm': 400, '150cm': 500, '200cm': 600, '250cm': 700, '300cm': 800 } },
+      { id: 5, name: 'Premium Velvet pleated curtain', price: 'AED 549', image: '/images/velvet-curtains/velvet-1.jpg', type: 'velvet', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 } },
       { id: 1101, name: 'Blackout & Sheer Combination', price: 'AED 350', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', type: 'blackout-sheer', sizePrices: { '100cm': 350, '150cm': 450, '200cm': 550, '250cm': 650, '300cm': 750 } }
     ],
     

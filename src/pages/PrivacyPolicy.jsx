@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
                 <p className="font-bold text-lg mb-1">Zoya Premium Curtain</p>
                 <p className="text-[#C8A96A] mb-2">Dubai, UAE</p>
                 <p>Phone: <a href="tel:+971555124614" className="text-white hover:text-[#C8A96A]">+971 55 512 4614</a></p>
-                <p>Email: <a href="mailto:info@zoyacurtains.ae" className="text-white hover:text-[#C8A96A]">info@zoyacurtains.ae</a></p>
+                <p>Email: <a href="mailto:info@zoyapremiumcurtains.com" className="text-white hover:text-[#C8A96A]">info@zoyapremiumcurtains.com</a></p>
               </div>
             </div>
 

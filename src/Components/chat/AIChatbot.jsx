@@ -41,10 +41,10 @@ const AIChatbot = () => {
       return "Since all our luxury curtains and furniture are custom-tailored to perfectly fit your space, pricing varies based on dimensions and fabric choices. We offer a completely FREE home measurement and consultation! Call or WhatsApp us at +971 55 512 4614 to book your visit.";
     }
     if (text.includes('contact') || text.includes('phone') || text.includes('whatsapp') || text.includes('call') || text.includes('number')) {
-      return "You can reach us anytime via Call or WhatsApp at +971 55 512 4614, or email us at info@zoyacurtains.ae. We are open daily from 9 AM to 9 PM.";
+      return "You can reach us anytime via Call or WhatsApp at +971 55 512 4614, or email us at info@zoyapremiumcurtains.com. We are open daily from 9 AM to 9 PM.";
     }
     if (text.includes('where') || text.includes('address') || text.includes('locate')) {
-      return "We are based in Dubai, UAE. However, we come to YOU! We offer free home measurements, consultations, and installations across all UAE Emirates. Would you like to book a visit?";
+      return "We are based in Sharjah, UAE. However, we come to YOU! We offer free home measurements and consultations across Sharjah, Dubai, and Ajman. Would you like to book a visit?";
     }
     if (text.includes('curtain') || text.includes('blind')) {
       return "We offer a wide range of premium curtains including Blackout Curtains (for total darkness), Sheer Curtains, and luxury Velvet Curtains. Would you like to book a free home measurement to see our fabric samples?";

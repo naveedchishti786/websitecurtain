@@ -289,7 +289,7 @@ const Navbar = () => {
                   <span>Call Now</span>
                 </a>
                 <a
-                  href="mailto:info@zoyacurtains.ae"
+                  href="mailto:info@zoyapremiumcurtains.com"
                   className="flex items-center justify-center space-x-2 bg-white text-[#0B1E36] px-4 py-3 rounded-xl font-bold text-sm border-2 border-[#0B1E36] hover:bg-[#F5F1EA] transition-all"
                 >
                   <Mail className="w-5 h-5" />

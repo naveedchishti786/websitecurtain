@@ -302,8 +302,8 @@ const Services = () => {
               <Mail className="w-12 h-12 text-amber-500 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 mb-4">Send your service request details</p>
-              <a href="mailto:info@zoyacurtains.ae" className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-lg font-bold transition-all">
-                info@zoyacurtains.ae
+              <a href="mailto:info@zoyapremiumcurtains.com" className="inline-block bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-lg font-bold transition-all">
+                info@zoyapremiumcurtains.com
               </a>
             </div>
 
@@ -396,7 +396,7 @@ const Services = () => {
               <a href="tel:+971555124614" className="inline-block bg-white text-amber-600 px-8 py-3.5 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg">
                 📞 Call Now
               </a>
-              <a href="mailto:info@zoyacurtains.ae" className="inline-block bg-amber-700 hover:bg-amber-800 text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg">
+              <a href="mailto:info@zoyapremiumcurtains.com" className="inline-block bg-amber-700 hover:bg-amber-800 text-white px-8 py-3.5 rounded-lg font-bold transition-all shadow-lg">
                 ✉️ Email Us
               </a>
             </div>

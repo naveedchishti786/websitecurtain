@@ -207,7 +207,7 @@ const Footer = () => {
               </a>
 
               <a 
-                href="mailto:info@zoyacurtains.ae" 
+                href="mailto:info@zoyapremiumcurtains.com" 
                 className="flex items-start space-x-3 group hover:translate-x-1 transition-all duration-300"
               >
                 <div className="w-10 h-10 bg-[#C8A96A]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#C8A96A] transition-colors duration-300">
@@ -215,7 +215,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-[#C8A96A] uppercase tracking-wider">Email</p>
-                  <p className="text-[#E8E2D8] font-semibold">info@zoyacurtains.ae</p>
+                  <p className="text-[#E8E2D8] font-semibold">info@zoyapremiumcurtains.com</p>
                 </div>
               </a>
 

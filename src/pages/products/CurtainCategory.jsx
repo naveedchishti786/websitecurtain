@@ -380,7 +380,8 @@ const CurtainCategory = () => {
         name: 'Custom Made Curtains',
         type: 'custom',
         price: 'AED 300+',
-        image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&auto=format&fit=crop&q=60',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/curtains.webp',
         rating: 4.8,
         description: 'Tailored to Your Specifications',
         colors: ['Any Color Available']

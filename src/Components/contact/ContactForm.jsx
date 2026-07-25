@@ -20,11 +20,23 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
+    
+    // Format the message for WhatsApp
+    const text = `New Inquiry from Website:
+Name: ${formData.name}
+Phone: ${formData.phone}
+Email: ${formData.email}
+Service: ${formData.service || 'Not specified'}
+Message: ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/971555124614?text=${encodeURIComponent(text)}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
     setSubmitted(true);
     
-    // Reset form after 3 seconds
+    // Reset form after 5 seconds
     setTimeout(() => {
       setSubmitted(false);
       setFormData({
@@ -34,7 +46,7 @@ const ContactForm = () => {
         service: '',
         message: ''
       });
-    }, 3000);
+    }, 5000);
   };
 
   return (
@@ -57,7 +69,7 @@ const ContactForm = () => {
                 Thank You!
               </h3>
               <p className="text-gray-600">
-                We'll get back to you within 24 hours.
+                We'll contact you within 2 business hours.
               </p>
             </div>
           ) : (
@@ -153,18 +165,18 @@ const ContactForm = () => {
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           <div className="text-center p-6 bg-white rounded-lg shadow">
             <div className="text-4xl mb-3">📞</div>
-            <h3 className="font-bold text-gray-800 mb-2">Phone</h3>
-            <p className="text-gray-600">+91 98765 43210</p>
+            <h3 className="font-bold text-gray-800 mb-2">Phone / WhatsApp</h3>
+            <p className="text-gray-600">+971 55 512 4614</p>
           </div>
           <div className="text-center p-6 bg-white rounded-lg shadow">
             <div className="text-4xl mb-3">📧</div>
             <h3 className="font-bold text-gray-800 mb-2">Email</h3>
-            <p className="text-gray-600">info@premiumcurtains.com</p>
+            <p className="text-gray-600">info@zoyapremiumcurtains.com</p>
           </div>
           <div className="text-center p-6 bg-white rounded-lg shadow">
             <div className="text-4xl mb-3">📍</div>
-            <h3 className="font-bold text-gray-800 mb-2">Address</h3>
-            <p className="text-gray-600">123 Main Street, City</p>
+            <h3 className="font-bold text-gray-800 mb-2">Location</h3>
+            <p className="text-gray-600">Ward Al Sham Furniture, Sharjah, UAE</p>
           </div>
         </div>
       </div>

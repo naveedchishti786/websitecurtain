@@ -274,7 +274,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Modern Velvet Curtains - Forest Green',
       description: 'Elegant velvet curtains with premium lining and modern design',
-      image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&h=600&fit=crop',
+      image: '/images/velvet-curtains/velvet-1.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -283,7 +283,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Sheer Voile Curtains - Light Filtering',
       description: 'Lightweight sheer curtains perfect for living rooms and bedrooms',
-      image: 'https://images.unsplash.com/photo-1509850713511-92e272efd4ab?w=800&h=600&fit=crop',
+      image: '/images/sheer-curtains/1.jpeg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -292,7 +292,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Blackout Curtains - Premium Darkening',
       description: 'High-quality blackout curtains for complete privacy and light control',
-      image: 'https://images.unsplash.com/photo-1598632823957-4e51b1b29620?w=800&h=600&fit=crop',
+      image: '/images/blackout-curtains/blackout-1.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -301,7 +301,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Linen Curtains - Natural Elegance',
       description: 'Natural linen curtains with subtle texture and timeless appeal',
-      image: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&h=600&fit=crop',
+      image: '/images/linen-curtains/1.jpeg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -310,7 +310,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Gold Damask Curtains - Luxury Design',
       description: 'Luxurious damask patterned curtains with gold accents',
-      image: 'https://images.unsplash.com/photo-1578500743066-461c8dee6b87?w=800&h=600&fit=crop',
+      image: '/images/velvet-curtains/velvet-2.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -319,7 +319,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Thermal Insulated Curtains',
       description: 'Energy-efficient thermal curtains for temperature control',
-      image: 'https://images.unsplash.com/photo-1578500710232-f6399b5509f4?w=800&h=600&fit=crop',
+      image: '/images/blackout-curtains/blackout-2.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -328,7 +328,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Jacquard Pattern Curtains',
       description: 'Beautiful jacquard weave with intricate patterns',
-      image: 'https://images.unsplash.com/photo-1585399226117-6bf144ad4a89?w=800&h=600&fit=crop',
+      image: '/images/velvet-curtains/velvet-3.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -337,7 +337,7 @@ const Gallery = () => {
       category: 'curtains',
       title: 'Silk Blend Curtains - Premium',
       description: 'Luxurious silk blend curtains with elegant drape',
-      image: 'https://images.unsplash.com/photo-1578500743066-461c8dee6b87?w=800&h=600&fit=crop',
+      image: '/images/silk-blackout-curtains/silk-1.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -482,63 +482,63 @@ const Gallery = () => {
     {
       id: 10,
       category: 'furniture',
-      title: 'Leather Sofa Set - Executive Style',
-      description: 'Premium leather sofa set for modern living rooms',
-      image: 'https://images.unsplash.com/photo-1592078615290-033ee584e267?w=800&h=600&fit=crop',
+      title: 'Modern Wardrobe - Sliding Doors',
+      description: 'Premium built-in wardrobe with sleek sliding doors',
+      image: '/images/cabinets/cabinet-1.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 11,
       category: 'furniture',
-      title: 'Dining Table Set - Wood Design',
-      description: 'Elegant wooden dining table with matching chairs',
-      image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&h=600&fit=crop',
+      title: 'Premium Wooden Cabinet',
+      description: 'Elegant custom-crafted wooden cabinet for versatile storage',
+      image: '/images/cabinets/cabinet-2.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 12,
       category: 'furniture',
-      title: 'Office Desk Setup - Modern Workspace',
-      description: 'Contemporary office furniture with ergonomic design',
-      image: 'https://images.unsplash.com/photo-1593642532400-2682a8a0fcc7?w=800&h=600&fit=crop',
+      title: 'Custom Kitchen Cabinetry',
+      description: 'Contemporary kitchen cabinets with ergonomic design',
+      image: '/images/cabinets/cabinet-3.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 13,
       category: 'furniture',
-      title: 'Accent Chairs Collection',
-      description: 'Stylish accent chairs in various colors and designs',
-      image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop',
+      title: 'Minimalist Storage Solution',
+      description: 'Stylish, space-saving cabinet for modern apartments',
+      image: '/images/cabinets/cabinet-4.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 14,
       category: 'furniture',
-      title: 'Coffee Table - Minimalist Design',
-      description: 'Modern coffee table with glass and wood combination',
-      image: 'https://images.unsplash.com/photo-1532372320572-cda402087165?w=800&h=600&fit=crop',
+      title: 'Luxury Walk-in Closet',
+      description: 'Spacious bespoke closet with premium wood finishing',
+      image: '/images/cabinets/cabinet-5.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 15,
       category: 'furniture',
-      title: 'Sectional Sofa - Corner Seating',
-      description: 'Large sectional sofa perfect for family gatherings',
-      image: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop',
+      title: 'Contemporary Display Cabinet',
+      description: 'Large glass-front cabinet perfect for living rooms',
+      image: '/images/cabinets/cabinet-6.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
     {
       id: 16,
       category: 'furniture',
-      title: 'Console Table - Entryway Piece',
-      description: 'Stylish console table for hallways and entrances',
-      image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop',
+      title: 'Elegant Bookshelf Cabinet',
+      description: 'Stylish tall cabinet for home offices and studies',
+      image: '/images/cabinets/cabinet-7.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -560,7 +560,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Luxury King Size Bed - Upholstered',
       description: 'Premium upholstered bed frame with elegant headboard',
-      image: 'https://images.unsplash.com/photo-1540932239986-310128078e6f?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-1.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -569,7 +569,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Contemporary Platform Bed',
       description: 'Modern platform bed with under-bed storage solution',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-2.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -578,7 +578,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Classic Wooden Bed Frame',
       description: 'Timeless wooden bed with intricate carving details',
-      image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-3.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -587,7 +587,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Modern Metal Frame Bed',
       description: 'Sleek metal bed frame with minimalist aesthetic',
-      image: 'https://images.unsplash.com/photo-1512909006412-b0d5482205a1?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-4.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -596,7 +596,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Canopy Bed - Luxury Edition',
       description: 'Four-poster canopy bed with premium fabric draping',
-      image: 'https://images.unsplash.com/photo-1507840957519-35b9e4072da4?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-5.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -605,7 +605,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Queen Size Storage Bed',
       description: 'Spacious queen bed with integrated storage drawers',
-      image: 'https://images.unsplash.com/photo-1516214104703-d870798883c5?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-6.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -614,7 +614,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Italian Leather Bed',
       description: 'Premium Italian leather bed with luxury design',
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-7.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -623,7 +623,7 @@ const Gallery = () => {
       category: 'beds',
       title: 'Adjustable Electric Bed',
       description: 'Modern adjustable bed with premium comfort features',
-      image: 'https://images.unsplash.com/photo-1604857521033-91d2cdb9bada?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-8.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -717,7 +717,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Master Bedroom Complete Setup',
       description: 'Full bedroom interior with bed, curtains, wardrobe and furniture',
-      image: 'https://images.unsplash.com/photo-1604857521033-91d2cdb9bada?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-14.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -726,7 +726,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Living Room Transformation',
       description: 'Complete living room with sofa, curtains, and dining area',
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&h=600&fit=crop',
+      image: '/images/furniture.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -735,7 +735,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Modern Apartment Interior',
       description: 'Full apartment furnishing with contemporary design throughout',
-      image: 'https://images.unsplash.com/photo-1604857521033-91d2cdb9bada?w=800&h=600&fit=crop',
+      image: '/images/tv-units/tv-unit-5.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -744,7 +744,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Luxury Villa Interior Design',
       description: 'Complete villa furnishing with premium materials and design',
-      image: 'https://images.unsplash.com/photo-1579848212155-bc2a432e63b7?w=800&h=600&fit=crop',
+      image: '/images/tv-units/tv-unit-2.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -753,7 +753,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Contemporary Home Office',
       description: 'Full office setup with desk, storage, and comfortable seating',
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop',
+      image: '/images/cabinets/cabinet-9.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -762,7 +762,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Guest Bedroom Makeover',
       description: 'Complete guest room with bed, curtains, and elegant decor',
-      image: 'https://images.unsplash.com/photo-1611269431281-ca522257b269?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-10.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -771,7 +771,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Family Room Complete Setup',
       description: 'Spacious family room with multiple seating and entertainment areas',
-      image: 'https://images.unsplash.com/photo-1582321905220-4ac41ba338af?w=800&h=600&fit=crop',
+      image: '/images/tv-units/tv-unit-3.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -780,7 +780,7 @@ const Gallery = () => {
       category: 'complete',
       title: 'Studio Apartment Design',
       description: 'Smart studio apartment with multipurpose furniture and design',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+      image: '/images/beds-collection/bed-11.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },
@@ -906,27 +906,7 @@ const Gallery = () => {
               Each project represents our commitment to excellence and customer satisfaction.
             </p>
 
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative group">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-[#C8A96A] pointer-events-none" />
-                <input
-                  type="text"
-                  placeholder="Search by name, category, or description..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-14 pr-12 py-4 border-2 border-[#E8E2D8] rounded-2xl focus:border-[#C8A96A] focus:shadow-[0_0_0_4px_rgba(200,169,106,0.1)] focus:outline-none transition-all text-[#222222] placeholder-[#999999] font-semibold text-lg bg-white shadow-sm hover:border-[#C8A96A]/50"
-                />
-                {searchTerm && (
-                  <button 
-                    onClick={() => setSearchTerm('')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#999999] hover:text-[#222222] transition-colors p-1"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                )}
-              </div>
-            </div>
+
           </div>
         </section>
 

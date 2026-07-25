@@ -205,13 +205,13 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Ahmed Al Mansouri',
+                name: 'Sagheer Ahmed',
                 role: 'Founder & CEO',
                 emoji: '👨‍💼',
                 description: 'Visionary leader with 15+ years in home furnishing industry'
               },
               {
-                name: 'Fatima Al Zaabi',
+                name: 'Zoya Afrin',
                 role: 'Product Manager',
                 emoji: '👩‍💼',
                 description: 'Expert in selecting premium products and quality assurance'

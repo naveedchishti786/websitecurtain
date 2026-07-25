@@ -5,6 +5,7 @@ import { ArrowRight, CheckCircle, Sparkles, ChevronDown, Star, Eye, Blinds, Sofa
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [prevImageIndex, setPrevImageIndex] = useState(4); // 5 images total, so last index is 4
 
   const heroImages = [
     'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&h=900&fit=crop', // Curtains / Blinds
@@ -17,10 +18,13 @@ const Home = () => {
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+      setCurrentImageIndex((prev) => {
+        setPrevImageIndex(prev);
+        return (prev + 1) % heroImages.length;
+      });
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroImages.length]);
 
   const categories = [
     { name: 'Curtains', icon: <Blinds className="w-16 h-16" strokeWidth={1.5} />, path: '/curtains', items: '100+ Designs' },
@@ -89,17 +93,26 @@ const Home = () => {
       {/* ===== HERO SECTION ===== */}
       <section className="relative w-full min-h-[70dvh] lg:min-h-[100dvh] bg-black overflow-hidden">
         {/* Background Images Slider */}
-        {heroImages.map((img, index) => (
-          <div
-            key={img}
-            className={`absolute inset-0 bg-contain bg-center bg-no-repeat ${
-              index === currentImageIndex 
-                ? 'opacity-100 z-10 transition-opacity duration-500 ease-in' 
-                : 'opacity-0 z-0 transition-opacity duration-[100ms] delay-500 ease-out'
-            }`}
-            style={{ backgroundImage: `url('${img}')` }}
-          ></div>
-        ))}
+        {heroImages.map((img, index) => {
+          let zIndex = 'z-0';
+          let opacity = 'opacity-0';
+          
+          if (index === currentImageIndex) {
+            zIndex = 'z-20';
+            opacity = 'opacity-100';
+          } else if (index === prevImageIndex) {
+            zIndex = 'z-10';
+            opacity = 'opacity-100'; // Keeps previous image fully visible underneath
+          }
+
+          return (
+            <div
+              key={img}
+              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${zIndex} ${opacity}`}
+              style={{ backgroundImage: `url('${img}')` }}
+            ></div>
+          );
+        })}
 
         {/* Natural Overlay - Only for Text Readability (No heavy theme colors) */}
         <div className="absolute inset-0 bg-black/25"></div>
@@ -145,6 +158,8 @@ const Home = () => {
               <p className="text-lg md:text-2xl text-[#F5F1EA] leading-relaxed max-w-3xl mx-auto font-medium drop-shadow-lg">
                 Discover our exquisite collection of premium curtains, furniture, and home furnishings. 
                 Elevate your space with timeless elegance and sophisticated design.
+                <br /><br />
+                <span className="text-[#C8A96A] font-bold drop-shadow-xl animate-pulse">✨ Free Consultation in Sharjah, Dubai & Ajman ✨</span>
               </p>
             </div>
 
@@ -171,34 +186,10 @@ const Home = () => {
               </a>
             </div>
 
-            {/* Stats Row */}
-            <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 pt-12 border-t-2 border-[#C8A96A]/40 transition-all duration-1000 delay-300 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}>
-              {[
-                { number: '5000+', label: 'Happy Customers', icon: '👥' },
-                { number: '500+', label: 'Premium Products', icon: '🎨' },
-                { number: '15+', label: 'Years Experience', icon: '🏆' },
-              ].map((stat, idx) => (
-                <div key={idx} className="text-center space-y-2 group hover:translate-y-2 transition-all duration-300">
-                  <div className="text-3xl md:text-4xl drop-shadow-lg">{stat.icon}</div>
-                  <p className="text-2xl md:text-3xl font-black text-[#D4AF37] drop-shadow-md">{stat.number}</p>
-                  <p className="text-sm md:text-base text-[#F5F1EA] font-bold">{stat.label}</p>
-                </div>
-              ))}
-            </div>
+
           </div>
 
-          {/* Scroll Down Indicator */}
-          <button
-            onClick={scrollToNext}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce text-[#D4AF37] hover:text-[#F5F1EA] transition-colors z-20"
-            aria-label="Scroll down"
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </button>
+
         </div>
 
         {/* Decorative Bottom Wave */}
@@ -273,7 +264,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <span className="text-[#C8A96A] font-bold text-sm tracking-widest uppercase mb-4 inline-block bg-[#C8A96A]/15 px-4 py-2 rounded-full border border-[#C8A96A]/30">
-              🪟 Premium Curtains
+              ✨ Premium Curtains
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-[#0B1E36] mt-4 mb-6 leading-tight">
               Curtains for Every Style

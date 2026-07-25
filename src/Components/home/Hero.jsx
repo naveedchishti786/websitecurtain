@@ -5,6 +5,7 @@ import { ArrowRight, Sparkles, ChevronDown } from 'lucide-react';
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState(2); // Since we have 3 slides, last is index 2
 
   useEffect(() => {
     setIsVisible(true);
@@ -29,10 +30,13 @@ const Hero = () => {
   // Auto-rotate slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      setCurrentSlide((prev) => {
+        setPrevSlide(prev);
+        return (prev + 1) % heroSlides.length;
+      });
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [heroSlides.length]);
 
   const scrollToNext = () => {
     window.scrollBy({
@@ -45,20 +49,31 @@ const Hero = () => {
     <section className="relative w-full min-h-screen bg-white overflow-hidden">
       {/* Background Image Carousel */}
       <div className="absolute inset-0">
-        {heroSlides.map((slide, idx) => (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1500 ${
-              idx === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img
-              src={slide.image}
-              alt={slide.alt}
-              className="w-full h-full object-contain object-center"
-            />
-          </div>
-        ))}
+        {heroSlides.map((slide, idx) => {
+          let zIndex = 'z-0';
+          let opacity = 'opacity-0';
+          
+          if (idx === currentSlide) {
+            zIndex = 'z-20';
+            opacity = 'opacity-100';
+          } else if (idx === prevSlide) {
+            zIndex = 'z-10';
+            opacity = 'opacity-100'; // Keeps the previous slide visible underneath while the new one fades in
+          }
+
+          return (
+            <div
+              key={idx}
+              className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${zIndex} ${opacity}`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          );
+        })}
 
         {/* Soft Green Overlay - Primary */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1E36]/72 via-[#173054]/62 to-[#0B1E36]/58 mix-blend-overlay"></div>
@@ -178,8 +193,11 @@ const Hero = () => {
 
         {/* Previous Slide Button */}
         <button
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-          className="absolute left-8 top-1/2 transform -translate-y-1/2 z-20 bg-[#D4AF37]/30 hover:bg-[#D4AF37]/60 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm hidden md:flex items-center justify-center"
+          onClick={() => {
+            setPrevSlide(currentSlide);
+            setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+          }}
+          className="absolute left-8 top-1/2 transform -translate-y-1/2 z-30 bg-[#D4AF37]/30 hover:bg-[#D4AF37]/60 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm hidden md:flex items-center justify-center"
           aria-label="Previous slide"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -189,8 +207,11 @@ const Hero = () => {
 
         {/* Next Slide Button */}
         <button
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-          className="absolute right-8 top-1/2 transform -translate-y-1/2 z-20 bg-[#D4AF37]/30 hover:bg-[#D4AF37]/60 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm hidden md:flex items-center justify-center"
+          onClick={() => {
+            setPrevSlide(currentSlide);
+            setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+          }}
+          className="absolute right-8 top-1/2 transform -translate-y-1/2 z-30 bg-[#D4AF37]/30 hover:bg-[#D4AF37]/60 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm hidden md:flex items-center justify-center"
           aria-label="Next slide"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

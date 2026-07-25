@@ -36,23 +36,23 @@ const Blog = () => {
       `,
       author: 'Sarah Johnson',
       date: '2024-01-15',
-      image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&auto=format&fit=crop&q=60',
+      image: '/images/curtains.webp',
       readTime: '5 min read'
     },
     {
       id: 2,
-      title: 'Top Furniture Trends of 2024',
+      title: `Top Furniture Trends of ${new Date().getFullYear()}`,
       category: 'Trends',
       excerpt: 'Explore the most popular furniture styles and materials dominating interior design this year.',
       content: `
-        <h2>Top Furniture Trends of 2024</h2>
-        <p>2024 brings exciting new trends in furniture design that blend sustainability, comfort, and style. Whether you're planning a complete home makeover or just looking to refresh your space, these trends will inspire your next furniture purchase.</p>
+        <h2>Top Furniture Trends of ${new Date().getFullYear()}</h2>
+        <p>${new Date().getFullYear()} brings exciting new trends in furniture design that blend sustainability, comfort, and style. Whether you're planning a complete home makeover or just looking to refresh your space, these trends will inspire your next furniture purchase.</p>
         
         <h3>1. Sustainable and Eco-Friendly Materials</h3>
         <p>Environmental consciousness continues to influence furniture design. Reclaimed wood, recycled metals, and sustainable fabrics are becoming increasingly popular. Furniture makers are focusing on durability and timeless design to reduce waste and encourage long-term use.</p>
         
         <h3>2. Comfort-First Design</h3>
-        <p>After years of prioritizing aesthetics, 2024 sees a return to comfort. Oversized sofas, deep seating, and plush cushions are everywhere. The "athleisure" movement has extended to furniture, creating pieces that are both stylish and incredibly comfortable for daily living.</p>
+        <p>After years of prioritizing aesthetics, ${new Date().getFullYear()} sees a return to comfort. Oversized sofas, deep seating, and plush cushions are everywhere. The "athleisure" movement has extended to furniture, creating pieces that are both stylish and incredibly comfortable for daily living.</p>
         
         <h3>3. Bold Colors and Patterns</h3>
         <p>Gone are the days of all-neutral interiors. Rich jewel tones, earth tones, and bold patterns are making a comeback. Emerald green, terracotta, and deep blues are popular choices for statement furniture pieces.</p>
@@ -68,7 +68,7 @@ const Blog = () => {
       `,
       author: 'Michael Chen',
       date: '2024-01-10',
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&auto=format&fit=crop&q=60',
+      image: '/images/furniture.jpg',
       readTime: '6 min read'
     },
     {
@@ -97,7 +97,7 @@ const Blog = () => {
       `,
       author: 'Emma Williams',
       date: '2024-01-05',
-      image: 'https://images.unsplash.com/photo-1604857521033-91d2cdb9bada?w=800&auto=format&fit=crop&q=60',
+      image: '/images/mattress.webp',
       readTime: '4 min read'
     },
     {
@@ -126,7 +126,7 @@ const Blog = () => {
       `,
       author: 'David Martinez',
       date: '2023-12-28',
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&auto=format&fit=crop&q=60',
+      image: '/images/tv-units/tv-unit-1.jpg',
       readTime: '5 min read'
     },
     {
@@ -152,7 +152,7 @@ const Blog = () => {
       `,
       author: 'Lisa Anderson',
       date: '2023-12-20',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60',
+      image: '/images/blackout-curtains/blackout-2.jpg',
       readTime: '5 min read'
     },
     {
@@ -178,7 +178,7 @@ const Blog = () => {
       `,
       author: 'James Wilson',
       date: '2023-12-15',
-      image: 'https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=800&auto=format&fit=crop&q=60',
+      image: '/images/blind-curtains/blind-2.jpg',
       readTime: '4 min read'
     }
   ];
@@ -198,9 +198,8 @@ const Blog = () => {
   const startIndex = (currentPage - 1) * postsPerPage;
   const displayedPosts = filteredPosts.slice(startIndex, startIndex + postsPerPage);
 
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
+  const formatDate = () => {
+    return new Date().getFullYear().toString();
   };
 
   const BlogDetailModal = ({ post, onClose }) => {
@@ -329,48 +328,51 @@ const Blog = () => {
 
         {/* ===== SEARCH & FILTER SECTION ===== */}
         <section className="py-12 bg-[#F5F1EA] border-b-2 border-[#E8E2D8]">
-          <div className="max-w-7xl mx-auto px-4">
-            {/* Search Bar */}
-            <div className="mb-8">
-              <div className="relative max-w-2xl mx-auto">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#C8A96A]" />
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => {
-                    setSearchTerm(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="w-full pl-12 pr-6 py-3 bg-white border-2 border-[#E8E2D8] rounded-xl focus:border-[#0B1E36] focus:outline-none transition-all text-[#222222] placeholder-[#666666] font-semibold"
-                />
+          <div className="max-w-5xl mx-auto px-4 relative z-20">
+            {/* Unified Control Panel */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border-2 border-[#E8E2D8]">
+              
+              {/* Category Filter */}
+              <div className="w-full relative">
+                <div className="flex flex-nowrap overflow-x-auto gap-2 md:gap-3 pb-4 pt-2 px-1 justify-start xl:justify-center" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                  <style>{`
+                    .flex.flex-nowrap::-webkit-scrollbar {
+                      display: none;
+                    }
+                  `}</style>
+                  {categories.map((category) => (
+                    <button
+                      key={category}
+                      onClick={() => {
+                        setSelectedCategory(category === 'All' ? 'all' : category);
+                        setCurrentPage(1);
+                      }}
+                      className={`flex-shrink-0 flex items-center space-x-1.5 px-4 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 border-2 whitespace-nowrap ${
+                        selectedCategory === (category === 'All' ? 'all' : category)
+                          ? 'bg-[#0B1E36] text-[#C8A96A] border-[#0B1E36] shadow-md'
+                          : 'bg-[#C8A96A]/10 text-[#0B1E36] border-transparent hover:border-[#C8A96A] hover:bg-white'
+                      }`}
+                    >
+                      <Tag className={`w-3.5 h-3.5 ${
+                        selectedCategory === (category === 'All' ? 'all' : category) 
+                          ? 'text-[#C8A96A]' 
+                          : 'text-[#C8A96A]'
+                      }`} />
+                      <span className="uppercase tracking-wider text-xs">{category}</span>
+                    </button>
+                  ))}
+                  {/* Spacer for right-side padding in scroll area */}
+                  <div className="w-2 flex-shrink-0" aria-hidden="true"></div>
+                </div>
+              </div>
+
+              {/* Results Count */}
+              <div className="mt-8 pt-6 border-t-2 border-[#F5F1EA]">
+                <p className="text-center text-sm text-[#888888] font-semibold">
+                  Showing <span className="text-[#0B1E36] font-black">{filteredPosts.length}</span> article{filteredPosts.length !== 1 ? 's' : ''}
+                </p>
               </div>
             </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  onClick={() => {
-                    setSelectedCategory(category === 'All' ? 'all' : category);
-                    setCurrentPage(1);
-                  }}
-                  className={`px-6 py-2 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
-                    selectedCategory === (category === 'All' ? 'all' : category)
-                      ? 'bg-[#0B1E36] text-white shadow-lg'
-                      : 'bg-white text-[#222222] border-2 border-[#E8E2D8] hover:border-[#C8A96A] hover:bg-white'
-                  }`}
-                >
-                  {category}
-                </button>
-              ))}
-            </div>
-
-            {/* Results Count */}
-            <p className="text-center text-sm text-[#888888] font-semibold mt-6">
-              Showing <span className="text-[#0B1E36] font-black">{filteredPosts.length}</span> article{filteredPosts.length !== 1 ? 's' : ''}
-            </p>
           </div>
         </section>
 
@@ -397,7 +399,7 @@ const Blog = () => {
                       <img
                         src={post.image}
                         alt={post.title}
-                        className="w-full h-full object-contain object-center group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E36]/60 via-[#0B1E36]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
