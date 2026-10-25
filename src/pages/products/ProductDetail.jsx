@@ -182,9 +182,9 @@ const ProductDetail = () => {
     ],
     curtains: [
       { id: 101, name: 'Premium Blackout Curtain', price: 'AED 250', image: '/images/blackout-curtains/blackout-1.jpg', type: 'blackout', sizePrices: { '100cm': 250, '150cm': 350, '200cm': 450, '250cm': 550, '300cm': 650 } },
-      { id: 301, name: 'American Style Sheer Curtain', price: 'AED 550', image: '/images/sheer-curtains/sheer-1.jpg', type: 'sheer', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 } },
+      { id: 301, name: 'American Style Sheer curtain', price: 'AED 550', image: '/images/sheer-curtains/sheer-1.jpg', type: 'sheer', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 367, '250cm': 458, '300cm': 550 } },
       { id: 5, name: 'Premium Velvet pleated curtain', price: 'AED 549', image: '/images/velvet-curtains/velvet-1.jpg', type: 'velvet', sizePrices: { '100cm': 183, '150cm': 275, '200cm': 366, '250cm': 458, '300cm': 549 } },
-      { id: 1101, name: 'Blackout & Sheer Combination', price: 'AED 350', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', type: 'blackout-sheer', sizePrices: { '100cm': 350, '150cm': 450, '200cm': 550, '250cm': 650, '300cm': 750 } }
+      { id: 1101, name: 'Linen Blackout & Sheer Combination', price: 'AED 350', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', type: 'blackout-sheer', sizePrices: { '100cm': 350, '150cm': 450, '200cm': 550, '250cm': 650, '300cm': 750 } }
     ],
     
     tvUnits: [
@@ -200,6 +200,12 @@ const ProductDetail = () => {
       { id: 'super-med-pillow', name: 'Super Medical Pillow Top', price: 'AED 609', image: '/images/mattress-collection/mattress-3.jpg', type: 'medical', prices: { '90*200cm': 609, '100*200cm': 669, '120*200cm': 769, '150*200cm': 799, '160*200cm': 849, '180*200cm': 899, '200*200cm': 999 }, productType: 'mattress' },
       { id: 'supreme-silk', name: 'Supreme Silk Pocket Spring', price: 'AED 799', image: '/images/mattress-collection/mattress-5.jpg', type: 'pocket-spring', prices: { '90*200cm': 799, '100*200cm': 839, '120*200cm': 959, '150*200cm': 1089, '160*200cm': 1129, '180*200cm': 1219, '200*200cm': 1319 }, productType: 'mattress' },
       { id: 'velvet-vista', name: 'Velvet Vista Pillow Top', price: 'AED 699', image: '/images/mattress-collection/mattress-7.jpg', type: 'bonnel-spring', prices: { '90*200cm': 699, '100*200cm': 749, '120*200cm': 769, '150*200cm': 849, '160*200cm': 879, '180*200cm': 939, '200*200cm': 999 }, productType: 'mattress' }
+    ],
+    sofas: [
+      { id: 9001, name: 'Premium 1 Seater Sofa', image: '/images/sofas/sofa-1.jpg', type: 'item', productType: 'sofas', price: 'AED 299' },
+      { id: 9002, name: 'Premium 2 Seater Sofa', image: '/images/sofas/sofa-2.jpg', type: 'item', productType: 'sofas', price: 'AED 499' },
+      { id: 9003, name: 'Premium 3 Seater Sofa', image: '/images/sofas/sofa-3.jpg', type: 'item', productType: 'sofas', price: 'AED 699' },
+      { id: 9004, name: 'Premium 4 Seater Sofa', image: '/images/sofas/sofa-4.jpg', type: 'item', productType: 'sofas', price: 'AED 899' }
     ]
   };
 
@@ -207,10 +213,12 @@ const ProductDetail = () => {
     const isBlind = product.type === 'blinds' || product.name?.toLowerCase().includes('blind');
     const isMattress = location.pathname.includes('mattress') || product.name?.toLowerCase().includes('mattress');
     const isTvUnit = product.type === 'tv-units' || product.name?.toLowerCase().includes('tv unit');
+    const isSofa = location.pathname.includes('sofa') || product.name?.toLowerCase().includes('sofa');
     let items;
     if (isMattress) items = relatedProducts.mattresses;
     else if (isTvUnit) items = relatedProducts.tvUnits;
     else if (isBlind) items = relatedProducts.blinds;
+    else if (isSofa) items = relatedProducts.sofas;
     else items = relatedProducts.curtains;
     
     // Filter out the current product itself
@@ -391,7 +399,7 @@ const ProductDetail = () => {
             {getRelated().map((item) => (
               <Link
                 key={item.id}
-                to={`/${item.productType === 'mattress' ? 'mattress' : 'curtains'}/${item.productType === 'mattress' ? item.type : (item.type === 'blinds' ? 'blinds' : 'blackout')}/${item.id}`}
+                to={`/\${item.productType === 'mattress' ? 'mattress' : (item.productType === 'sofas' ? 'sofas' : 'curtains')}/\${item.productType === 'mattress' ? item.type : (item.productType === 'sofas' ? item.type : (item.type === 'blinds' ? 'blinds' : 'blackout'))}/\${item.id}`}
                 state={{ product: item }}
                 className="bg-white rounded-xl shadow-lg p-4 hover:shadow-xl transition-all block"
               >

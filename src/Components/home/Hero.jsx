@@ -11,19 +11,28 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
-  // Hero carousel images
+  // Hero carousel images with device-responsive sources
   const heroSlides = [
     {
-      image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&h=900&fit=crop',
-      alt: 'Premium Curtains'
+      desktop: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&h=900&crop=right&q=85',
+      mobile: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&h=1600&crop=right&q=85',
+      position: 'object-right sm:object-center',
+      alt: 'Premium Curtains & Blinds'
     },
     {
-      image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop',
-      alt: 'Luxury Sofas'
+      desktop: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&h=900&crop=left&q=85',
+      mobile: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=900&h=1600&crop=left&q=85',
+      position: 'object-left sm:object-center',
+      alt: 'Luxury Living Room Curtains'
     },
     {
-      image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&h=900&fit=crop',
-      alt: 'Modern Furniture'
+      desktop: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&h=900&crop=right&q=85',
+      mobile: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&h=1600&crop=right&q=85',
+      position: 'object-right sm:object-center',
+      alt: 'Designer Sofas & Modern Furniture'
     },
   ];
 
@@ -66,11 +75,17 @@ const Hero = () => {
               key={idx}
               className={`absolute inset-0 transition-opacity duration-1500 ease-in-out ${zIndex} ${opacity}`}
             >
-              <img
-                src={slide.image}
-                alt={slide.alt}
-                className="w-full h-full object-cover object-center"
-              />
+              <picture className="w-full h-full block">
+                <source media="(max-width: 640px)" srcSet={slide.mobile} />
+                <source media="(max-width: 1024px)" srcSet={slide.tablet} />
+                <source media="(min-width: 1025px)" srcSet={slide.desktop} />
+                <img
+                  src={slide.desktop}
+                  alt={slide.alt}
+                  className={`w-full h-full object-cover ${slide.position || 'object-center'}`}
+                  loading={idx === 0 ? "eager" : "lazy"}
+                />
+              </picture>
             </div>
           );
         })}

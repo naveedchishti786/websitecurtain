@@ -102,8 +102,7 @@ const About = () => {
                   'Memory Foam & Orthopedic Mattresses',
                   'Sliding & Built-In Wardrobes',
                   'Kitchen & Bedroom Cupboards',
-                  'Storage Cabinets & Solutions',
-                  'Home Decor & Accessories'
+                  'Storage Cabinets & Solutions'
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-center space-x-3 text-[#173054] group">
                     <span className="text-[#C8A96A] font-black text-xl">✓</span>

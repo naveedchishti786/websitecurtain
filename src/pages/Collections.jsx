@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Truck, Shield, Sparkles, ChevronRight, Blinds, Sofa, Armchair, BedDouble, BedSingle, Archive } from 'lucide-react';
+import { ArrowRight, Star, Truck, Shield, Sparkles, ChevronRight, Blinds, Sofa, Armchair, BedDouble, BedSingle, Archive, Layers } from 'lucide-react';
 
 const Collections = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -15,14 +15,14 @@ const Collections = () => {
       description: 'Premium curtains for every room and style',
       image: '/images/blackout-curtains/blackout-1.jpg',
       items: 42,
-      featured: 'Blackout • Velvet & blackout • Silk & blackout • Custom',
+      featured: 'Blackout Curtains • Velvet Blackout Curtains • Silk Blackout Curtains • Custom Made Curtains',
       path: '/curtains',
       products: [
         { name: 'Blackout Curtains', count: '7 types' },
-        { name: 'Sheer Curtains', count: '6 types' },
-        { name: 'Velvet & blackout', count: '6 types' },
-        { name: 'Silk & blackout', count: '6 types' },
-        { name: 'Linen & blackout', count: '6 types' },
+        { name: 'Linen Sheer Curtains', count: '6 types' },
+        { name: 'Velvet Blackout Curtains', count: '6 types' },
+        { name: 'Silk Blackout Curtains', count: '6 types' },
+        { name: 'Linen Blackout Curtains', count: '6 types' },
       ]
     },
     {
@@ -119,6 +119,41 @@ const Collections = () => {
         { name: 'Bedroom Cupboards', count: '6 types' },
         { name: 'Storage Cabinets', count: '6 types' },
       ]
+    },
+    {
+      id: 6,
+      name: 'Carpets',
+      icon: <Layers size="1em" />,
+      bgGradient: 'from-[#0B1E36] to-[#C8A96A]',
+      description: 'Premium carpets and rugs for elegant spaces',
+      image: '/images/carpets/carpet-1.jpg',
+      items: 45,
+      featured: 'Persian • Modern • Custom Rugs',
+      path: '/carpets',
+      products: [
+        { name: 'Persian Carpets', count: '12 types' },
+        { name: 'Modern Rugs', count: '8 types' },
+        { name: 'Wall-to-Wall Carpets', count: '10 types' },
+        { name: 'Office Carpets', count: '5 types' },
+        { name: 'Custom Rugs', count: '10 types' },
+      ]
+    },
+    {
+      id: 7,
+      name: 'Pillows & Neck Care',
+      icon: <Sparkles size="1em" />,
+      bgGradient: 'from-[#0B1E36] to-[#C8A96A]',
+      description: 'Orthopedic cervical & 4D Italian contour memory foam pillows',
+      image: '/images/pillows/pillow-4d-studio-pro.jpg',
+      items: 6,
+      featured: '4D Italian Tech (AED 89) • Model 8006 (AED 60)',
+      path: '/pillows',
+      products: [
+        { name: '4D Skin-Friendly Contour Pillow', count: 'AED 89' },
+        { name: 'Cervical Neck Care Pillow (Model 8006)', count: 'AED 60' },
+        { name: 'Italian PostureCare Technology', count: 'Ice Silk' },
+        { name: 'Dual Height Ergonomic Contour', count: '9/11 cm' },
+      ]
     }
   ];
 
@@ -130,6 +165,8 @@ const Collections = () => {
     { id: 'sofas', name: 'Sofas', icon: <Sofa size="1em" /> },
     { id: 'storage', name: 'Storage', icon: <Archive size="1em" /> },
     { id: 'mattress', name: 'Mattress', icon: <BedSingle size="1em" /> },
+    { id: 'carpets', name: 'Carpets', icon: <Layers size="1em" /> },
+    { id: 'pillows', name: 'Pillows', icon: <Sparkles size="1em" /> },
   ];
 
   const filteredCollections = activeFilter === 'all' 

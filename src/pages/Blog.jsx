@@ -20,7 +20,7 @@ const Blog = () => {
         <p>Curtains are more than just window coverings – they're a statement piece that can transform your entire room. Whether you're looking to update your living room, bedroom, or office, choosing the perfect curtains involves considering several important factors.</p>
         
         <h3>1. Consider the Room's Purpose</h3>
-        <p>The first step in choosing curtains is to think about the room's function. Bedrooms typically benefit from blackout curtains that provide privacy and block light, while living rooms might showcase sheer curtains that filter light beautifully. Home offices need curtains that reduce glare on screens without creating a dim environment.</p>
+        <p>The first step in choosing curtains is to think about the room's function. Bedrooms typically benefit from blackout curtains that provide privacy and block light, while living rooms might showcase linen sheer curtains that filter light beautifully. Home offices need curtains that reduce glare on screens without creating a dim environment.</p>
         
         <h3>2. Select the Right Fabric</h3>
         <p>Different fabrics serve different purposes. Velvet curtains add luxury and warmth to a space, while linen offers a casual, natural look. Silk curtains are elegant and sophisticated, and blackout fabrics are perfect for complete light control. Consider the climate in your area – heavier fabrics work better in cold climates, while lighter fabrics are ideal for warm regions.</p>
