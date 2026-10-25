@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Star, Heart, ShoppingCart, Blinds } from 'lucide-react';
+import { Star, Heart, ShoppingCart, Blinds, ArrowRight } from 'lucide-react';
 
 const CurtainCategory = () => {
   const { type } = useParams();
@@ -20,7 +20,7 @@ const CurtainCategory = () => {
     })).filter(item => item.name !== 'Premium Blackout Curtain 4' && item.name !== 'Premium Blackout Curtain 5' && item.name !== 'Premium Blackout Curtain 6'),
     'blackout-sheer': Array.from({ length: 18 }, (_, i) => ({
       id: 1101 + i,
-      name: `Blackout & Sheer Combination ${i + 1}`,
+      name: `Linen Blackout & Sheer Combination ${i + 1}`,
       type: 'blackout-sheer',
       price: `AED ${350 + (i % 5) * 30}`,
       image: `/images/blackout-sheer-curtains/blackout-sheer-${i + 1}.jpg`,
@@ -386,6 +386,246 @@ const CurtainCategory = () => {
         description: 'Tailored to Your Specifications',
         colors: ['Any Color Available']
       },
+      {
+        id: 1101,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-2.jpg',
+        rating: 4.9,
+        reviews: 300,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1102,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-3.jpg',
+        rating: 4.6,
+        reviews: 128,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1103,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-4.jpg',
+        rating: 4.9,
+        reviews: 197,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1104,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-5.jpg',
+        rating: 4.5,
+        reviews: 55,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1105,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-6.jpg',
+        rating: 4.7,
+        reviews: 220,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1106,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-7.jpg',
+        rating: 4.9,
+        reviews: 249,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1107,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-8.jpg',
+        rating: 4.7,
+        reviews: 272,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1108,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-9.jpg',
+        rating: 4.9,
+        reviews: 148,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 1109,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-10.jpg',
+        rating: 4.8,
+        reviews: 200,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11010,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-11.jpg',
+        rating: 4.8,
+        reviews: 108,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11011,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-12.jpg',
+        rating: 4.8,
+        reviews: 53,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11012,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-13.jpg',
+        rating: 4.8,
+        reviews: 123,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11013,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-14.jpg',
+        rating: 4.6,
+        reviews: 160,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11014,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/blackout-curtains/blackout-15.jpg',
+        rating: 5.0,
+        reviews: 218,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11015,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-1.jpg',
+        rating: 4.5,
+        reviews: 65,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11016,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-2.jpg',
+        rating: 4.7,
+        reviews: 240,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11017,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-3.jpg',
+        rating: 4.6,
+        reviews: 225,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11018,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-4.jpg',
+        rating: 4.8,
+        reviews: 69,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11019,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-5.jpg',
+        rating: 4.8,
+        reviews: 187,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
+      {
+        id: 11020,
+        name: 'Custom Made Curtains',
+        type: 'custom',
+        price: 'AED 300+',
+        sizePrices: { '100cm': 300, '150cm': 450, '200cm': 600, '250cm': 750, '300cm': 900 },
+        image: '/images/velvet-curtains/velvet-6.jpg',
+        rating: 4.5,
+        reviews: 277,
+        description: 'Tailored to Your Specifications',
+        colors: ['Any Color Available']
+      },
     ],
     blinds: [
   {
@@ -508,7 +748,7 @@ const CurtainCategory = () => {
       {/* Filter Section */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="flex flex-wrap gap-3 mb-8">
-          {['all', 'blackout', 'blackout-sheer', 'sheer', 'velvet', 'silk', 'linen', 'blinds', 'custom'].map((filter) => (
+          {['all', 'blackout-sheer', 'sheer', 'velvet', 'silk', 'linen', 'blinds', 'custom'].map((filter) => (
             <button
               key={filter}
               onClick={() => setSelectedFilter(filter)}
@@ -518,10 +758,14 @@ const CurtainCategory = () => {
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              {filter === 'blackout-sheer' ? 'Blackout & Sheer' : 
-               filter === 'velvet' ? 'Velvet & blackout' :
-               filter === 'silk' ? 'Silk & blackout' :
-               filter === 'linen' ? 'Linen & blackout' :
+              {filter === 'all' ? 'All Curtains' :
+               filter === 'blackout-sheer' ? 'Linen Blackout & Sheer Curtains' : 
+               filter === 'velvet' ? 'Velvet Blackout Curtains' :
+               filter === 'silk' ? 'Silk Blackout Curtains' :
+               filter === 'linen' ? 'Linen Blackout Curtains' :
+               filter === 'blinds' ? 'Blinds' :
+               filter === 'custom' ? 'Custom Made Curtains' :
+               filter === 'sheer' ? 'Linen Sheer Curtains' :
                filter.charAt(0).toUpperCase() + filter.slice(1)}
             </button>
           ))}
@@ -540,9 +784,11 @@ const CurtainCategory = () => {
                 
                 {/* Overlay Text Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end">
-                  <span className="text-[#C8A96A] text-xs font-black uppercase tracking-widest mb-1 shadow-sm">
-                    Customizable
-                  </span>
+                  {product.type !== 'custom' && (
+                    <span className="text-[#C8A96A] text-xs font-black uppercase tracking-widest mb-1 shadow-sm">
+                      Customizable
+                    </span>
+                  )}
                   <h4 className="text-white font-bold text-lg leading-tight shadow-sm drop-shadow-md">
                     {product.name}
                   </h4>
@@ -586,26 +832,38 @@ const CurtainCategory = () => {
                 </div>
 
                 {/* Price & Button */}
-                <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold text-amber-600">
-                    {product.prices ? `AED ${Object.values(product.prices)[0]}` : product.price}
-                  </span>
-                  <div className="flex gap-2">
-                    <button
-                      onClick={() => handleAddToCart(product)}
-                      className="bg-amber-500 hover:bg-amber-600 text-white p-2.5 rounded-lg transition-all"
+                {product.type === 'custom' ? (
+                  <div className="pt-4 border-t-2 border-[#F5F1EA] mt-auto">
+                    <a
+                      href="tel:+971555124614"
+                      className="w-full py-3 bg-[#0B1E36] text-white font-black rounded-xl hover:bg-[#C8A96A] hover:text-[#0B1E36] transition-all duration-300 flex items-center justify-center space-x-2 group/btn"
                     >
-                      <ShoppingCart className="w-5 h-5" />
-                    </button>
-                    <Link
-                      to={`/curtains/${product.type}/${product.id}`}
-                      state={{ product }}
-                      className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2.5 rounded-lg font-semibold transition-all"
-                    >
-                      View Details
-                    </Link>
+                      <span>Get Custom Quote</span>
+                      <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </a>
                   </div>
-                </div>
+                ) : (
+                  <div className="flex justify-between items-center mt-auto">
+                    <span className="text-2xl font-bold text-amber-600">
+                      {product.prices ? `AED ${Object.values(product.prices)[0]}` : product.price}
+                    </span>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={(e) => { e.preventDefault(); handleAddToCart(product); }}
+                        className="bg-amber-500 hover:bg-amber-600 text-white p-2.5 rounded-lg transition-all"
+                      >
+                        <ShoppingCart className="w-5 h-5" />
+                      </button>
+                      <Link
+                        to={`/curtains/${product.type}/${product.id}`}
+                        state={{ product }}
+                        className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2.5 rounded-lg font-semibold transition-all"
+                      >
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}

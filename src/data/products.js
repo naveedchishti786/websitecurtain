@@ -16,6 +16,12 @@ export const categories = {
     name: 'Mattress & Bedding',
     description: 'Comfortable mattresses, pillows, and blankets',
     image: '/images/mattress/category.jpg'
+  },
+  pillows: {
+    id: 'pillows',
+    name: 'Pillows & Neck Care',
+    description: 'Cervical orthopedic memory foam pillows for healthy sleep',
+    image: '/images/pillows/pillow-8006-pair.png'
   }
 };
 
@@ -93,6 +99,28 @@ export const products = {
       category: "mattress"
     },
     // Add more mattress/bedding products
+  ],
+  pillows: [
+    {
+      id: 31,
+      name: "Cervical Neck Care Pillow (Model 8006)",
+      description: "The balance between softness and support. Eco-friendly comfort memory foam pillow core.",
+      price: 60,
+      image: "/images/pillows/pillow-8006-studio-pro.jpg",
+      features: ["Model 8006", "SIZE: 60*35*9/11cm", "Eco-friendly comfort pillow core", "Healthy sleep resources", "Dual Height 9/11cm"],
+      category: "pillows",
+      rating: 4.9
+    },
+    {
+      id: 32,
+      name: "4D Skin-Friendly Contour Memory Pillow",
+      description: "Italian PostureCare Technology with water ripple memory foam core and cooling ice-silk fabric.",
+      price: 89,
+      image: "/images/pillows/pillow-4d-studio-pro.jpg",
+      features: ["Italian PostureCare Technology", "SIZE: 60*35*9/11cm", "Ice Silk & Water Ripple Design", "Cool Gel Honeycomb Insert", "Non-Allergenic & Odourless"],
+      category: "pillows",
+      rating: 5.0
+    }
   ]
 };
 

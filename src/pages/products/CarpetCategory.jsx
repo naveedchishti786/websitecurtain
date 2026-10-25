@@ -19,7 +19,7 @@ const CarpetCategory = () => {
         type: 'persian',
         price: 'AED 4,999',
         priceNum: 4999,
-        image: '🧶',
+        image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=800&auto=format&fit=crop',
         rating: 4.9,
         reviews: 124,
         description: 'Authentic hand-knotted Persian silk rug with intricate floral patterns.',
@@ -34,7 +34,7 @@ const CarpetCategory = () => {
         type: 'persian',
         price: 'AED 2,499',
         priceNum: 2499,
-        image: '🧶',
+        image: 'https://images.unsplash.com/photo-1652634213812-f0deeb1de78e?q=80&w=800&auto=format&fit=crop',
         rating: 4.8,
         reviews: 89,
         description: 'Durable and soft wool carpet featuring classic medallion designs.',
@@ -42,6 +42,19 @@ const CarpetCategory = () => {
         material: 'Premium Wool',
         dimensions: '250cm x 350cm',
         features: ['Soft Texture', 'Stain Resistant', 'Classic Motif']
+      },
+      {
+        id: 'c8',
+        name: 'Vintage Turkish Kilim',
+        type: 'persian',
+        image: 'https://images.unsplash.com/photo-1720458606063-a1b944884641?q=80&w=800&auto=format&fit=crop',
+        rating: 4.9,
+        reviews: 65,
+        description: 'Authentic flat-woven Turkish Kilim with tribal geometric patterns.',
+        colors: ['Terracotta', 'Indigo', 'Mustard'],
+        material: '100% Wool',
+        dimensions: '180cm x 270cm',
+        features: ['Flat Weave', 'Reversible', 'Vintage Wash']
       }
     ],
     'modern': [
@@ -51,7 +64,7 @@ const CarpetCategory = () => {
         type: 'modern',
         price: 'AED 1,299',
         priceNum: 1299,
-        image: '🎨',
+        image: 'https://images.unsplash.com/photo-1534889156217-d643df14f14a?q=80&w=800&auto=format&fit=crop',
         rating: 4.7,
         reviews: 210,
         description: 'Contemporary abstract design to elevate modern living spaces.',
@@ -66,7 +79,7 @@ const CarpetCategory = () => {
         type: 'modern',
         price: 'AED 899',
         priceNum: 899,
-        image: '🟦',
+        image: 'https://images.unsplash.com/photo-1599327285939-4ee9088f2b65?q=80&w=800&auto=format&fit=crop',
         rating: 4.6,
         reviews: 156,
         description: 'Clean geometric lines for a minimalist aesthetic.',
@@ -74,6 +87,32 @@ const CarpetCategory = () => {
         material: 'Premium Acrylic',
         dimensions: '200cm x 290cm',
         features: ['Geometric Pattern', 'Minimalist', 'Soft Feel']
+      },
+      {
+        id: 'c9',
+        name: 'Shaggy Plush Carpet',
+        type: 'modern',
+        image: 'https://plus.unsplash.com/premium_photo-1675720238475-4e60bbf8101b?q=80&w=800&auto=format&fit=crop',
+        rating: 4.8,
+        reviews: 312,
+        description: 'Ultra-soft deep pile shaggy rug for maximum comfort.',
+        colors: ['Snow White', 'Charcoal', 'Blush Pink'],
+        material: 'Premium Microfiber',
+        dimensions: '200cm x 290cm',
+        features: ['Deep Pile', 'Super Soft', 'Cozy Feel']
+      },
+      {
+        id: 'c10',
+        name: 'Moroccan Berber Rug',
+        type: 'modern',
+        image: 'https://images.unsplash.com/photo-1595595183083-d40937b04cf3?q=80&w=800&auto=format&fit=crop',
+        rating: 4.9,
+        reviews: 145,
+        description: 'Hand-woven Moroccan style rug with classic diamond patterns.',
+        colors: ['Cream/Black', 'Beige/Brown'],
+        material: 'Wool Blend',
+        dimensions: '160cm x 230cm',
+        features: ['Hand-Woven', 'Textured', 'Bohemian Style']
       }
     ],
     'office': [
@@ -83,7 +122,7 @@ const CarpetCategory = () => {
         type: 'office',
         price: 'AED 150/sqm',
         priceNum: 150,
-        image: '🏢',
+        image: 'https://images.unsplash.com/photo-1549637642-90187f64f420?q=80&w=800&auto=format&fit=crop',
         rating: 4.8,
         reviews: 340,
         description: 'Heavy-duty carpet tiles perfect for high-traffic corporate offices.',
@@ -98,7 +137,7 @@ const CarpetCategory = () => {
         type: 'office',
         price: 'AED 1,899',
         priceNum: 1899,
-        image: '💼',
+        image: 'https://images.unsplash.com/photo-1594235046256-90e5572fd5f9?q=80&w=800&auto=format&fit=crop',
         rating: 4.9,
         reviews: 75,
         description: 'Elegant large area rug designed specifically for executive boardrooms.',
@@ -106,6 +145,19 @@ const CarpetCategory = () => {
         material: 'Wool Blend',
         dimensions: '300cm x 400cm',
         features: ['Professional Look', 'Stain Repellent', 'Acoustic Insulation']
+      },
+      {
+        id: 'c11',
+        name: 'Commercial Broadloom Carpet',
+        type: 'office',
+        image: 'https://plus.unsplash.com/premium_photo-1661964459712-483d87fe863b?q=80&w=800&auto=format&fit=crop',
+        rating: 4.7,
+        reviews: 189,
+        description: 'Wall-to-wall commercial broadloom carpet for large office spaces.',
+        colors: ['Slate Grey', 'Midnight Blue'],
+        material: 'Solution Dyed Nylon',
+        dimensions: 'Custom Roll Width',
+        features: ['Wall-to-Wall', 'High Durability', 'Low Maintenance']
       }
     ],
     'custom': [
@@ -115,7 +167,7 @@ const CarpetCategory = () => {
         type: 'custom',
         price: 'AED 3,000+',
         priceNum: 3000,
-        image: '✨',
+        image: 'https://images.unsplash.com/photo-1558944351-3f79926e74ef?q=80&w=800&auto=format&fit=crop',
         rating: 5.0,
         reviews: 42,
         description: 'Fully customizable carpets tailored to your exact room dimensions and design preferences.',
@@ -123,6 +175,19 @@ const CarpetCategory = () => {
         material: 'Custom Choice (Silk, Wool, Viscose)',
         dimensions: 'Custom Size',
         features: ['Made to Measure', 'Custom Design', 'Premium Craftsmanship']
+      },
+      {
+        id: 'c12',
+        name: 'Natural Jute & Sisal Rug',
+        type: 'custom',
+        image: 'https://plus.unsplash.com/premium_photo-1675738774551-cf86de1fd242?q=80&w=800&auto=format&fit=crop',
+        rating: 4.6,
+        reviews: 92,
+        description: 'Eco-friendly natural fiber rug custom-sized for organic interiors.',
+        colors: ['Natural Tan', 'Bleached', 'Dark Brown'],
+        material: '100% Natural Jute & Sisal',
+        dimensions: 'Custom Size',
+        features: ['Eco-Friendly', 'Textured', 'Durable Binding']
       }
     ]
   };
@@ -135,17 +200,8 @@ const CarpetCategory = () => {
     ? allProducts 
     : carpetData[selectedFilter] || [];
 
-  // Apply price filter
-  filteredProducts = filteredProducts.filter(
-    product => product.priceNum >= priceRange[0] && product.priceNum <= priceRange[1]
-  );
-
   // Apply sorting
-  if (sortBy === 'price-low') {
-    filteredProducts = [...filteredProducts].sort((a, b) => a.priceNum - b.priceNum);
-  } else if (sortBy === 'price-high') {
-    filteredProducts = [...filteredProducts].sort((a, b) => b.priceNum - a.priceNum);
-  } else if (sortBy === 'rating') {
+  if (sortBy === 'rating') {
     filteredProducts = [...filteredProducts].sort((a, b) => b.rating - a.rating);
   }
 
@@ -214,42 +270,10 @@ const CarpetCategory = () => {
                   </div>
                 </div>
 
-                {/* Price Range */}
-                <div className="mb-8">
-                  <h4 className="font-bold text-[#0B1E36] mb-3 uppercase tracking-wider text-sm">Price Range</h4>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="text-xs font-bold text-[#666666] uppercase">Min: AED {priceRange[0].toLocaleString()}</label>
-                      <input
-                        type="range"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value={priceRange[0]}
-                        onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
-                        className="w-full accent-[#C8A96A]"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-xs font-bold text-[#666666] uppercase">Max: AED {priceRange[1].toLocaleString()}</label>
-                      <input
-                        type="range"
-                        min="0"
-                        max="10000"
-                        step="100"
-                        value={priceRange[1]}
-                        onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
-                        className="w-full accent-[#C8A96A]"
-                      />
-                    </div>
-                  </div>
-                </div>
-
                 {/* Clear Filters */}
                 <button
                   onClick={() => {
                     setSelectedFilter('all');
-                    setPriceRange([0, 10000]);
                   }}
                   className="w-full bg-[#F5F1EA] hover:bg-[#C8A96A] text-[#0B1E36] py-3 rounded-xl font-black transition-all border-2 border-[#C8A96A]/30 hover:border-[#C8A96A]"
                 >
@@ -275,8 +299,6 @@ const CarpetCategory = () => {
                     className="px-4 py-2.5 bg-[#F5F1EA] border-2 border-transparent rounded-xl focus:outline-none focus:border-[#C8A96A] text-sm font-bold text-[#0B1E36] transition-colors flex-1 sm:flex-none"
                   >
                     <option value="popular">Most Popular</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
                     <option value="rating">Highest Rated</option>
                   </select>
 
@@ -302,10 +324,8 @@ const CarpetCategory = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                   {filteredProducts.map((product) => (
                     <div key={product.id} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group border-2 border-[#E8E2D8] hover:border-[#C8A96A]/50 flex flex-col">
-                      <div className="relative h-56 bg-gradient-to-br from-[#F5F1EA] to-[#E8E2D8] flex items-center justify-center text-7xl overflow-hidden">
-                        <div className="transform group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl">
-                          {product.image}
-                        </div>
+                      <div className="relative h-56 bg-gradient-to-br from-[#F5F1EA] to-[#E8E2D8] flex items-center justify-center overflow-hidden">
+                        <img src={product.image} alt={product.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                       </div>
 
                       <div className="p-6 flex flex-col flex-grow">
@@ -322,12 +342,6 @@ const CarpetCategory = () => {
                         <p className="text-[#666666] text-sm mb-4 line-clamp-2 flex-grow">{product.description}</p>
 
                         <div className="pt-4 border-t-2 border-[#F5F1EA] mt-auto">
-                          <div className="flex justify-between items-end mb-4">
-                            <div>
-                              <p className="text-xs font-bold text-[#666666] uppercase tracking-wider mb-1">Starting from</p>
-                              <p className="text-xl font-black text-[#0B1E36]">{product.price}</p>
-                            </div>
-                          </div>
                           
                           <a
                             href="tel:+971555124614"
@@ -345,10 +359,8 @@ const CarpetCategory = () => {
                 <div className="space-y-4">
                   {filteredProducts.map((product) => (
                     <div key={product.id} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border-2 border-[#E8E2D8] hover:border-[#C8A96A]/50 flex flex-col sm:flex-row overflow-hidden group">
-                      <div className="w-full sm:w-48 h-48 sm:h-auto bg-gradient-to-br from-[#F5F1EA] to-[#E8E2D8] flex items-center justify-center text-6xl flex-shrink-0">
-                        <div className="transform group-hover:scale-110 transition-transform duration-500 drop-shadow-2xl">
-                          {product.image}
-                        </div>
+                      <div className="w-full sm:w-48 h-48 sm:h-auto bg-gradient-to-br from-[#F5F1EA] to-[#E8E2D8] flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        <img src={product.image} alt={product.name} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
                       </div>
                       
                       <div className="p-6 flex flex-col sm:flex-row w-full gap-6">
@@ -370,8 +382,6 @@ const CarpetCategory = () => {
                         </div>
                         
                         <div className="sm:w-48 flex flex-col justify-center sm:border-l-2 border-[#F5F1EA] sm:pl-6 pt-4 sm:pt-0 mt-4 sm:mt-0 border-t-2 sm:border-t-0">
-                          <p className="text-xs font-bold text-[#666666] uppercase tracking-wider mb-1">Starting from</p>
-                          <p className="text-2xl font-black text-[#0B1E36] mb-4">{product.price}</p>
                           <a
                             href="tel:+971555124614"
                             className="w-full py-3 bg-[#0B1E36] text-white font-black rounded-xl hover:bg-[#C8A96A] hover:text-[#0B1E36] transition-all duration-300 text-center"

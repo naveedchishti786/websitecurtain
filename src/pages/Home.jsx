@@ -8,11 +8,41 @@ const Home = () => {
   const [prevImageIndex, setPrevImageIndex] = useState(4); // 5 images total, so last index is 4
 
   const heroImages = [
-    'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1600&h=900&fit=crop', // Curtains / Blinds
-    'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop', // Furniture / Sofas
-    'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1600&h=900&fit=crop', // Beds / Mattress
-    'https://images.unsplash.com/photo-1600607688969-a5bfcd64bd28?w=1600&h=900&fit=crop', // Carpets / Luxury Interior
-    'https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1600&h=900&fit=crop'  // Natural / Minimalist
+    {
+      desktop: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&h=900&crop=right&q=85',
+      mobile: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&h=1600&crop=right&q=85',
+      position: 'object-right sm:object-center',
+      alt: 'Zoya Premium Floor-to-Ceiling Curtains and Living Room',
+    },
+    {
+      desktop: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&h=900&crop=left&q=85',
+      mobile: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=900&h=1600&crop=left&q=85',
+      position: 'object-left sm:object-center',
+      alt: 'Elegant Sheer Window Curtains and Living Room',
+    },
+    {
+      desktop: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&h=900&crop=right&q=85',
+      mobile: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&h=1600&crop=right&q=85',
+      position: 'object-right sm:object-center',
+      alt: 'Luxury Living Room Window Treatments & Furniture',
+    },
+    {
+      desktop: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&h=900&crop=center&q=85',
+      mobile: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&h=1600&crop=center&q=85',
+      position: 'object-center',
+      alt: 'Master Bedroom Luxury Drapes and Bedding',
+    },
+    {
+      desktop: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1920&h=1080&q=85',
+      tablet: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&h=900&crop=center&q=85',
+      mobile: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=900&h=1600&crop=center&q=85',
+      position: 'object-center',
+      alt: 'Warm Velvet and Sheer Window Drapes',
+    },
   ];
 
   useEffect(() => {
@@ -32,6 +62,7 @@ const Home = () => {
     { name: 'Beds', icon: <BedDouble className="w-16 h-16" strokeWidth={1.5} />, path: '/beds', items: '50+ Models' },
     { name: 'Mattress', icon: <BedSingle className="w-16 h-16" strokeWidth={1.5} />, path: '/mattress', items: '75+ Options' },
     { name: 'Storage', icon: <Archive className="w-16 h-16" strokeWidth={1.5} />, path: '/storage', items: '120+ Solutions' },
+    { name: 'Pillows', icon: <Sparkles className="w-16 h-16" strokeWidth={1.5} />, path: '/pillows', items: 'From AED 60' },
   ];
 
   const features = [
@@ -91,9 +122,9 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* ===== HERO SECTION ===== */}
-      <section className="relative w-full min-h-[70dvh] lg:min-h-[100dvh] bg-black overflow-hidden">
-        {/* Background Images Slider */}
-        {heroImages.map((img, index) => {
+      <section className="relative w-full min-h-[90dvh] sm:min-h-[85dvh] lg:min-h-[100dvh] bg-black overflow-hidden flex flex-col justify-start sm:justify-center">
+        {/* Background Images Slider with Device-Responsive Picture Element */}
+        {heroImages.map((slide, index) => {
           let zIndex = 'z-0';
           let opacity = 'opacity-0';
           
@@ -107,19 +138,33 @@ const Home = () => {
 
           return (
             <div
-              key={img}
-              className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ease-in-out ${zIndex} ${opacity}`}
-              style={{ backgroundImage: `url('${img}')` }}
-            ></div>
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${zIndex} ${opacity}`}
+            >
+              <picture className="w-full h-full block">
+                {/* Mobile screens - vertical crop tailored for phones */}
+                <source media="(max-width: 640px)" srcSet={slide.mobile} />
+                {/* Tablet screens */}
+                <source media="(max-width: 1024px)" srcSet={slide.tablet} />
+                {/* Desktop and larger screens */}
+                <source media="(min-width: 1025px)" srcSet={slide.desktop} />
+                <img
+                  src={slide.desktop}
+                  alt={slide.alt}
+                  className={`w-full h-full object-cover ${slide.position || 'object-center'}`}
+                  loading={index === 0 ? "eager" : "lazy"}
+                />
+              </picture>
+            </div>
           );
         })}
 
-        {/* Natural Overlay - Only for Text Readability (No heavy theme colors) */}
-        <div className="absolute inset-0 bg-black/25"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/60"></div>
+        {/* Natural Overlay - Balanced for text readability across light & dark mobile displays */}
+        <div className="absolute inset-0 bg-black/35 sm:bg-black/30 z-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/60 z-20"></div>
         
         {/* Slider Progress Time Indicator */}
-        <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-white/20 z-30">
+        <div className="absolute top-0 left-0 right-0 h-1 bg-white/20 z-30">
           <div 
             key={currentImageIndex}
             className="h-full bg-gradient-to-r from-[#D4AF37] to-[#C8A96A]"
@@ -128,72 +173,89 @@ const Home = () => {
         </div>
 
         {/* Animated gradient elements */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C8A96A]/10 rounded-full blur-3xl animate-pulse z-20"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#C8A96A]/10 rounded-full blur-3xl animate-pulse delay-1000 z-20"></div>
+        <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#C8A96A]/10 rounded-full blur-3xl animate-pulse z-20 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-[#C8A96A]/10 rounded-full blur-3xl animate-pulse delay-1000 z-20 pointer-events-none"></div>
 
         {/* Content */}
-        <div className="relative z-30 h-full min-h-[70dvh] lg:min-h-[100dvh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
-          <div className="max-w-5xl mx-auto text-center space-y-8 mt-10 lg:mt-0">
+        <div className="relative z-30 w-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pt-8 pb-14 sm:py-20 lg:py-24">
+          <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 lg:space-y-8">
             {/* Badge */}
-            <div className={`inline-flex items-center space-x-2 px-6 py-3 rounded-full bg-[#C8A96A]/25 backdrop-blur-md border border-[#C8A96A]/50 transition-all duration-1000 ${
+            <div className={`inline-flex items-center space-x-2 px-3.5 py-1.5 sm:px-6 sm:py-3 rounded-full bg-[#C8A96A]/25 backdrop-blur-md border border-[#C8A96A]/50 transition-all duration-1000 ${
               isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
             }`}>
-              <Sparkles className="w-5 h-5 text-[#C8A96A]" />
-              <span className="text-[#F5F1EA] font-bold text-sm tracking-widest uppercase">
+              <Sparkles className="w-3.5 h-3.5 sm:w-5 sm:h-5 text-[#C8A96A]" />
+              <span className="text-[#F5F1EA] font-bold text-xs sm:text-sm tracking-widest uppercase">
                 ✨ Transform Your Home Today
               </span>
             </div>
 
             {/* Main Heading */}
-            <div className={`space-y-6 transition-all duration-1000 delay-100 ${
+            <div className={`space-y-2 sm:space-y-6 transition-all duration-1000 delay-100 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight drop-shadow-2xl">
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-black text-white leading-tight tracking-tight drop-shadow-2xl">
                 Transform Your Home with<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D4AF37] via-[#C8A96A] to-[#E8C547] drop-shadow-xl animate-pulse">
                   Zoya Premium Curtain
                 </span>
               </h1>
 
-              <p className="text-lg md:text-2xl text-[#F5F1EA] leading-relaxed max-w-3xl mx-auto font-medium drop-shadow-lg">
+              <p className="text-xs sm:text-base md:text-xl lg:text-2xl text-[#F5F1EA] leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-lg">
                 Discover our exquisite collection of premium curtains, furniture, and home furnishings. 
                 Elevate your space with timeless elegance and sophisticated design.
-                <br /><br />
-                <span className="text-[#C8A96A] font-bold drop-shadow-xl animate-pulse">✨ Free Consultation in Sharjah, Dubai & Ajman ✨</span>
+                <br className="hidden sm:inline" /><span className="sm:inline hidden"><br /></span>
+                <span className="block mt-1 sm:mt-2 text-[#C8A96A] font-bold drop-shadow-xl animate-pulse text-xs sm:text-base md:text-lg">
+                  ✨ Free Consultation in Sharjah, Dubai & Ajman ✨
+                </span>
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className={`flex flex-col sm:flex-row items-center justify-center gap-6 pt-8 transition-all duration-1000 delay-200 ${
+            <div className={`flex flex-col sm:flex-row items-center justify-center gap-2.5 sm:gap-6 pt-3 sm:pt-6 transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               {/* Primary CTA */}
               <Link
                 to="/curtains"
-                className="flex items-center justify-center space-x-3 px-8 py-4 md:px-10 md:py-5 bg-[#C8A96A] text-[#2B2B2B] font-black text-lg rounded-xl hover:bg-[#D4AF37] transition-all duration-300 shadow-2xl hover:shadow-[#C8A96A]/80 transform hover:scale-105 group uppercase tracking-wide w-full sm:w-auto"
+                className="flex items-center justify-center space-x-2.5 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#C8A96A] text-[#2B2B2B] font-black text-sm sm:text-lg rounded-xl hover:bg-[#D4AF37] transition-all duration-300 shadow-2xl hover:shadow-[#C8A96A]/80 transform hover:scale-105 group uppercase tracking-wide w-full sm:w-auto"
               >
                 <span>Shop Curtains</span>
-                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
 
               {/* Secondary CTA */}
               <a
                 href="tel:+971555124614"
-                className="flex items-center justify-center space-x-3 px-8 py-4 md:px-10 md:py-5 bg-[#0B1E36] text-white font-black text-lg rounded-xl hover:bg-[#173054] transition-all duration-300 shadow-xl transform hover:scale-105 group uppercase tracking-wide border-none w-full sm:w-auto"
+                className="flex items-center justify-center space-x-2.5 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#0B1E36] text-white font-black text-sm sm:text-lg rounded-xl hover:bg-[#173054] transition-all duration-300 shadow-xl transform hover:scale-105 group uppercase tracking-wide border-none w-full sm:w-auto"
               >
                 <span>📞 Get Consultation</span>
-                <ChevronDown className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
+                <ChevronDown className="w-4 h-4 sm:w-6 sm:h-6 group-hover:translate-y-1 transition-transform" />
               </a>
             </div>
-
-
           </div>
+        </div>
 
-
+        {/* Slide Dots Indicator */}
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-2 z-30">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => {
+                setPrevImageIndex(currentImageIndex);
+                setCurrentImageIndex(idx);
+              }}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                idx === currentImageIndex 
+                  ? 'w-8 bg-[#C8A96A]' 
+                  : 'w-2 bg-white/50 hover:bg-white/80'
+              }`}
+            />
+          ))}
         </div>
 
         {/* Decorative Bottom Wave */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-20"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-6 sm:h-16 lg:h-24 bg-gradient-to-t from-white/80 to-transparent z-20 pointer-events-none"></div>
       </section>
 
       {/* ===== CATEGORIES SECTION ===== */}
@@ -226,7 +288,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
             {categories.map((cat) => (
               <Link key={cat.name} to={cat.path} className="group h-full">
                 <div className="bg-gradient-to-br from-[#F5F1EA] via-[#F5F1EA] to-[#E8DFD5] rounded-2xl p-8 text-center hover:shadow-2xl transition-all transform hover:-translate-y-3 h-full border-2 border-[#C8A96A]/20 hover:border-[#C8A96A]/60 group/card">
@@ -276,10 +338,10 @@ const Home = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { type: 'Blackout Curtains', image: '/images/blackout-curtains/blackout-1.jpg', path: '/curtains/blackout' },
-              { type: 'Sheer Curtains', image: '/images/sheer-curtains/sheer-1.jpg', path: '/curtains/sheer' },
+              { type: 'Linen Blackout & Sheer Curtains', image: '/images/blackout-sheer-curtains/blackout-sheer-1.jpg', path: '/curtains/blackout-sheer' },
+              { type: 'Linen Sheer Curtains', image: '/images/sheer-curtains/sheer-1.jpg', path: '/curtains/sheer' },
               { type: 'Blinds', image: '/images/blind-curtains/blind-1.jpg', path: '/curtains/blinds' },
-              { type: 'Velvet & blackout', image: '/images/velvet-curtains/velvet-1.jpg', path: '/curtains/velvet' }
+              { type: 'Velvet Blackout Curtains', image: '/images/velvet-curtains/velvet-1.jpg', path: '/curtains/velvet' }
             ].map((curtain, idx) => (
               <Link key={idx} to={curtain.path} className="group block h-full">
                 <div className="relative rounded-2xl overflow-hidden h-80 shadow-lg group-hover:shadow-2xl transition-all duration-300 bg-[#F5F1EA]">
@@ -470,17 +532,17 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left - Image */}
-            <div className="relative">
+            <div className="relative mb-6 sm:mb-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=600&fit=crop"
+                  src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&h=800&q=80"
                   alt="Our Experience"
-                  className="w-full h-96 object-contain object-center"
+                  className="w-full h-72 sm:h-96 object-cover object-center"
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 bg-gradient-to-br from-[#C8A96A] to-[#B8955A] text-white p-8 rounded-2xl shadow-xl">
-                <p className="text-5xl font-black">15+</p>
-                <p className="text-lg font-bold">Years of Experience</p>
+              <div className="absolute -bottom-6 right-2 sm:-bottom-8 sm:-right-8 bg-gradient-to-br from-[#C8A96A] to-[#B8955A] text-white p-5 sm:p-8 rounded-2xl shadow-xl">
+                <p className="text-3xl sm:text-5xl font-black">15+</p>
+                <p className="text-sm sm:text-lg font-bold">Years of Experience</p>
               </div>
             </div>
 

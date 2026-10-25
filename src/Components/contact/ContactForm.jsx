@@ -18,35 +18,47 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Format the message for WhatsApp
-    const text = `New Inquiry from Website:
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email}
-Service: ${formData.service || 'Not specified'}
-Message: ${formData.message}`;
+    setIsSubmitting(true);
 
-    const whatsappUrl = `https://wa.me/971555124614?text=${encodeURIComponent(text)}`;
-    
-    // Open WhatsApp in new tab
-    window.open(whatsappUrl, '_blank');
-
-    setSubmitted(true);
-    
-    // Reset form after 5 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
+    try {
+      await fetch("https://formsubmit.co/ajax/info@zoyapremiumcurtains.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Inquiry from ${formData.name} (${formData.service || 'General'})`,
+          _template: 'table',
+          _captcha: 'false',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          service: formData.service || 'Not specified',
+          message: formData.message,
+          _replyto: formData.email
+        })
       });
-    }, 5000);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      }, 5000);
+    }
   };
 
   return (

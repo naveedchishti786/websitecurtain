@@ -15,11 +15,10 @@ const Navbar = () => {
       icon: <Blinds className="w-5 h-5" />,
       dropdown: true,
       items: [
-        { name: 'Blackout Curtains', path: '/curtains/blackout', icon: <Blinds className="w-5 h-5" />, description: 'Total Darkness' },
-        { name: 'Sheer Curtains', path: '/curtains/sheer', icon: <Blinds className="w-5 h-5" />, description: 'Light Filtering' },
-        { name: 'Velvet & blackout', path: '/curtains/velvet', icon: <Blinds className="w-5 h-5" />, description: 'Luxury Texture' },
+        { name: 'Linen Sheer Curtains', path: '/curtains/sheer', icon: <Blinds className="w-5 h-5" />, description: 'Light Filtering' },
+        { name: 'Velvet Blackout Curtains', path: '/curtains/velvet', icon: <Blinds className="w-5 h-5" />, description: 'Luxury Texture' },
         { name: 'Blinds', path: '/curtains/blinds', icon: <Blinds className="w-5 h-5" />, description: 'Roller & Venetian' },
-        { name: 'Blackout & Sheer', path: '/curtains/blackout-sheer', icon: <Blinds className="w-5 h-5" />, description: 'Perfect Combo' },
+        { name: 'Linen Blackout & Sheer Curtains', path: '/curtains/blackout-sheer', icon: <Blinds className="w-5 h-5" />, description: 'Perfect Combo' },
       ]
     },
     { 
@@ -33,8 +32,8 @@ const Navbar = () => {
         { name: 'Beds', path: '/beds', icon: <BedDouble className="w-5 h-5" />, description: 'Luxury Beds' },
         { name: 'Mattress', path: '/mattress', icon: <BedSingle className="w-5 h-5" />, description: 'Comfort Mattress' },
         { name: 'Storage', path: '/storage', icon: <Archive className="w-5 h-5" />, description: 'Smart Storage' },
-        { name: 'Accessories', path: '/accessories', icon: <Gem className="w-5 h-5" />, description: 'Home Accessories' },
         { name: 'Carpets & Rugs', path: '/carpets', icon: <Layers className="w-5 h-5" />, description: 'Premium Carpets' },
+        { name: 'Pillows', path: '/pillows', icon: <Sparkles className="w-5 h-5" />, description: 'Cervical Neck Care' },
       ]
     },
     { name: 'Services', path: '/services', icon: <Wrench className="w-5 h-5" /> },

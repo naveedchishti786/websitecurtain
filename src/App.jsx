@@ -19,11 +19,11 @@ const FurnitureCategory = lazy(() => import('./pages/products/FurnitureCategory'
 const BedsCategory = lazy(() => import('./pages/products/BedsCategory'));
 const MattressCategory = lazy(() => import('./pages/products/MattressCategory'));
 const StorageCategory = lazy(() => import('./pages/products/StorageCategory'));
+const PillowsCategory = lazy(() => import('./pages/products/PillowsCategory'));
 
 // Product Detail
 const ProductDetail = lazy(() => import('./pages/products/ProductDetail'));
 const SofaCategory = lazy(() => import('./pages/products/SofaCategory'));
-const AccessoriesCategory = lazy(() => import('./pages/products/AccessoriesCategory'));
 
 // Service and Info Pages
 const Services = lazy(() => import('./pages/Services'));
@@ -99,6 +99,7 @@ function App() {
                 <Route path="/sofas/:type" element={<SofaCategory />} />
                 <Route path="/sofas/:type/:id" element={<ProductDetail />} />
 
+
                 {/* ==================== BEDS CATEGORY ==================== */}
                 <Route path="/beds" element={<BedsCategory />} />
                 <Route path="/beds/:type" element={<BedsCategory />} />
@@ -114,10 +115,11 @@ function App() {
                 <Route path="/storage/:type" element={<StorageCategory />} />
                 <Route path="/storage/:type/:id" element={<ProductDetail />} />
 
-                {/* ==================== ACCESSORIES CATEGORY ==================== */}
-                <Route path="/accessories" element={<AccessoriesCategory />} />
-                <Route path="/accessories/:type" element={<AccessoriesCategory />} />
-                <Route path="/accessories/:type/:id" element={<ProductDetail />} />
+                {/* ==================== PILLOWS CATEGORY ==================== */}
+                <Route path="/pillows" element={<PillowsCategory />} />
+                <Route path="/pillows/:type" element={<PillowsCategory />} />
+                <Route path="/pillows/:type/:id" element={<ProductDetail />} />
+
 
                 {/* ==================== SERVICE & INFO PAGES ==================== */}
                 <Route path="/services" element={<Services />} />

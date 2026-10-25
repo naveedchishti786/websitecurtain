@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Search, Filter, X, ZoomIn, Grid, Blinds, Sofa, BedDouble, Archive, Home } from 'lucide-react';
+import { Search, Filter, X, ZoomIn, Grid, Blinds, Sofa, BedDouble, Archive, Home, Layers, Sparkles } from 'lucide-react';
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -9,15 +9,125 @@ const Gallery = () => {
 
   const categories = [
     { id: 'all', name: 'All Works', icon: <Grid className="w-5 h-5" /> },
+    { id: 'pillows', name: 'Pillows & Neck Care', icon: <Sparkles className="w-5 h-5" /> },
     { id: 'curtains', name: 'Curtains', icon: <Blinds className="w-5 h-5" /> },
     { id: 'furniture', name: 'Furniture', icon: <Sofa className="w-5 h-5" /> },
     { id: 'beds', name: 'Beds', icon: <BedDouble className="w-5 h-5" /> },
     { id: 'storage', name: 'Storage', icon: <Archive className="w-5 h-5" /> },
     { id: 'complete', name: 'Complete Rooms', icon: <Home className="w-5 h-5" /> },
+    { id: 'sofas', name: 'Sofas', icon: <Sofa className="w-5 h-5" /> },
+    { id: 'carpets', name: 'Carpets & Rugs', icon: <Layers className="w-5 h-5" /> },
   ];
 
   const galleryItems = [
-
+    {
+      id: 9001,
+      category: 'pillows',
+      title: '4D Skin-Friendly Contour Memory Pillow',
+      description: 'Italian PostureCare Technology with cooling ice-silk fabric and water-ripple memory core for optimal cervical alignment (AED 89).',
+      image: '/images/pillows/pillow-4d-studio-pro.jpg',
+      location: 'Dubai & Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9002,
+      category: 'pillows',
+      title: '4D Contour Pillow - Luxury Master Bedroom Suite',
+      description: 'Ergonomic dual-height contour pillow in an elegant modern bedroom setting with crisp white linen.',
+      image: '/images/pillows/pillow-4d-bedroom-pro.jpg',
+      location: 'Dubai Hills Estate',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9003,
+      category: 'pillows',
+      title: 'Cervical Neck Care Pillow (Model 8006)',
+      description: 'Ergonomic wave design with eco-friendly memory foam core, quilted jacquard cover, and gold piping (AED 60).',
+      image: '/images/pillows/pillow-8006-studio-pro.jpg',
+      location: 'Sharjah Showroom',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9004,
+      category: 'pillows',
+      title: 'Ergonomic Cervical Spine Alignment Care',
+      description: 'Scientifically designed contour cradle maintaining straight cervical and spine alignment for side and back sleepers.',
+      image: '/images/pillows/pillow-spine-alignment.jpg',
+      location: 'Dubai Healthcare City',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9005,
+      category: 'pillows',
+      title: '4D Ice-Silk Pillow Core & Water Ripple Structure',
+      description: 'Enlarged side-sleeping areas engineered to relieve neck pressure and improve microcirculation during sleep.',
+      image: '/images/pillows/pillow-4d-diagram.png',
+      location: 'Sharjah Showroom',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9006,
+      category: 'pillows',
+      title: 'PostureCare 4D Technology & Cool Gel Honeycomb',
+      description: 'Advanced Italian technology with cooling honeycomb gel core and non-allergenic, odourless memory foam.',
+      image: '/images/pillows/pillow-4d-cover.png',
+      location: 'Dubai & Ajman',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9007,
+      category: 'pillows',
+      title: 'Model 8006 Orthopedic Cervical Contour Studio',
+      description: 'Dual-height orthopedic contour engineered for head, neck, and shoulder alignment (60x35x9/11cm).',
+      image: '/images/pillows/pillow-8006-pair.png',
+      location: 'Dubai Showroom',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9008,
+      category: 'pillows',
+      title: 'Model 8006 Luxury Honeycomb Quilted Cover',
+      description: 'Showroom presentation featuring gold embroidery trim, air-mesh piping, and slow-rebound core.',
+      image: '/images/pillows/pillow-8006-real.png',
+      location: 'Sharjah Showroom',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 8001, category: 'carpets', title: 'Royal Persian Silk Rug', description: 'Authentic hand-knotted Persian silk rug with intricate floral patterns.', image: 'https://images.unsplash.com/photo-1600166898405-da9535204843?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8002, category: 'carpets', title: 'Classic Persian Wool Carpet', description: 'Durable and soft wool carpet featuring classic medallion designs.', image: 'https://images.unsplash.com/photo-1652634213812-f0deeb1de78e?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8003, category: 'carpets', title: 'Vintage Turkish Kilim', description: 'Authentic flat-woven Turkish Kilim with tribal geometric patterns.', image: 'https://images.unsplash.com/photo-1720458606063-a1b944884641?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8004, category: 'carpets', title: 'Abstract Modern Art Carpet', description: 'Contemporary abstract design to elevate modern living spaces.', image: 'https://images.unsplash.com/photo-1534889156217-d643df14f14a?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8005, category: 'carpets', title: 'Minimalist Geometric Rug', description: 'Clean geometric lines for a minimalist aesthetic.', image: 'https://images.unsplash.com/photo-1599327285939-4ee9088f2b65?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8006, category: 'carpets', title: 'Shaggy Plush Carpet', description: 'Ultra-soft deep pile shaggy rug for maximum comfort.', image: 'https://plus.unsplash.com/premium_photo-1675720238475-4e60bbf8101b?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8007, category: 'carpets', title: 'Moroccan Berber Rug', description: 'Hand-woven Moroccan style rug with classic diamond patterns.', image: 'https://images.unsplash.com/photo-1595595183083-d40937b04cf3?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8008, category: 'carpets', title: 'Executive Office Carpet Tiles', description: 'Heavy-duty carpet tiles perfect for high-traffic corporate offices.', image: 'https://images.unsplash.com/photo-1549637642-90187f64f420?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8009, category: 'carpets', title: 'Premium Boardroom Rug', description: 'Elegant large area rug designed specifically for executive boardrooms.', image: 'https://images.unsplash.com/photo-1594235046256-90e5572fd5f9?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8010, category: 'carpets', title: 'Commercial Broadloom Carpet', description: 'Wall-to-wall commercial broadloom carpet for large office spaces.', image: 'https://plus.unsplash.com/premium_photo-1661964459712-483d87fe863b?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8011, category: 'carpets', title: 'Bespoke Custom Carpet', description: 'Fully customizable carpets tailored to your exact room dimensions and design preferences.', image: 'https://images.unsplash.com/photo-1558944351-3f79926e74ef?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
+    {
+      id: 8012, category: 'carpets', title: 'Natural Jute & Sisal Rug', description: 'Eco-friendly natural fiber rug custom-sized for organic interiors.', image: 'https://plus.unsplash.com/premium_photo-1675738774551-cf86de1fd242?q=80&w=800&auto=format&fit=crop', location: 'Sharjah', year: new Date().getFullYear()
+    },
       {
         id: 201,
         category: 'curtains',
@@ -781,6 +891,404 @@ const Gallery = () => {
       title: 'Studio Apartment Design',
       description: 'Smart studio apartment with multipurpose furniture and design',
       image: '/images/beds-collection/bed-11.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    
+    // SOFAS COLLECTION
+    {
+      id: 9001,
+      category: 'sofas',
+      title: 'Premium 1 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-1.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9003,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-3.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9005,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-5.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9006,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-6.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9008,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-8.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9009,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-9.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9011,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-11.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9013,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-13.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9015,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-15.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9016,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-16.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9017,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-17.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9018,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-18.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9019,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-19.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9020,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-20.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9021,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-21.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9022,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-22.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9024,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-24.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9025,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-25.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9027,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-27.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9028,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-28.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9029,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-29.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9030,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-30.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9031,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-31.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9032,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-32.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9033,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-33.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9034,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-34.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9035,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-35.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9036,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-36.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9037,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-37.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9038,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-38.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9039,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-39.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9040,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-40.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9041,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-41.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9042,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-42.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9043,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-43.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9044,
+      category: 'sofas',
+      title: 'Premium 2 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-44.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9045,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-45.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9046,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-46.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9047,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-47.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9048,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-48.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9049,
+      category: 'sofas',
+      title: 'Premium 3 Seater Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-49.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9050,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-50.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9051,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-51.jpg',
+      location: 'Sharjah',
+      year: new Date().getFullYear()
+    },
+    {
+      id: 9052,
+      category: 'sofas',
+      title: 'Premium L-Shape Sofa',
+      description: 'Elegant and comfortable sofa for your living space.',
+      image: '/images/sofas/sofa-52.jpg',
       location: 'Sharjah',
       year: new Date().getFullYear()
     },

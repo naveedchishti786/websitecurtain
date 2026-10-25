@@ -194,6 +194,21 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a 
+                href="https://maps.app.goo.gl/py66qExCXesdHqXt8?g_st=awb"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start space-x-3 group hover:translate-x-1 transition-all duration-300"
+              >
+                <div className="w-10 h-10 bg-[#C8A96A]/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#C8A96A] transition-colors duration-300">
+                  <MapPin className="w-5 h-5 text-[#C8A96A] group-hover:text-white transition-colors duration-300" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-[#C8A96A] uppercase tracking-wider">Showroom</p>
+                  <p className="text-[#E8E2D8] font-semibold text-xs leading-relaxed">ZOYA AFRIN CURTAIN FABRICS TRADING LLC<br />Al Shuwaiheen, Sharjah, UAE</p>
+                </div>
+              </a>
+
+              <a 
                 href="tel:+971555124614" 
                 className="flex items-start space-x-3 group hover:translate-x-1 transition-all duration-300"
               >
